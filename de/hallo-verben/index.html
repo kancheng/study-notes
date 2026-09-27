@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="德文 A1 必背：sein、haben、heißen 現在式變位、例句、中文翻譯與發音。">
+<title>Hallo Verben｜德文 A1 三大動詞</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#182a45;background:#f3f6fb}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#132f55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800;letter-spacing:.02em}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.55rem;margin:0}
+p{line-height:1.7}
+.intro{margin-bottom:24px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0 28px}
+.download,button{cursor:pointer;border:0;border-radius:9px;font:inherit}
+.download{display:inline-block;background:#df3349;color:white;padding:12px 18px;text-decoration:none;font-weight:700}
+.download:hover{background:#b91f35}
+.note{font-size:.92rem;color:#52647d}
+.card{background:white;border:1px solid #dce4f0;border-radius:16px;box-shadow:0 8px 24px #142f5210;margin:20px 0;padding:23px}
+.cardhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.meaning{color:#52647d}
+.tablewrap{overflow-x:auto;margin-top:18px}
+table{border-collapse:collapse;width:100%;min-width:610px;text-align:left}
+th{background:#eaf0f9;font-size:.9rem}
+th,td{padding:13px 14px;border-bottom:1px solid #e4e9f1}
+td:nth-child(2){font-weight:750;color:#173e71}
+.examples{margin-top:22px}
+.examples h3{font-size:1.07rem;margin:0 0 10px}
+.example{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #edf0f5}
+.line{font-size:1.03rem;font-weight:700}
+.zh{color:#53637b;margin-top:3px}
+.speak{background:#e7f0fd;color:#163b6a;padding:9px 12px;min-width:84px}
+.speak:hover,.speak:focus-visible{background:#cedffa;outline:2px solid #3769a9;outline-offset:2px}
+.tip{background:#e9eff8;border-left:4px solid #5276aa;padding:14px 18px;border-radius:8px;margin-top:20px}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../../index.html">← 四語筆記首頁</a>　/　Hallo Verben</div></header>
+<main>
+<div class="intro">
+<h1>德文 A1｜三個必背動詞</h1>
+<p>把六組人稱和現在式一起記：<strong>sein</strong>（是）、<strong>haben</strong>（有）、<strong>heißen</strong>（叫做）。先看表，再按例句旁的播放鍵跟讀。</p>
+<div class="toolbar">
+<a class="download" href="./Hallo-Verben-A1.pdf" download>下載完整 PDF</a>
+<span class="note">發音使用裝置的德語語音；可用性依瀏覽器與系統而異。</span>
+</div>
+</div>
+<div id="content"></div>
+<div class="tip"><strong>拼字提醒：</strong>du <strong>bist</strong>、ihr <strong>seid</strong>、sie / Sie <strong>sind</strong>。du <strong>hast</strong>、er <strong>hat</strong>。名字動詞寫 <strong>heißt</strong>、<strong>heißen</strong>。年齡用 sein：<em>Ich bin 25 Jahre alt.</em>（我 25 歲。）</div>
+</main>
+<footer>Hallo Verben · 德語入門變位與跟讀小抄</footer>
+<script>
+const LANG = 'de-DE';
+const groups = [
+  {
+    name: 'Sein',
+    meaning: '是／處於',
+    rows: [
+      ['ich', 'ich bin', '我是'],
+      ['du', 'du bist', '你是'],
+      ['er / sie', 'er / sie ist', '他／她是'],
+      ['wir', 'wir sind', '我們是'],
+      ['ihr', 'ihr seid', '你們是'],
+      ['sie / Sie', 'sie / Sie sind', '他們／您是']
+    ],
+    examples: [
+      ['Ich bin Student.', '我是學生。'],
+      ['Bist du bereit?', '你準備好了嗎？'],
+      ['Sie ist Französin.', '她是法國人。'],
+      ['Wir sind in Taipei.', '我們在台北。'],
+      ['Sind Sie Lehrer?', '您是老師嗎？'],
+      ['Sie sind hier.', '他們在這裡。']
+    ]
+  },
+  {
+    name: 'Haben',
+    meaning: '有',
+    rows: [
+      ['ich', 'ich habe', '我有'],
+      ['du', 'du hast', '你有'],
+      ['er / sie', 'er / sie hat', '他／她有'],
+      ['wir', 'wir haben', '我們有'],
+      ['ihr', 'ihr habt', '你們有'],
+      ['sie / Sie', 'sie / Sie haben', '他們／您有']
+    ],
+    examples: [
+      ['Ich habe ein Buch.', '我有一本書。'],
+      ['Hast du einen Stift?', '你有筆嗎？'],
+      ['Er hat einen Bruder.', '他有一個兄弟。'],
+      ['Wir haben einen Kurs.', '我們有一堂課。'],
+      ['Haben Sie eine Frage?', '您有問題嗎？'],
+      ['Sie haben Freunde.', '他們有朋友。']
+    ]
+  },
+  {
+    name: 'Heißen',
+    meaning: '叫做／名字是',
+    rows: [
+      ['ich', 'ich heiße', '我叫'],
+      ['du', 'du heißt', '你叫'],
+      ['er / sie', 'er / sie heißt', '他／她叫'],
+      ['wir', 'wir heißen', '我們叫'],
+      ['ihr', 'ihr heißt', '你們叫'],
+      ['sie / Sie', 'sie / Sie heißen', '他們／您叫']
+    ],
+    examples: [
+      ['Ich heiße Hao-Cheng.', '我叫 Hao-Cheng。'],
+      ['Wie heißt du?', '你叫什麼名字？'],
+      ['Sie heißt Marie.', '她叫 Marie。'],
+      ['Wir heißen die Blauen.', '我們叫做「藍隊」。'],
+      ['Wie heißen Sie?', '您叫什麼名字？'],
+      ['Sie heißen Paul und Marc.', '他們叫 Paul 和 Marc。']
+    ]
+  }
+];
+const esc = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+document.querySelector('#content').innerHTML = groups.map(g => `<section class="card"><div class="cardhead"><h2>${esc(g.name)}</h2><span class="meaning">${esc(g.meaning)}</span></div><div class="tablewrap"><table><thead><tr><th scope="col">人稱</th><th scope="col">現在式</th><th scope="col">中文</th></tr></thead><tbody>${g.rows.map(r => `<tr><td>${esc(r[0])}</td><td lang="de">${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div><div class="examples"><h3>例句與翻譯</h3>${g.examples.map(([line, zh]) => `<div class="example"><div><div class="line" lang="de">${esc(line)}</div><div class="zh">${esc(zh)}</div></div><button class="speak" type="button" data-say="${esc(line)}" aria-label="播放德語：${esc(line)}">▶ 播放</button></div>`).join('')}</div></section>`).join('');
+function speak(text) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  let started = false;
+  const run = () => {
+    if (started) return;
+    started = true;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = LANG;
+    u.rate = 0.82;
+    const voice = speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith('de'));
+    if (voice) u.voice = voice;
+    speechSynthesis.speak(u);
+  };
+  if (speechSynthesis.getVoices().length) run();
+  else {
+    speechSynthesis.addEventListener('voiceschanged', run, { once: true });
+    setTimeout(run, 300);
+  }
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+document.addEventListener('click', e => {
+  const b = e.target.closest('.speak');
+  if (b) speak(b.dataset.say);
+});
+</script>
+</body>
+</html>
