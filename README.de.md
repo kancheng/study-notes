@@ -4,12 +4,12 @@
 
 Lernnotizen für Englisch, Französisch, Deutsch und Japanisch, mit Grammatik, Wortschatz, Beispielsätzen, Audio und herunterladbaren Blättern. Die Oberfläche der Website ist auf Traditionellem Chinesisch. Die Beispielsätze stehen in der Sprache, die gerade gelernt wird.
 
-Die erste Lektion in Englisch, Französisch und Deutsch ist eine A1-Vorstellung. Japanisch folgt dem JLPT von N5 bis N2. Jedes Beispiel zeigt Kanji, Kana und Romaji.
+Englisch, Französisch und Deutsch folgen dem GER von A1 bis B2. Japanisch folgt dem JLPT von N5 bis N2. Jedes japanische Beispiel zeigt Kanji, Kana und Romaji.
 
 | Sprache | Lektion | Inhalt |
 | --- | --- | --- |
 | Englisch | [`en/`](en/) | Grammatik von A1 bis B2, beginnend mit be, have, be called |
-| Französisch | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
+| Französisch | [`fr/`](fr/) | Grammatik von A1 bis B2 nach dem GER, beginnend mit être, avoir, s’appeler |
 | Deutsch | [`de/`](de/) | Grammatik von A1 bis B2 nach dem GER, beginnend mit sein, haben, heißen |
 | Japanisch | [`ja/`](ja/) | Grammatik von N5 bis N2, Beispiele mit Kanji, Kana und Romaji |
 
@@ -17,7 +17,7 @@ Die erste Lektion in Englisch, Französisch und Deutsch ist eine A1-Vorstellung.
 
 - `index.html`: Einstieg zu Englisch, Französisch, Deutsch und Japanisch
 - `en/`: englische Grammatik von A1 bis B2
-- `fr/bonjour-verbes/`: französisches A1-Blatt und `Bonjour-Verbes-A1.pdf`
+- `fr/`: französische Grammatik von A1 bis B2 nach dem GER
 - `de/`: deutsche Grammatik von A1 bis B2 nach dem GER
 - `ja/`: japanische Grammatik von JLPT N5 bis N2
 - `tools/generate_pdf.py`: Programm, das die PDFs erzeugt
@@ -37,4 +37,4 @@ Legen Sie den neuen Text in den Ordner der Sprache, tragen Sie ihn in die Liste 
 
 ## PDFs erzeugen
 
-PDFs für Englisch, Französisch und Deutsch erzeugt `python3 tools/generate_pdf.py`. Japanische Seiten und PDFs erzeugt `python3 tools/build_ja_grammar.py`. Beides braucht `reportlab`. Chinesisch nutzt `tools/NotoSansTC.ttf`. Japanische PDFs nutzen `tools/NotoSansJP.otf`, falls vorhanden, sonst Yu Gothic. Lateinische Buchstaben im französischen PDF nutzen DejaVu Sans (`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`). Fehlt diese Schrift, bleibt das vorhandene französische PDF unverändert, und die PDFs für Englisch und Deutsch werden trotzdem erzeugt.
+PDFs für Englisch und Deutsch erzeugt `python3 tools/generate_pdf.py`. Französische Seiten und PDFs erzeugt `python3 tools/build_fr_grammar.py`. Japanische Seiten und PDFs erzeugt `python3 tools/build_ja_grammar.py`. Dafür wird `reportlab` benötigt. Chinesisch und Französisch nutzen `tools/NotoSansTC.ttf`. Japanische PDFs nutzen `tools/NotoSansJP.otf`, falls vorhanden, sonst Yu Gothic.
