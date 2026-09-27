@@ -4,14 +4,14 @@
 
 Study notes for English, French, German, and Japanese, with grammar, vocabulary, examples, audio, and downloadable sheets. The site interface is Traditional Chinese. Example sentences are in the language being studied.
 
-The first lesson in each language is an A1 self-introduction: six persons, 18 examples, Chinese translations, a listen button, and a PDF.
+The first lesson in English, French, and German is an A1 self-introduction. Japanese follows the JLPT from N5 through N2, and every example shows kanji, kana, and romaji.
 
 | Language | Lesson | Contents |
 | --- | --- | --- |
 | English | [`en/`](en/) | A1–B2 grammar, starting with be, have, be called |
 | French | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
 | German | [`de/`](de/) | A1 to B2 grammar on the CEFR scale, starting with sein, haben, heißen |
-| Japanese | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
+| Japanese | [`ja/`](ja/) | N5 to N2 grammar, with kanji, kana, and romaji on every example |
 
 ## Site layout
 
@@ -19,7 +19,7 @@ The first lesson in each language is an A1 self-introduction: six persons, 18 ex
 - `en/`: English grammar from A1 through B2
 - `fr/bonjour-verbes/`: French A1 verb sheet and `Bonjour-Verbes-A1.pdf`
 - `de/`: German grammar from A1 to B2, following the CEFR
-- `ja/konnichiwa-doushi/`: Japanese A1 pattern sheet and `Konnichiwa-Doushi-A1.pdf`
+- `ja/`: Japanese grammar from JLPT N5 to N2
 - `tools/generate_pdf.py`: PDF generator
 - `tools/NotoSansTC.ttf`: Chinese font used in the PDFs
 
@@ -37,4 +37,4 @@ Put a new article in that language’s folder, add it to the list in that langua
 
 ## Generate the PDFs
 
-Run `python3 tools/generate_pdf.py`. This requires `reportlab`. Chinese text, and the English, German, and Japanese sheets, use the bundled `tools/NotoSansTC.ttf` so Chinese does not disappear in the PDF. Latin text in the French PDF uses the system font DejaVu Sans (`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`). If that font is missing, the script leaves the existing French PDF in place and still writes the English, German, and Japanese PDFs.
+English, French, and German PDFs come from `python3 tools/generate_pdf.py`. Japanese pages and PDFs come from `python3 tools/build_ja_grammar.py`. Both need `reportlab`. Chinese uses the bundled `tools/NotoSansTC.ttf`. Japanese PDFs use `tools/NotoSansJP.otf` when it is present, otherwise Yu Gothic. Latin text in the French PDF uses DejaVu Sans (`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`). If that font is missing, the script leaves the existing French PDF in place and still writes the English and German PDFs.

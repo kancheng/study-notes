@@ -4,14 +4,14 @@
 
 英语、法语、德语、日语的学习笔记，含语法、词汇、例句、朗读与可下载讲义。网站界面是繁体中文，例句是正在学的那种语言。
 
-四种语言的第一篇都是 A1 自我介绍：六组人称、18 个例句、中文翻译、朗读按钮与 PDF。
+英文、法文、德文的第一篇是 A1 自我介绍。日文依 JLPT 从 N5 排到 N2，例句附汉字、假名与罗马拼音。
 
 | 语言 | 教材 | 内容 |
 | --- | --- | --- |
 | 英文 | [`en/`](en/) | A1 到 B2 基础语法，从 be、have、be called 开始 |
 | 法文 | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être、avoir、s’appeler |
 | 德文 | [`de/`](de/) | A1 到 B2 基础语法，依 GER，从 sein、haben、heißen 开始 |
-| 日文 | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です、あります／います、と言います |
+| 日文 | [`ja/`](ja/) | N5 到 N2 基础语法，例句附汉字、假名与罗马拼音 |
 
 ## 网站结构
 
@@ -19,7 +19,7 @@
 - `en/`：英文基础语法，按 A1、A2、B1、B2 排列
 - `fr/bonjour-verbes/`：法文 A1 动词教材与 `Bonjour-Verbes-A1.pdf`
 - `de/`：德文基础语法，依 GER 的 A1、A2、B1、B2 排列
-- `ja/konnichiwa-doushi/`：日文 A1 说法教材与 `Konnichiwa-Doushi-A1.pdf`
+- `ja/`：日文基础语法，依 JLPT 的 N5、N4、N3、N2 排列
 - `tools/generate_pdf.py`：PDF 生成程序
 - `tools/NotoSansTC.ttf`：PDF 用的中文字体
 
@@ -37,4 +37,4 @@ GitHub About：`English, French, German, and Japanese study notes with grammar, 
 
 ## 生成 PDF
 
-运行 `python3 tools/generate_pdf.py`。需要 `reportlab`。中文与英、德、日正文使用项目内的 `tools/NotoSansTC.ttf`，避免中文在 PDF 里消失。法文 PDF 的拉丁字母使用系统上的 DejaVu Sans（`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`）。找不到这套字体时，脚本会保留已有的法文 PDF，英、德、日 PDF 仍会生成。
+英、法、德的 PDF 用 `python3 tools/generate_pdf.py`。日文页面与 PDF 用 `python3 tools/build_ja_grammar.py`。两者都需要 `reportlab`。中文使用项目内的 `tools/NotoSansTC.ttf`。日文 PDF 优先使用 `tools/NotoSansJP.otf`，否则使用系统的 Yu Gothic。法文 PDF 的拉丁字母使用系统上的 DejaVu Sans（`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`）。找不到这套字体时，脚本会保留已有的法文 PDF，英、德 PDF 仍会生成。

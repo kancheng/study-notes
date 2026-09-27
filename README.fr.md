@@ -4,14 +4,14 @@
 
 Notes d’étude pour l’anglais, le français, l’allemand et le japonais : grammaire, vocabulaire, exemples, audio et fiches à télécharger. L’interface du site est en chinois traditionnel. Les exemples sont dans la langue étudiée.
 
-La première leçon de chaque langue est une présentation A1 : six personnes, 18 exemples, traduction en chinois, bouton d’écoute et PDF.
+La première leçon d’anglais, de français et d’allemand est une présentation A1. Le japonais suit le JLPT, de N5 à N2. Chaque exemple montre les kanji, les kana et le rōmaji.
 
 | Langue | Leçon | Contenu |
 | --- | --- | --- |
 | Anglais | [`en/`](en/) | Grammaire de A1 à B2, à partir de be, have, be called |
 | Français | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
 | Allemand | [`de/`](de/) | Grammaire de A1 à B2 selon le CECR, à partir de sein, haben, heißen |
-| Japonais | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
+| Japonais | [`ja/`](ja/) | Grammaire de N5 à N2, exemples avec kanji, kana et rōmaji |
 
 ## Structure du site
 
@@ -19,7 +19,7 @@ La première leçon de chaque langue est une présentation A1 : six personnes, 1
 - `en/` : grammaire anglaise, de A1 à B2
 - `fr/bonjour-verbes/` : fiche A1 de français et `Bonjour-Verbes-A1.pdf`
 - `de/` : grammaire allemande de A1 à B2, selon le CECR
-- `ja/konnichiwa-doushi/` : fiche A1 de japonais et `Konnichiwa-Doushi-A1.pdf`
+- `ja/` : grammaire japonaise du JLPT N5 au N2
 - `tools/generate_pdf.py` : programme qui produit les PDF
 - `tools/NotoSansTC.ttf` : police chinoise utilisée dans les PDF
 
@@ -37,4 +37,4 @@ Placez le nouvel article dans le dossier de la langue, ajoutez-le à la liste du
 
 ## Produire les PDF
 
-Exécutez `python3 tools/generate_pdf.py`. Il faut `reportlab`. Le chinois, ainsi que les fiches d’anglais, d’allemand et de japonais, utilisent `tools/NotoSansTC.ttf`, fourni avec le projet, pour que le chinois reste visible dans le PDF. Les lettres latines du PDF de français utilisent DejaVu Sans sur le système (`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`). Si cette police est absente, le script conserve le PDF de français déjà présent et génère quand même les PDF d’anglais, d’allemand et de japonais.
+Les PDF d’anglais, de français et d’allemand viennent de `python3 tools/generate_pdf.py`. Les pages et PDF de japonais viennent de `python3 tools/build_ja_grammar.py`. Les deux ont besoin de `reportlab`. Le chinois utilise `tools/NotoSansTC.ttf`. Les PDF de japonais utilisent `tools/NotoSansJP.otf` s’il est présent, sinon Yu Gothic. Les lettres latines du PDF de français utilisent DejaVu Sans (`/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`). Si cette police est absente, le script conserve le PDF de français déjà présent et génère quand même les PDF d’anglais et d’allemand.
