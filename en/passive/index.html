@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="現在、過去和現在完成的被動，附例句、中文、朗讀與 PDF。">
+<title>Passive｜英文 B1</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#182a45;background:#f3f6fb}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#132f55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.55rem;margin:0}
+p{line-height:1.7}
+.intro{margin-bottom:24px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0 28px}
+.download,button{cursor:pointer;border:0;border-radius:9px;font:inherit}
+.download{display:inline-block;background:#df3349;color:white;padding:12px 18px;text-decoration:none;font-weight:700}
+.download:hover{background:#b91f35}
+.note{font-size:.92rem;color:#52647d}
+.card{background:white;border:1px solid #dce4f0;border-radius:16px;box-shadow:0 8px 24px #142f5210;margin:20px 0;padding:23px}
+.cardhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.meaning{color:#52647d}
+.tablewrap{overflow-x:auto;margin-top:18px}
+table{border-collapse:collapse;width:100%;min-width:680px;text-align:left}
+th{background:#eaf0f9;font-size:.9rem}
+th,td{padding:13px 14px;border-bottom:1px solid #e4e9f1}
+td:nth-child(2){font-weight:750;color:#173e71}
+.examples{margin-top:22px}
+.examples h3{font-size:1.07rem;margin:0 0 10px}
+.example{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #edf0f5}
+.line{font-size:1.03rem;font-weight:700}
+.zh{color:#53637b;margin-top:3px}
+.speak{background:#e7f0fd;color:#163b6a;padding:9px 12px;min-width:84px}
+.speak:hover,.speak:focus-visible{background:#cedffa;outline:2px solid #3769a9;outline-offset:2px}
+.tip{background:#e9eff8;border-left:4px solid #5276aa;padding:14px 18px;border-radius:8px;margin-top:20px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.pager a{color:#154a85;font-weight:750;text-decoration:none}
+.pager a:hover,.pager a:focus-visible{text-decoration:underline}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 英文筆記</a>　/　Passive</div></header>
+<main>
+<div class="intro">
+<h1>英文 B1｜被動語態</h1>
+<p>當受詞比做事的人重要，就把受詞放到句首，用 be 加過去分詞。</p>
+<div class="toolbar">
+<a class="download" href="./passive.pdf" download>下載完整 PDF</a>
+<span class="note">發音使用裝置的英語語音；可用性依瀏覽器與系統而異。</span>
+</div>
+</div>
+<div id="content"></div>
+<div class="tip"><strong>用法提醒：</strong>by 用來補出做事的人。不重要時可以省略。</div>
+<nav class="pager"><a href="../present-perfect-continuous/">← Present Perfect Continuous</a><a href="../modal-passive/">Modal Passive →</a></nav>
+</main>
+<footer>Passive · 英文 B1</footer>
+<script id="lesson" type="application/json">{"cols": ["用法", "形式", "中文"], "groups": [{"name": "現在", "meaning": "am / is / are + p.p.", "rows": [["做成", "is made", "被做成"], ["使用", "is used", "被使用"], ["講", "is spoken", "被講"], ["需要", "are needed", "被需要"]], "examples": [["This car is made in Japan.", "這輛車是在日本製造的。"], ["English is used here.", "這裡使用英文。"], ["Chinese is spoken in Taiwan.", "台灣說中文。"], ["Teachers are needed.", "需要老師。"]]}, {"name": "過去", "meaning": "was / were + p.p.", "rows": [["寫", "was written", "被寫"], ["蓋", "was built", "被蓋"], ["邀請", "were invited", "被邀請"], ["發現", "was found", "被發現"]], "examples": [["The letter was written yesterday.", "這封信是昨天寫的。"], ["The school was built in 1990.", "這所學校建於 1990 年。"], ["We were invited to the party.", "我們被邀請去派對。"], ["The book was found under the desk.", "書在桌子底下被找到。"]]}, {"name": "現在完成", "meaning": "have / has been + p.p.", "rows": [["做完", "has been finished", "已經被做完"], ["送出", "has been sent", "已經被送出"], ["修好", "have been fixed", "已經被修好"], ["選上", "has been chosen", "已經被選上"]], "examples": [["The work has been finished.", "工作已經做完了。"], ["The email has been sent.", "信已經寄出了。"], ["The lights have been fixed.", "燈已經修好了。"], ["She has been chosen for the team.", "她已經被選進隊裡。"]]}]}</script>
+<script>
+const lesson = JSON.parse(document.getElementById('lesson').textContent);
+const esc = s => s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+document.querySelector('#content').innerHTML = lesson.groups.map(function (g) {
+  var head = lesson.cols.map(function (col) { return '<th scope="col">' + esc(col) + '</th>'; }).join('');
+  var rows = g.rows.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td lang="en">' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join('');
+  var examples = g.examples.map(function (pair) { return '<div class="example"><div><div class="line" lang="en">' + esc(pair[0]) + '</div><div class="zh">' + esc(pair[1]) + '</div></div><button class="speak" type="button" data-say="' + esc(pair[0]) + '" aria-label="播放英語：' + esc(pair[0]) + '">▶ 播放</button></div>'; }).join('');
+  return '<section class="card"><div class="cardhead"><h2>' + esc(g.name) + '</h2><span class="meaning">' + esc(g.meaning) + '</span></div><div class="tablewrap"><table><thead><tr>' + head + '</tr></thead><tbody>' + rows + '</tbody></table></div><div class="examples"><h3>例句與翻譯</h3>' + examples + '</div></section>';
+}).join('');
+function speak(text) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  let started = false;
+  const run = () => {
+    if (started) return;
+    started = true;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.82;
+    const voice = speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_','-').startsWith('en'));
+    if (voice) u.voice = voice;
+    speechSynthesis.speak(u);
+  };
+  if (speechSynthesis.getVoices().length) run();
+  else {
+    speechSynthesis.addEventListener('voiceschanged', run, { once: true });
+    setTimeout(run, 300);
+  }
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+document.addEventListener('click', e => {
+  const b = e.target.closest('.speak');
+  if (b) speak(b.dataset.say);
+});
+</script>
+</body>
+</html>

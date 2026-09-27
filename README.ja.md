@@ -8,7 +8,7 @@
 
 | 言語 | 教材 | 内容 |
 | --- | --- | --- |
-| 英語 | [`en/hello-verbs/`](en/hello-verbs/) | be、have、be called |
+| 英語 | [`en/`](en/) | A1 から B2 の基礎文法。最初は be、have、be called |
 | フランス語 | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être、avoir、s’appeler |
 | ドイツ語 | [`de/hallo-verben/`](de/hallo-verben/) | sein、haben、heißen |
 | 日本語 | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です、あります／います、と言います |
@@ -16,7 +16,7 @@
 ## サイト構成
 
 - `index.html`：英・仏・独・日の入口
-- `en/hello-verbs/`：英語 A1 の動詞教材と `Hello-Verbs-A1.pdf`
+- `en/`：英語の基礎文法。A1、A2、B1、B2 の順
 - `fr/bonjour-verbes/`：フランス語 A1 の動詞教材と `Bonjour-Verbes-A1.pdf`
 - `de/hallo-verben/`：ドイツ語 A1 の動詞教材と `Hallo-Verben-A1.pdf`
 - `ja/konnichiwa-doushi/`：日本語 A1 の言い方教材と `Konnichiwa-Doushi-A1.pdf`

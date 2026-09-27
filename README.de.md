@@ -8,7 +8,7 @@ Die erste Lektion jeder Sprache ist eine A1-Vorstellung: sechs Personen, 18 Beis
 
 | Sprache | Lektion | Inhalt |
 | --- | --- | --- |
-| Englisch | [`en/hello-verbs/`](en/hello-verbs/) | be, have, be called |
+| Englisch | [`en/`](en/) | Grammatik von A1 bis B2, beginnend mit be, have, be called |
 | Französisch | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
 | Deutsch | [`de/hallo-verben/`](de/hallo-verben/) | sein, haben, heißen |
 | Japanisch | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
@@ -16,7 +16,7 @@ Die erste Lektion jeder Sprache ist eine A1-Vorstellung: sechs Personen, 18 Beis
 ## Aufbau der Website
 
 - `index.html`: Einstieg zu Englisch, Französisch, Deutsch und Japanisch
-- `en/hello-verbs/`: englisches A1-Blatt und `Hello-Verbs-A1.pdf`
+- `en/`: englische Grammatik von A1 bis B2
 - `fr/bonjour-verbes/`: französisches A1-Blatt und `Bonjour-Verbes-A1.pdf`
 - `de/hallo-verben/`: deutsches A1-Blatt und `Hallo-Verben-A1.pdf`
 - `ja/konnichiwa-doushi/`: japanisches A1-Blatt und `Konnichiwa-Doushi-A1.pdf`

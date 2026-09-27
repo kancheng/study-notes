@@ -8,7 +8,7 @@ La première leçon de chaque langue est une présentation A1 : six personnes, 1
 
 | Langue | Leçon | Contenu |
 | --- | --- | --- |
-| Anglais | [`en/hello-verbs/`](en/hello-verbs/) | be, have, be called |
+| Anglais | [`en/`](en/) | Grammaire de A1 à B2, à partir de be, have, be called |
 | Français | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
 | Allemand | [`de/hallo-verben/`](de/hallo-verben/) | sein, haben, heißen |
 | Japonais | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
@@ -16,7 +16,7 @@ La première leçon de chaque langue est une présentation A1 : six personnes, 1
 ## Structure du site
 
 - `index.html` : entrée vers l’anglais, le français, l’allemand et le japonais
-- `en/hello-verbs/` : fiche A1 d’anglais et `Hello-Verbs-A1.pdf`
+- `en/` : grammaire anglaise, de A1 à B2
 - `fr/bonjour-verbes/` : fiche A1 de français et `Bonjour-Verbes-A1.pdf`
 - `de/hallo-verben/` : fiche A1 d’allemand et `Hallo-Verben-A1.pdf`
 - `ja/konnichiwa-doushi/` : fiche A1 de japonais et `Konnichiwa-Doushi-A1.pdf`
