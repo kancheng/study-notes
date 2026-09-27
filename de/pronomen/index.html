@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ich、du、Sie 的主格：六組人稱、她與他們的差別，附例句、中文、朗讀與 PDF。">
+<title>Pronomen｜德文 A1</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#182a45;background:#f3f6fb}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#132f55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.55rem;margin:0}
+p{line-height:1.7}
+.intro{margin-bottom:24px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0 28px}
+.download,button{cursor:pointer;border:0;border-radius:9px;font:inherit}
+.download{display:inline-block;background:#df3349;color:white;padding:12px 18px;text-decoration:none;font-weight:700}
+.download:hover{background:#b91f35}
+.note{font-size:.92rem;color:#52647d}
+.card{background:white;border:1px solid #dce4f0;border-radius:16px;box-shadow:0 8px 24px #142f5210;margin:20px 0;padding:23px}
+.cardhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.meaning{color:#52647d}
+.tablewrap{overflow-x:auto;margin-top:18px}
+table{border-collapse:collapse;width:100%;min-width:680px;text-align:left}
+th{background:#eaf0f9;font-size:.9rem}
+th,td{padding:13px 14px;border-bottom:1px solid #e4e9f1}
+td:nth-child(2){font-weight:750;color:#173e71}
+.examples{margin-top:22px}
+.examples h3{font-size:1.07rem;margin:0 0 10px}
+.example{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #edf0f5}
+.line{font-size:1.03rem;font-weight:700}
+.zh{color:#53637b;margin-top:3px}
+.speak{background:#e7f0fd;color:#163b6a;padding:9px 12px;min-width:84px}
+.speak:hover,.speak:focus-visible{background:#cedffa;outline:2px solid #3769a9;outline-offset:2px}
+.tip{background:#e9eff8;border-left:4px solid #5276aa;padding:14px 18px;border-radius:8px;margin-top:20px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.pager a{color:#1d6a4f;font-weight:750;text-decoration:none}
+.pager a:hover,.pager a:focus-visible{text-decoration:underline}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　Pronomen</div></header>
+<main>
+<div class="intro">
+<h1>德文 A1｜人稱代名詞</h1>
+<p>主詞用主格。她、他們和您都寫 sie，只有尊稱 Sie 要大寫。</p>
+<div class="toolbar">
+<a class="download" href="./pronomen.pdf" download>下載完整 PDF</a>
+<span class="note">發音使用裝置的德語語音；可用性依瀏覽器與系統而異。</span>
+</div>
+</div>
+<div id="content"></div>
+<div class="tip"><strong>用法提醒：</strong>sie 小寫是她或他們。Sie 大寫是您，動詞用複數：Sie sind。<br>es 指事物，也用於天氣和時間：Es ist kalt. Es ist acht Uhr.</div>
+<nav class="pager"><a href="../hallo-verben/">← Hallo Verben</a><a href="../praesens/">Präsens →</a></nav>
+</main>
+<footer>Pronomen · 德文 A1</footer>
+<script id="lesson" type="application/json">{"cols": ["人稱", "形式", "中文"], "groups": [{"name": "單數", "meaning": "說話的人與對方", "rows": [["我", "ich", "我"], ["你（熟）", "du", "你"], ["他", "er", "他"], ["她", "sie", "她"]], "examples": [["Ich wohne in Taipei.", "我住在台北。"], ["Du lernst Deutsch.", "你在學德文。"], ["Er ist Lehrer.", "他是老師。"], ["Sie ist Ärztin.", "她是醫生。"]]}, {"name": "複數與尊稱", "meaning": "我們、你們、他們、您", "rows": [["我們", "wir", "我們"], ["你們（熟）", "ihr", "你們"], ["他們", "sie", "他們"], ["您（尊稱）", "Sie", "您"]], "examples": [["Wir sind Studenten.", "我們是學生。"], ["Ihr seid pünktlich.", "你們很準時。"], ["Sie kommen aus Berlin.", "他們來自柏林。"], ["Wie heißen Sie?", "您貴姓？"]]}, {"name": "es", "meaning": "事物、天氣、時間", "rows": [["它", "es", "它"], ["天氣", "es ist kalt", "天氣冷"], ["時間", "es ist acht Uhr", "現在八點"], ["下雨", "es regnet", "下雨"]], "examples": [["Das Buch ist neu. Es ist interessant.", "這本書是新的。它很有趣。"], ["Es ist kalt heute.", "今天天氣冷。"], ["Es ist acht Uhr.", "現在八點。"], ["Es regnet heute.", "今天下雨。"]]}]}</script>
+<script>
+const lesson = JSON.parse(document.getElementById('lesson').textContent);
+const esc = s => s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+document.querySelector('#content').innerHTML = lesson.groups.map(function (g) {
+  var head = lesson.cols.map(function (col) { return '<th scope="col">' + esc(col) + '</th>'; }).join('');
+  var rows = g.rows.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td lang="de">' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join('');
+  var examples = g.examples.map(function (pair) { return '<div class="example"><div><div class="line" lang="de">' + esc(pair[0]) + '</div><div class="zh">' + esc(pair[1]) + '</div></div><button class="speak" type="button" data-say="' + esc(pair[0]) + '" aria-label="播放德語：' + esc(pair[0]) + '">▶ 播放</button></div>'; }).join('');
+  return '<section class="card"><div class="cardhead"><h2>' + esc(g.name) + '</h2><span class="meaning">' + esc(g.meaning) + '</span></div><div class="tablewrap"><table><thead><tr>' + head + '</tr></thead><tbody>' + rows + '</tbody></table></div><div class="examples"><h3>例句與翻譯</h3>' + examples + '</div></section>';
+}).join('');
+function speak(text) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  let started = false;
+  const run = () => {
+    if (started) return;
+    started = true;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'de-DE';
+    u.rate = 0.82;
+    const voice = speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_','-').startsWith('de'));
+    if (voice) u.voice = voice;
+    speechSynthesis.speak(u);
+  };
+  if (speechSynthesis.getVoices().length) run();
+  else {
+    speechSynthesis.addEventListener('voiceschanged', run, { once: true });
+    setTimeout(run, 300);
+  }
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+document.addEventListener('click', e => {
+  const b = e.target.closest('.speak');
+  if (b) speak(b.dataset.say);
+});
+</script>
+</body>
+</html>

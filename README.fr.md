@@ -10,7 +10,7 @@ La première leçon de chaque langue est une présentation A1 : six personnes, 1
 | --- | --- | --- |
 | Anglais | [`en/`](en/) | Grammaire de A1 à B2, à partir de be, have, be called |
 | Français | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
-| Allemand | [`de/hallo-verben/`](de/hallo-verben/) | sein, haben, heißen |
+| Allemand | [`de/`](de/) | Grammaire de A1 à B2 selon le CECR, à partir de sein, haben, heißen |
 | Japonais | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
 
 ## Structure du site
@@ -18,7 +18,7 @@ La première leçon de chaque langue est une présentation A1 : six personnes, 1
 - `index.html` : entrée vers l’anglais, le français, l’allemand et le japonais
 - `en/` : grammaire anglaise, de A1 à B2
 - `fr/bonjour-verbes/` : fiche A1 de français et `Bonjour-Verbes-A1.pdf`
-- `de/hallo-verben/` : fiche A1 d’allemand et `Hallo-Verben-A1.pdf`
+- `de/` : grammaire allemande de A1 à B2, selon le CECR
 - `ja/konnichiwa-doushi/` : fiche A1 de japonais et `Konnichiwa-Doushi-A1.pdf`
 - `tools/generate_pdf.py` : programme qui produit les PDF
 - `tools/NotoSansTC.ttf` : police chinoise utilisée dans les PDF

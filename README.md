@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | 英文 | [`en/`](en/) | A1 到 B2 基礎文法，從 be、have、be called 開始 |
 | 法文 | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être、avoir、s’appeler |
-| 德文 | [`de/hallo-verben/`](de/hallo-verben/) | sein、haben、heißen |
+| 德文 | [`de/`](de/) | A1 到 B2 基礎文法，依 GER，從 sein、haben、heißen 開始 |
 | 日文 | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です、あります／います、と言います |
 
 ## 網站結構
@@ -18,7 +18,7 @@
 - `index.html`：英、法、德、日入口
 - `en/`：英文基礎文法，依 A1、A2、B1、B2 排列
 - `fr/bonjour-verbes/`：法文 A1 動詞教材與 `Bonjour-Verbes-A1.pdf`
-- `de/hallo-verben/`：德文 A1 動詞教材與 `Hallo-Verben-A1.pdf`
+- `de/`：德文基礎文法，依 GER 的 A1、A2、B1、B2 排列
 - `ja/konnichiwa-doushi/`：日文 A1 說法教材與 `Konnichiwa-Doushi-A1.pdf`
 - `tools/generate_pdf.py`：PDF 產生程式
 - `tools/NotoSansTC.ttf`：PDF 用的中文字型

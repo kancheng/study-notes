@@ -10,7 +10,7 @@ The first lesson in each language is an A1 self-introduction: six persons, 18 ex
 | --- | --- | --- |
 | English | [`en/`](en/) | A1–B2 grammar, starting with be, have, be called |
 | French | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
-| German | [`de/hallo-verben/`](de/hallo-verben/) | sein, haben, heißen |
+| German | [`de/`](de/) | A1 to B2 grammar on the CEFR scale, starting with sein, haben, heißen |
 | Japanese | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
 
 ## Site layout
@@ -18,7 +18,7 @@ The first lesson in each language is an A1 self-introduction: six persons, 18 ex
 - `index.html`: entry point for English, French, German, and Japanese
 - `en/`: English grammar from A1 through B2
 - `fr/bonjour-verbes/`: French A1 verb sheet and `Bonjour-Verbes-A1.pdf`
-- `de/hallo-verben/`: German A1 verb sheet and `Hallo-Verben-A1.pdf`
+- `de/`: German grammar from A1 to B2, following the CEFR
 - `ja/konnichiwa-doushi/`: Japanese A1 pattern sheet and `Konnichiwa-Doushi-A1.pdf`
 - `tools/generate_pdf.py`: PDF generator
 - `tools/NotoSansTC.ttf`: Chinese font used in the PDFs

@@ -10,7 +10,7 @@ Die erste Lektion jeder Sprache ist eine A1-Vorstellung: sechs Personen, 18 Beis
 | --- | --- | --- |
 | Englisch | [`en/`](en/) | Grammatik von A1 bis B2, beginnend mit be, have, be called |
 | Französisch | [`fr/bonjour-verbes/`](fr/bonjour-verbes/) | être, avoir, s’appeler |
-| Deutsch | [`de/hallo-verben/`](de/hallo-verben/) | sein, haben, heißen |
+| Deutsch | [`de/`](de/) | Grammatik von A1 bis B2 nach dem GER, beginnend mit sein, haben, heißen |
 | Japanisch | [`ja/konnichiwa-doushi/`](ja/konnichiwa-doushi/) | です, あります／います, と言います |
 
 ## Aufbau der Website
@@ -18,7 +18,7 @@ Die erste Lektion jeder Sprache ist eine A1-Vorstellung: sechs Personen, 18 Beis
 - `index.html`: Einstieg zu Englisch, Französisch, Deutsch und Japanisch
 - `en/`: englische Grammatik von A1 bis B2
 - `fr/bonjour-verbes/`: französisches A1-Blatt und `Bonjour-Verbes-A1.pdf`
-- `de/hallo-verben/`: deutsches A1-Blatt und `Hallo-Verben-A1.pdf`
+- `de/`: deutsche Grammatik von A1 bis B2 nach dem GER
 - `ja/konnichiwa-doushi/`: japanisches A1-Blatt und `Konnichiwa-Doushi-A1.pdf`
 - `tools/generate_pdf.py`: Programm, das die PDFs erzeugt
 - `tools/NotoSansTC.ttf`: chinesische Schrift für die PDFs
