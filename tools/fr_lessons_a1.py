@@ -215,6 +215,49 @@ LESSONS = [
         ],
     ),
     L(
+        'interrogatifs', 'A1', 'Interrogatifs', '法文 A1｜疑問詞',
+        'qui、que／qu’est-ce que、quand、où、pourquoi、comment 是常見的疑問詞，用來組成問句。',
+        'qui、que、quand、où、pourquoi、comment：疑問詞對照與例句，附中文、朗讀與 PDF。',
+        '問「什麼」當受詞時，口語常用 Qu’est-ce que… ?\nqui 可當主詞：Qui vient ? 動詞要配合第三人稱。',
+        [
+            G('疑問詞', '六個常用詞', [
+                ['誰', 'qui', '誰'],
+                ['什麼', 'que / qu’est-ce que', '什麼'],
+                ['何時', 'quand', '什麼時候'],
+                ['哪裡', 'où', '哪裡'],
+                ['為什麼', 'pourquoi', '為什麼'],
+                ['如何', 'comment', '怎麼／如何'],
+            ], [
+                ['Qui vient ?', '誰要來？'],
+                ['Qu’est-ce que tu étudies ?', '你在學什麼？'],
+                ['Quand commence le cours ?', '課幾點開始？'],
+                ['Où habites-tu ?', '你住哪裡？'],
+            ]),
+            G('人與事物', 'qui / que', [
+                ['誰來', 'Qui vient ?', '誰要來？'],
+                ['學什麼', 'Qu’est-ce que tu étudies ?', '你在學什麼？'],
+                ['那是什麼', 'Qu’est-ce que c’est ?', '這是什麼？'],
+                ['誰教', 'Qui t’enseigne ?', '誰教你？'],
+            ], [
+                ['Qui vient ?', '誰要來？'],
+                ['Qu’est-ce que tu étudies ?', '你在學什麼？'],
+                ['Qu’est-ce que c’est ?', '這是什麼？'],
+                ['Qui enseigne l’anglais ?', '誰教英文？'],
+            ]),
+            G('時間、地方、原因、方式', 'quand / où / pourquoi / comment', [
+                ['何時開始', 'Quand commence le cours ?', '課幾點開始？'],
+                ['住哪裡', 'Où habites-tu ?', '你住哪裡？'],
+                ['為什麼學', 'Pourquoi apprends-tu l’anglais ?', '你為什麼學英文？'],
+                ['怎麼練習', 'Comment est-ce que tu t’entraînes ?', '你怎麼練習？'],
+            ], [
+                ['Quand commence le cours ?', '課幾點開始？'],
+                ['Où habites-tu ?', '你住哪裡？'],
+                ['Pourquoi apprends-tu l’anglais ?', '你為什麼學英文？'],
+                ['Comment est-ce que tu t’entraînes ?', '你怎麼練習？'],
+            ]),
+        ],
+    ),
+    L(
         'verbes-er', 'A1', 'Verbes en -er', '法文 A1｜-er 動詞',
         '大多數動詞是 -er。去掉 -er 之後，照人稱加詞尾。nous 的詞尾是 -ons。manger 在 nous 要保留 e，acheter 在單數要把 e 改成 è。',
         'parler、manger、acheter 的現在式，附例句、中文、朗讀與 PDF。',

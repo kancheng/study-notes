@@ -128,6 +128,49 @@ LESSONS = [
         ],
     ),
     L(
+        'wh-questions', 'A1', 'WH-Questions', '英文 A1｜WH 疑問詞',
+        'who、what、when、where、why、how 是常見的疑問詞，用來組成 WH-questions。疑問詞放在句首，後面常接 be 或 do／does。',
+        'who、what、when、where、why、how：疑問詞對照與例句，附中文、朗讀與 PDF。',
+        'who 當主詞時，後面直接接動詞，不必再加 do：Who is coming?\n問習慣或事實時，用 do／does：Where do you live? What does she study?',
+        [
+            G('疑問詞', '六個常用詞', [
+                ['誰', 'who', '誰'],
+                ['什麼', 'what', '什麼'],
+                ['何時', 'when', '什麼時候'],
+                ['哪裡', 'where', '哪裡'],
+                ['為什麼', 'why', '為什麼'],
+                ['如何', 'how', '怎麼／如何'],
+            ], [
+                ['Who is coming?', '誰要來？'],
+                ['What are you studying?', '你在學什麼？'],
+                ['When does the class start?', '課幾點開始？'],
+                ['Where do you live?', '你住哪裡？'],
+            ]),
+            G('人與事物', 'who / what', [
+                ['誰來', 'Who is coming?', '誰要來？'],
+                ['學什麼', 'What are you studying?', '你在學什麼？'],
+                ['那是什麼', 'What is this?', '這是什麼？'],
+                ['誰教', 'Who teaches you?', '誰教你？'],
+            ], [
+                ['Who is coming?', '誰要來？'],
+                ['What are you studying?', '你在學什麼？'],
+                ['What is this?', '這是什麼？'],
+                ['Who teaches English?', '誰教英文？'],
+            ]),
+            G('時間、地方、原因、方式', 'when / where / why / how', [
+                ['何時開始', 'When does the class start?', '課幾點開始？'],
+                ['住哪裡', 'Where do you live?', '你住哪裡？'],
+                ['為什麼學', 'Why are you learning English?', '你為什麼學英文？'],
+                ['怎麼練習', 'How do you practice?', '你怎麼練習？'],
+            ], [
+                ['When does the class start?', '課幾點開始？'],
+                ['Where do you live?', '你住哪裡？'],
+                ['Why are you learning English?', '你為什麼學英文？'],
+                ['How do you practice?', '你怎麼練習？'],
+            ]),
+        ],
+    ),
+    L(
         'can', 'A1', 'Can', '英文 A1｜can',
         'can 表示做得到。後面直接接原形動詞，不隨人稱變化。',
         'can、cannot 和疑問句，附例句、中文、朗讀與 PDF。',

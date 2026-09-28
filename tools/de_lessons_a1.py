@@ -130,6 +130,49 @@ LESSONS = [
         ],
     ),
     L(
+        'w-fragen', 'A1', 'W-Fragen', '德文 A1｜W 疑問詞',
+        'wer、was、wann、wo、warum、wie 是常見的 W 疑問詞。疑問詞放在第一位，動詞緊接在後。',
+        'wer、was、wann、wo、warum、wie：疑問詞對照與例句，附中文、朗讀與 PDF。',
+        '德文問句裡，疑問詞後面立刻是變位動詞：Wo wohnst du?\n問「去哪裡」用 wohin，問「從哪裡來」用 woher。',
+        [
+            G('疑問詞', '六個常用詞', [
+                ['誰', 'wer', '誰'],
+                ['什麼', 'was', '什麼'],
+                ['何時', 'wann', '什麼時候'],
+                ['哪裡', 'wo', '哪裡'],
+                ['為什麼', 'warum', '為什麼'],
+                ['如何', 'wie', '怎麼／如何'],
+            ], [
+                ['Wer kommt?', '誰要來？'],
+                ['Was lernst du?', '你在學什麼？'],
+                ['Wann beginnt der Unterricht?', '課幾點開始？'],
+                ['Wo wohnst du?', '你住哪裡？'],
+            ]),
+            G('人與事物', 'wer / was', [
+                ['誰來', 'Wer kommt?', '誰要來？'],
+                ['學什麼', 'Was lernst du?', '你在學什麼？'],
+                ['那是什麼', 'Was ist das?', '這是什麼？'],
+                ['誰教', 'Wer unterrichtet dich?', '誰教你？'],
+            ], [
+                ['Wer kommt?', '誰要來？'],
+                ['Was lernst du?', '你在學什麼？'],
+                ['Was ist das?', '這是什麼？'],
+                ['Wer unterrichtet Englisch?', '誰教英文？'],
+            ]),
+            G('時間、地方、原因、方式', 'wann / wo / warum / wie', [
+                ['何時開始', 'Wann beginnt der Unterricht?', '課幾點開始？'],
+                ['住哪裡', 'Wo wohnst du?', '你住哪裡？'],
+                ['為什麼學', 'Warum lernst du Englisch?', '你為什麼學英文？'],
+                ['怎麼練習', 'Wie übst du?', '你怎麼練習？'],
+            ], [
+                ['Wann beginnt der Unterricht?', '課幾點開始？'],
+                ['Wo wohnst du?', '你住哪裡？'],
+                ['Warum lernst du Englisch?', '你為什麼學英文？'],
+                ['Wie übst du?', '你怎麼練習？'],
+            ]),
+        ],
+    ),
+    L(
         'artikel', 'A1', 'Artikel', '德文 A1｜冠詞與名詞性別',
         '德文名詞有陽性、陰性、中性。冠詞要跟性別一起記，名詞第一個字母大寫。',
         'der、die、das 與 ein、eine：主格性別、不加冠詞的職業，附例句、中文、朗讀與 PDF。',

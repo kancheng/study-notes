@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日疑問詞對照：who、what、when、where、why、how 與例句。點選可朗讀。">
+<title>疑問詞對照｜四語筆記</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#445a7a;color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1180px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:#445a7a;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #445a7a;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#445a7a;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #445a7a;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:920px}
+th{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}
+.th-en{color:#17355d}
+.th-de{color:#1d6a4f}
+.th-fr{color:#b3482f}
+.th-ja{color:#8d3a55}
+td{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}
+.zh{color:#53647c;font-weight:650;white-space:nowrap}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.say .word{font-size:1.05rem;font-weight:750}
+.say.en,.th-en,.say.en .word{color:#17355d}
+.say.de,.th-de,.say.de .word{color:#1d6a4f}
+.say.fr,.th-fr,.say.fr .word{color:#b3482f}
+.say.ja,.th-ja,.say.ja .word{color:#8d3a55}
+.sub{font-size:.9rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.82rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #445a7a;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip a{color:#445a7a;font-weight:650;text-decoration:none}
+.tip a:hover,.tip a:focus-visible{text-decoration:underline}
+footer{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:700px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　疑問詞對照</div></header>
+<main>
+<h1>四語疑問詞對照</h1>
+<p class="note">who、what、when、where、why、how 與德、法、日對應詞，並附六句平行例句。點選任一格可朗讀；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+<nav class="toc" aria-label="章節"><a href="#wh-words">疑問詞</a><a href="#wh-examples">例句對照</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="wh-words">
+<h2>疑問詞</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">誰</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="who" data-lang="en-US"><span class="word">who</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wer" data-lang="de-DE"><span class="word">wer</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="qui" data-lang="fr-FR"><span class="word">qui</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="だれ" data-lang="ja-JP"><span class="word">だれ</span><span class="sub"><span class="hira">だれ</span>　<span class="kata">ダレ</span></span><span class="roma">dare</span></button></td></tr><tr class="vocab-row"><td class="zh">什麼</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="what" data-lang="en-US"><span class="word">what</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="was" data-lang="de-DE"><span class="word">was</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="que / qu’est-ce que" data-lang="fr-FR"><span class="word">que / qu’est-ce que</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="何" data-lang="ja-JP"><span class="word">何</span><span class="sub"><span class="hira">なに</span>　<span class="kata">ナニ</span></span><span class="roma">nani</span></button></td></tr><tr class="vocab-row"><td class="zh">何時</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="when" data-lang="en-US"><span class="word">when</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wann" data-lang="de-DE"><span class="word">wann</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="quand" data-lang="fr-FR"><span class="word">quand</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="いつ" data-lang="ja-JP"><span class="word">いつ</span><span class="sub"><span class="hira">いつ</span>　<span class="kata">イツ</span></span><span class="roma">itsu</span></button></td></tr><tr class="vocab-row"><td class="zh">哪裡</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="where" data-lang="en-US"><span class="word">where</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wo" data-lang="de-DE"><span class="word">wo</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="où" data-lang="fr-FR"><span class="word">où</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="どこ" data-lang="ja-JP"><span class="word">どこ</span><span class="sub"><span class="hira">どこ</span>　<span class="kata">ドコ</span></span><span class="roma">doko</span></button></td></tr><tr class="vocab-row"><td class="zh">為什麼</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="why" data-lang="en-US"><span class="word">why</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="warum" data-lang="de-DE"><span class="word">warum</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="pourquoi" data-lang="fr-FR"><span class="word">pourquoi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="なぜ" data-lang="ja-JP"><span class="word">なぜ</span><span class="sub"><span class="hira">なぜ</span>　<span class="kata">ナゼ</span></span><span class="roma">naze</span></button></td></tr><tr class="vocab-row"><td class="zh">如何</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="how" data-lang="en-US"><span class="word">how</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wie" data-lang="de-DE"><span class="word">wie</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="comment" data-lang="fr-FR"><span class="word">comment</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="どう" data-lang="ja-JP"><span class="word">どう</span><span class="sub"><span class="hira">どう</span>　<span class="kata">ドウ</span></span><span class="roma">dou</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="wh-examples">
+<h2>例句對照</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">誰要來？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Who is coming?" data-lang="en-US"><span class="word">Who is coming?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wer kommt?" data-lang="de-DE"><span class="word">Wer kommt?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Qui vient ?" data-lang="fr-FR"><span class="word">Qui vient ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="誰が来ますか。" data-lang="ja-JP"><span class="word">誰が来ますか。</span><span class="sub"><span class="hira">だれ が きます か。</span>　<span class="kata">ダレ ガ キマス カ。</span></span><span class="roma">Dare ga kimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">你在學什麼？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="What are you studying?" data-lang="en-US"><span class="word">What are you studying?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Was lernst du?" data-lang="de-DE"><span class="word">Was lernst du?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Qu’est-ce que tu étudies ?" data-lang="fr-FR"><span class="word">Qu’est-ce que tu étudies ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="何を勉強しますか。" data-lang="ja-JP"><span class="word">何を勉強しますか。</span><span class="sub"><span class="hira">なに を べんきょう します か。</span>　<span class="kata">ナニ ヲ ベンキョウ シマス カ。</span></span><span class="roma">Nani o benkyou shimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">課幾點開始？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="When does the class start?" data-lang="en-US"><span class="word">When does the class start?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wann beginnt der Unterricht?" data-lang="de-DE"><span class="word">Wann beginnt der Unterricht?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Quand commence le cours ?" data-lang="fr-FR"><span class="word">Quand commence le cours ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="授業はいつ始まりますか。" data-lang="ja-JP"><span class="word">授業はいつ始まりますか。</span><span class="sub"><span class="hira">じゅぎょう は いつ はじまります か。</span>　<span class="kata">ジュギョウ ハ イツ ハジマリマス カ。</span></span><span class="roma">Jugyou wa itsu hajimarimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">你住哪裡？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Where do you live?" data-lang="en-US"><span class="word">Where do you live?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wo wohnst du?" data-lang="de-DE"><span class="word">Wo wohnst du?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Où habites-tu ?" data-lang="fr-FR"><span class="word">Où habites-tu ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="どこに住みますか。" data-lang="ja-JP"><span class="word">どこに住みますか。</span><span class="sub"><span class="hira">どこ に すみます か。</span>　<span class="kata">ドコ ニ スミマス カ。</span></span><span class="roma">Doko ni sumimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">你為什麼學英文？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Why are you learning English?" data-lang="en-US"><span class="word">Why are you learning English?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Warum lernst du Englisch?" data-lang="de-DE"><span class="word">Warum lernst du Englisch?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Pourquoi apprends-tu l’anglais ?" data-lang="fr-FR"><span class="word">Pourquoi apprends-tu l’anglais ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="なぜ英語を勉強しますか。" data-lang="ja-JP"><span class="word">なぜ英語を勉強しますか。</span><span class="sub"><span class="hira">なぜ えいご を べんきょう します か。</span>　<span class="kata">ナゼ エイゴ ヲ ベンキョウ シマス カ。</span></span><span class="roma">Naze eigo o benkyou shimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">你怎麼練習？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="How do you practice?" data-lang="en-US"><span class="word">How do you practice?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wie übst du?" data-lang="de-DE"><span class="word">Wie übst du?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Comment est-ce que tu t’entraînes ?" data-lang="fr-FR"><span class="word">Comment est-ce que tu t’entraînes ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="どうやって練習しますか。" data-lang="ja-JP"><span class="word">どうやって練習しますか。</span><span class="sub"><span class="hira">どうやって れんしゅう します か。</span>　<span class="kata">ドウヤッテ レンシュウ シマス カ。</span></span><span class="roma">Douyatte renshuu shimasu ka.</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>各國語法的語序不同：英文常是疑問詞＋助動詞＋主詞；德文是疑問詞＋動詞；法文口語常用 est-ce que；日文疑問詞可在句中，句尾加「か」。各語言專頁：<a href="../../en/wh-questions/">英文</a> · <a href="../../de/w-fragen/">德文</a> · <a href="../../fr/interrogatifs/">法文</a> · <a href="../../ja/gimonshi/">日文</a>。</div>
+</main>
+<footer>疑問詞對照｜四語筆記</footer>
+<script>
+
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
