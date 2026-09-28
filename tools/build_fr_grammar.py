@@ -341,6 +341,13 @@ h2{{font-size:1.35rem;margin:36px 0 6px}}
 <div class="eyebrow">FRANÇAIS · 法文</div>
 <h1>法文筆記</h1>
 <p>基礎文法依歐洲語言共同參考架構（CECRL）排列，對應 DELF A1、DELF A2、DELF B1 與 DELF B2。每一課都有對照表、例句、中文翻譯、朗讀與 PDF。</p>
+<h2>字母表</h2>
+<article class="item">
+<div class="meta">字母 · 跟讀</div>
+<h3 lang="fr">Alphabet</h3>
+<p>法文字母 A–Z，以及重音與合字：名稱與朗讀。</p>
+<a class="button" href="./alphabet/">進入 Alphabet →</a>
+</article>
 {''.join(sections)}
 </main>
 </body>

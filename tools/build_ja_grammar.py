@@ -503,6 +503,13 @@ h2{{font-size:1.35rem;margin:36px 0 6px}}
 <h1>日文筆記</h1>
 <p>基礎文法依日本語能力試驗（JLPT）排列，從 N5 到 N2。每一課都有對照表。例句寫出漢字、假名與平文式羅馬拼音，並可朗讀、下載 PDF。</p>
 <p>假名依詞分開。助詞は、を、へ的羅馬拼音是 wa、o、e。長音照假名寫成 ou、oo、ei、ii、uu；片假名的長音符號寫成雙母音。</p>
+<h2>字母表</h2>
+<article class="item">
+<div class="meta">五十音 · 跟讀</div>
+<h3 lang="ja">五十音</h3>
+<p>平假名、片假名對照：清音、濁音、半濁音、拗音與羅馬拼音。</p>
+<a class="button" href="./gojuon/">進入 五十音 →</a>
+</article>
 {''.join(sections)}
 </main>
 </body>

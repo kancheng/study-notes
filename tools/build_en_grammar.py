@@ -329,6 +329,13 @@ h2{{font-size:1.35rem;margin:36px 0 6px}}
 <div class="eyebrow">ENGLISH · 英文</div>
 <h1>英文筆記</h1>
 <p>基礎文法依使用能力排列，從 A1 單句到 B2 句型改寫。每一課都有對照表、例句、中文翻譯、朗讀與 PDF。</p>
+<h2>字母表</h2>
+<article class="item">
+<div class="meta">字母 · 跟讀</div>
+<h3>Alphabet</h3>
+<p>英文字母 A–Z：大小寫對照、字母名稱與朗讀。</p>
+<a class="button" href="./alphabet/">進入 Alphabet →</a>
+</article>
 {''.join(sections)}
 </main>
 </body>

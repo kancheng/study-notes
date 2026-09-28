@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="德文使用拉丁字母，另有 Ä、Ö、Ü 與 ß。點選可聽字母名稱。">
+<title>Alphabet｜德文字母</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.35rem;margin:36px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px}
+.tile{background:white;border:1px solid #dce4ef;border-radius:14px;padding:14px 10px;text-align:center;box-shadow:0 6px 18px #142f520c;cursor:pointer}
+.tile:hover,.tile:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.glyph{font-size:1.85rem;font-weight:800;color:#1d6a4f;line-height:1.2}
+.pair{font-size:1.05rem;color:#3d4d63;margin-top:4px}
+.roma,.name{font-size:.88rem;color:#6a5870;margin-top:4px}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px}
+.kana-wrap{overflow-x:auto;margin:12px 0 8px}
+.kana{border-collapse:collapse;width:100%;min-width:640px;background:white;border:1px solid #dce4ef;border-radius:12px;overflow:hidden}
+.kana th,.kana td{border:1px solid #dce4ef;padding:10px 8px;text-align:center;vertical-align:middle}
+.kana th{background:#f8eef2;font-size:.9rem;color:#5c3a46}
+.kana td.rowhead{background:#f8eef2;font-weight:750;white-space:nowrap}
+.kana .empty{background:#faf7f8;color:#b7a8ae}
+.cell{cursor:pointer;border-radius:8px}
+.cell:hover,.cell:focus-visible{outline:2px solid #1d6a4f;outline-offset:-2px}
+.cell .hira{font-size:1.45rem;font-weight:800;color:#1d6a4f;line-height:1.15}
+.cell .kata{font-size:1.05rem;color:#3d4d63;margin-top:2px}
+.cell .roma{font-size:.82rem;color:#6a5870;margin-top:2px}
+.accent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.glyph{font-size:1.55rem}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　Alphabet</div></header>
+<main>
+<h1>德文字母表</h1>
+<p class="note">德文使用拉丁字母，另有 Ä、Ö、Ü 與 ß。點選可聽字母名稱。</p>
+
+<h2>基本字母</h2>
+<p class="note">德文字母以拉丁字母為基礎。名稱依德文讀法標註。</p>
+<div class="grid"><button class="tile" type="button" data-say="A" data-lang="de-DE" aria-label="播放 A"><div class="glyph">A</div><div class="pair">a</div><div class="name">ah</div></button><button class="tile" type="button" data-say="B" data-lang="de-DE" aria-label="播放 B"><div class="glyph">B</div><div class="pair">b</div><div class="name">be</div></button><button class="tile" type="button" data-say="C" data-lang="de-DE" aria-label="播放 C"><div class="glyph">C</div><div class="pair">c</div><div class="name">tse</div></button><button class="tile" type="button" data-say="D" data-lang="de-DE" aria-label="播放 D"><div class="glyph">D</div><div class="pair">d</div><div class="name">de</div></button><button class="tile" type="button" data-say="E" data-lang="de-DE" aria-label="播放 E"><div class="glyph">E</div><div class="pair">e</div><div class="name">eh</div></button><button class="tile" type="button" data-say="F" data-lang="de-DE" aria-label="播放 F"><div class="glyph">F</div><div class="pair">f</div><div class="name">ef</div></button><button class="tile" type="button" data-say="G" data-lang="de-DE" aria-label="播放 G"><div class="glyph">G</div><div class="pair">g</div><div class="name">ge</div></button><button class="tile" type="button" data-say="H" data-lang="de-DE" aria-label="播放 H"><div class="glyph">H</div><div class="pair">h</div><div class="name">ha</div></button><button class="tile" type="button" data-say="I" data-lang="de-DE" aria-label="播放 I"><div class="glyph">I</div><div class="pair">i</div><div class="name">i</div></button><button class="tile" type="button" data-say="J" data-lang="de-DE" aria-label="播放 J"><div class="glyph">J</div><div class="pair">j</div><div class="name">jot</div></button><button class="tile" type="button" data-say="K" data-lang="de-DE" aria-label="播放 K"><div class="glyph">K</div><div class="pair">k</div><div class="name">ka</div></button><button class="tile" type="button" data-say="L" data-lang="de-DE" aria-label="播放 L"><div class="glyph">L</div><div class="pair">l</div><div class="name">el</div></button><button class="tile" type="button" data-say="M" data-lang="de-DE" aria-label="播放 M"><div class="glyph">M</div><div class="pair">m</div><div class="name">em</div></button><button class="tile" type="button" data-say="N" data-lang="de-DE" aria-label="播放 N"><div class="glyph">N</div><div class="pair">n</div><div class="name">en</div></button><button class="tile" type="button" data-say="O" data-lang="de-DE" aria-label="播放 O"><div class="glyph">O</div><div class="pair">o</div><div class="name">oh</div></button><button class="tile" type="button" data-say="P" data-lang="de-DE" aria-label="播放 P"><div class="glyph">P</div><div class="pair">p</div><div class="name">pe</div></button><button class="tile" type="button" data-say="Q" data-lang="de-DE" aria-label="播放 Q"><div class="glyph">Q</div><div class="pair">q</div><div class="name">ku</div></button><button class="tile" type="button" data-say="R" data-lang="de-DE" aria-label="播放 R"><div class="glyph">R</div><div class="pair">r</div><div class="name">er</div></button><button class="tile" type="button" data-say="S" data-lang="de-DE" aria-label="播放 S"><div class="glyph">S</div><div class="pair">s</div><div class="name">es</div></button><button class="tile" type="button" data-say="T" data-lang="de-DE" aria-label="播放 T"><div class="glyph">T</div><div class="pair">t</div><div class="name">te</div></button><button class="tile" type="button" data-say="U" data-lang="de-DE" aria-label="播放 U"><div class="glyph">U</div><div class="pair">u</div><div class="name">u</div></button><button class="tile" type="button" data-say="V" data-lang="de-DE" aria-label="播放 V"><div class="glyph">V</div><div class="pair">v</div><div class="name">fau</div></button><button class="tile" type="button" data-say="W" data-lang="de-DE" aria-label="播放 W"><div class="glyph">W</div><div class="pair">w</div><div class="name">ve</div></button><button class="tile" type="button" data-say="X" data-lang="de-DE" aria-label="播放 X"><div class="glyph">X</div><div class="pair">x</div><div class="name">iks</div></button><button class="tile" type="button" data-say="Y" data-lang="de-DE" aria-label="播放 Y"><div class="glyph">Y</div><div class="pair">y</div><div class="name">üpsilon</div></button><button class="tile" type="button" data-say="Z" data-lang="de-DE" aria-label="播放 Z"><div class="glyph">Z</div><div class="pair">z</div><div class="name">tsett</div></button></div>
+<h2>變音與 ß</h2>
+<p class="note">Ä、Ö、Ü 是變音字母（Umlaut）。ß（Eszett）沒有對應的大寫傳統寫法時可寫成 SS；正式大寫也可用 ẞ。</p>
+<div class="grid"><button class="tile" type="button" data-say="Ä" data-lang="de-DE" aria-label="播放 Ä"><div class="glyph">Ä</div><div class="pair">ä</div><div class="name">a-umlaut</div></button><button class="tile" type="button" data-say="Ö" data-lang="de-DE" aria-label="播放 Ö"><div class="glyph">Ö</div><div class="pair">ö</div><div class="name">o-umlaut</div></button><button class="tile" type="button" data-say="Ü" data-lang="de-DE" aria-label="播放 Ü"><div class="glyph">Ü</div><div class="pair">ü</div><div class="name">u-umlaut</div></button><button class="tile" type="button" data-say="ß" data-lang="de-DE" aria-label="播放 ẞ"><div class="glyph">ẞ</div><div class="pair">ß</div><div class="name">Eszett / scharfes S</div></button></div>
+<div class="tip"><strong>補充：</strong>名詞第一個字母要大寫。字典排序時，ä / ö / ü 常當作 a / o / u，ß 當作 ss。</div>
+
+<div class="tip"><strong>用法提醒：</strong>點選字母或假名可朗讀。發音品質依裝置內安裝的語音而異。</div>
+</main>
+<footer>Alphabet｜德文字母</footer>
+<script>
+
+function speak(text, lang) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  let started = false;
+  const run = () => {
+    if (started) return;
+    started = true;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = 0.85;
+    const prefix = lang.toLowerCase().replace('_','-').slice(0, 2);
+    const voice = speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_','-').startsWith(prefix));
+    if (voice) u.voice = voice;
+    speechSynthesis.speak(u);
+  };
+  if (speechSynthesis.getVoices().length) run();
+  else {
+    speechSynthesis.addEventListener('voiceschanged', run, { once: true });
+    setTimeout(run, 300);
+  }
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (b) speak(b.dataset.say, b.dataset.lang || 'en-US');
+});
+
+</script>
+</body>
+</html>
