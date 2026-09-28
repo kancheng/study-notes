@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日打招呼三大動詞對照：be／sein／être／です，have／haben／avoir／あります，be called／heißen／s’appeler／と言います。">
+<title>打招呼動詞對照｜四語筆記</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#445a7a;color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1180px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:#445a7a;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #445a7a;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#445a7a;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #445a7a;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:920px}
+th{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}
+.th-en{color:#17355d}
+.th-de{color:#1d6a4f}
+.th-fr{color:#b3482f}
+.th-ja{color:#8d3a55}
+td{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}
+.zh{color:#53647c;font-weight:650;white-space:nowrap}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.say .word{font-size:1.05rem;font-weight:750}
+.say.en,.th-en,.say.en .word{color:#17355d}
+.say.de,.th-de,.say.de .word{color:#1d6a4f}
+.say.fr,.th-fr,.say.fr .word{color:#b3482f}
+.say.ja,.th-ja,.say.ja .word{color:#8d3a55}
+.sub{font-size:.9rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.82rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #445a7a;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip a{color:#445a7a;font-weight:650;text-decoration:none}
+.tip a:hover,.tip a:focus-visible{text-decoration:underline}
+footer{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:700px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　打招呼動詞對照</div></header>
+<main>
+<h1>四語打招呼動詞對照</h1>
+<p class="note">對應各語言入門三大動詞：be／sein／être／です，have／haben／avoir／あります・います，be called／heißen／s’appeler／と言います。含人稱變位與平行例句；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+<nav class="toc" aria-label="章節"><a href="#hello-verbs">三大動詞</a><a href="#hello-be">是 · 人稱對照</a><a href="#hello-have">有 · 人稱對照</a><a href="#hello-name">叫做 · 人稱對照</a><a href="#hello-examples">三大動詞例句</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="hello-verbs">
+<h2>三大動詞</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="be" data-lang="en-US"><span class="word">be</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sein" data-lang="de-DE"><span class="word">sein</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="être" data-lang="fr-FR"><span class="word">être</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="です" data-lang="ja-JP"><span class="word">です</span><span class="sub"><span class="hira">です</span>　<span class="kata">デス</span></span><span class="roma">desu</span></button></td></tr><tr class="vocab-row"><td class="zh">有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="have" data-lang="en-US"><span class="word">have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="haben" data-lang="de-DE"><span class="word">haben</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="avoir" data-lang="fr-FR"><span class="word">avoir</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="あります／います" data-lang="ja-JP"><span class="word">あります／います</span><span class="sub"><span class="hira">あります／います</span>　<span class="kata">アリマス／イマス</span></span><span class="roma">arimasu / imasu</span></button></td></tr><tr class="vocab-row"><td class="zh">叫做</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="be called" data-lang="en-US"><span class="word">be called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="heißen" data-lang="de-DE"><span class="word">heißen</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="s’appeler" data-lang="fr-FR"><span class="word">s’appeler</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="と言います" data-lang="ja-JP"><span class="word">と言います</span><span class="sub"><span class="hira">と いいます</span>　<span class="kata">ト イイマス</span></span><span class="roma">to iimasu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="hello-be">
+<h2>是 · 人稱對照</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">我是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am" data-lang="en-US"><span class="word">I am</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ich bin" data-lang="de-DE"><span class="word">ich bin</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="je suis" data-lang="fr-FR"><span class="word">je suis</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私は学生です" data-lang="ja-JP"><span class="word">私は学生です</span><span class="sub"><span class="hira">わたし は がくせい です</span>　<span class="kata">ワタシ ハ ガクセイ デス</span></span><span class="roma">watashi wa gakusei desu</span></button></td></tr><tr class="vocab-row"><td class="zh">你是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you are" data-lang="en-US"><span class="word">you are</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="du bist" data-lang="de-DE"><span class="word">du bist</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="tu es" data-lang="fr-FR"><span class="word">tu es</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="あなたは先生です" data-lang="ja-JP"><span class="word">あなたは先生です</span><span class="sub"><span class="hira">あなた は せんせい です</span>　<span class="kata">アナタ ハ センセイ デス</span></span><span class="roma">anata wa sensei desu</span></button></td></tr><tr class="vocab-row"><td class="zh">他／她是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="he / she is" data-lang="en-US"><span class="word">he / she is</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="er / sie ist" data-lang="de-DE"><span class="word">er / sie ist</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="il / elle est" data-lang="fr-FR"><span class="word">il / elle est</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼女はフランス人です" data-lang="ja-JP"><span class="word">彼女はフランス人です</span><span class="sub"><span class="hira">かのじょ は フランスじん です</span>　<span class="kata">カノジョ ハ フランスジン デス</span></span><span class="roma">kanojo wa furansujin desu</span></button></td></tr><tr class="vocab-row"><td class="zh">我們是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="we are" data-lang="en-US"><span class="word">we are</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wir sind" data-lang="de-DE"><span class="word">wir sind</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="nous sommes" data-lang="fr-FR"><span class="word">nous sommes</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私たちは学生です" data-lang="ja-JP"><span class="word">私たちは学生です</span><span class="sub"><span class="hira">わたしたち は がくせい です</span>　<span class="kata">ワタシタチ ハ ガクセイ デス</span></span><span class="roma">watashitachi wa gakusei desu</span></button></td></tr><tr class="vocab-row"><td class="zh">你們是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you are" data-lang="en-US"><span class="word">you are</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ihr seid" data-lang="de-DE"><span class="word">ihr seid</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vous êtes" data-lang="fr-FR"><span class="word">vous êtes</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="あなたたちは学生です" data-lang="ja-JP"><span class="word">あなたたちは学生です</span><span class="sub"><span class="hira">あなたたち は がくせい です</span>　<span class="kata">アナタタチ ハ ガクセイ デス</span></span><span class="roma">anatatachi wa gakusei desu</span></button></td></tr><tr class="vocab-row"><td class="zh">他們是</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="they are" data-lang="en-US"><span class="word">they are</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sie sind" data-lang="de-DE"><span class="word">sie sind</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="ils / elles sont" data-lang="fr-FR"><span class="word">ils / elles sont</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼らは学生です" data-lang="ja-JP"><span class="word">彼らは学生です</span><span class="sub"><span class="hira">かれら は がくせい です</span>　<span class="kata">カレラ ハ ガクセイ デス</span></span><span class="roma">karera wa gakusei desu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="hello-have">
+<h2>有 · 人稱對照</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">我有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I have" data-lang="en-US"><span class="word">I have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ich habe" data-lang="de-DE"><span class="word">ich habe</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="j’ai" data-lang="fr-FR"><span class="word">j’ai</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="本があります" data-lang="ja-JP"><span class="word">本があります</span><span class="sub"><span class="hira">ほん が あります</span>　<span class="kata">ホン ガ アリマス</span></span><span class="roma">hon ga arimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">你有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you have" data-lang="en-US"><span class="word">you have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="du hast" data-lang="de-DE"><span class="word">du hast</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="tu as" data-lang="fr-FR"><span class="word">tu as</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="ペンはありますか" data-lang="ja-JP"><span class="word">ペンはありますか</span><span class="sub"><span class="hira">ペン は あります か</span>　<span class="kata">ペン ハ アリマス カ</span></span><span class="roma">pen wa arimasu ka</span></button></td></tr><tr class="vocab-row"><td class="zh">他／她有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="he / she has" data-lang="en-US"><span class="word">he / she has</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="er / sie hat" data-lang="de-DE"><span class="word">er / sie hat</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="il / elle a" data-lang="fr-FR"><span class="word">il / elle a</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼には兄弟がいます" data-lang="ja-JP"><span class="word">彼には兄弟がいます</span><span class="sub"><span class="hira">かれ に は きょうだい が います</span>　<span class="kata">カレ ニ ハ キョウダイ ガ イマス</span></span><span class="roma">kare ni wa kyoudai ga imasu</span></button></td></tr><tr class="vocab-row"><td class="zh">我們有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="we have" data-lang="en-US"><span class="word">we have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wir haben" data-lang="de-DE"><span class="word">wir haben</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="nous avons" data-lang="fr-FR"><span class="word">nous avons</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="授業があります" data-lang="ja-JP"><span class="word">授業があります</span><span class="sub"><span class="hira">じゅぎょう が あります</span>　<span class="kata">ジュギョウ ガ アリマス</span></span><span class="roma">jugyou ga arimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">你們有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you have" data-lang="en-US"><span class="word">you have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ihr habt" data-lang="de-DE"><span class="word">ihr habt</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vous avez" data-lang="fr-FR"><span class="word">vous avez</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="質問がありますか" data-lang="ja-JP"><span class="word">質問がありますか</span><span class="sub"><span class="hira">しつもん が あります か</span>　<span class="kata">シツモン ガ アリマス カ</span></span><span class="roma">shitsumon ga arimasu ka</span></button></td></tr><tr class="vocab-row"><td class="zh">他們有</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="they have" data-lang="en-US"><span class="word">they have</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sie haben" data-lang="de-DE"><span class="word">sie haben</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="ils / elles ont" data-lang="fr-FR"><span class="word">ils / elles ont</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼らには友達がいます" data-lang="ja-JP"><span class="word">彼らには友達がいます</span><span class="sub"><span class="hira">かれら に は ともだち が います</span>　<span class="kata">カレラ ニ ハ トモダチ ガ イマス</span></span><span class="roma">karera ni wa tomodachi ga imasu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="hello-name">
+<h2>叫做 · 人稱對照</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">我叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am called" data-lang="en-US"><span class="word">I am called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ich heiße" data-lang="de-DE"><span class="word">ich heiße</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="je m’appelle" data-lang="fr-FR"><span class="word">je m’appelle</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私はハオチェンと言います" data-lang="ja-JP"><span class="word">私はハオチェンと言います</span><span class="sub"><span class="hira">わたし は ハオチェン と いいます</span>　<span class="kata">ワタシ ハ ハオチェン ト イイマス</span></span><span class="roma">watashi wa haochen to iimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">你叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you are called" data-lang="en-US"><span class="word">you are called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="du heißt" data-lang="de-DE"><span class="word">du heißt</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="tu t’appelles" data-lang="fr-FR"><span class="word">tu t’appelles</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="お名前は何ですか" data-lang="ja-JP"><span class="word">お名前は何ですか</span><span class="sub"><span class="hira">おなまえ は なん です か</span>　<span class="kata">オナマエ ハ ナン デス カ</span></span><span class="roma">onamae wa nan desu ka</span></button></td></tr><tr class="vocab-row"><td class="zh">他／她叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="he / she is called" data-lang="en-US"><span class="word">he / she is called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="er / sie heißt" data-lang="de-DE"><span class="word">er / sie heißt</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="il / elle s’appelle" data-lang="fr-FR"><span class="word">il / elle s’appelle</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼女はマリーと言います" data-lang="ja-JP"><span class="word">彼女はマリーと言います</span><span class="sub"><span class="hira">かのじょ は マリー と いいます</span>　<span class="kata">カノジョ ハ マリー ト イイマス</span></span><span class="roma">kanojo wa marii to iimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">我們叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="we are called" data-lang="en-US"><span class="word">we are called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="wir heißen" data-lang="de-DE"><span class="word">wir heißen</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="nous nous appelons" data-lang="fr-FR"><span class="word">nous nous appelons</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私たちは青組と言います" data-lang="ja-JP"><span class="word">私たちは青組と言います</span><span class="sub"><span class="hira">わたしたち は あおぐみ と いいます</span>　<span class="kata">ワタシタチ ハ アオグミ ト イイマス</span></span><span class="roma">watashitachi wa aogumi to iimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">你們叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="you are called" data-lang="en-US"><span class="word">you are called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="ihr heißt" data-lang="de-DE"><span class="word">ihr heißt</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vous vous appelez" data-lang="fr-FR"><span class="word">vous vous appelez</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="あなたたちは青組と言います" data-lang="ja-JP"><span class="word">あなたたちは青組と言います</span><span class="sub"><span class="hira">あなたたち は あおぐみ と いいます</span>　<span class="kata">アナタタチ ハ アオグミ ト イイマス</span></span><span class="roma">anatatachi wa aogumi to iimasu</span></button></td></tr><tr class="vocab-row"><td class="zh">他們叫</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="they are called" data-lang="en-US"><span class="word">they are called</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sie heißen" data-lang="de-DE"><span class="word">sie heißen</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="ils / elles s’appellent" data-lang="fr-FR"><span class="word">ils / elles s’appellent</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼らはポールとマークと言います" data-lang="ja-JP"><span class="word">彼らはポールとマークと言います</span><span class="sub"><span class="hira">かれら は ポール と マーク と いいます</span>　<span class="kata">カレラ ハ ポール ト マーク ト イイマス</span></span><span class="roma">karera wa pooru to maaku to iimasu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="hello-examples">
+<h2>三大動詞例句</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">我是學生。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am a student." data-lang="en-US"><span class="word">I am a student.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich bin Student." data-lang="de-DE"><span class="word">Ich bin Student.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je suis étudiant." data-lang="fr-FR"><span class="word">Je suis étudiant.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私は学生です。" data-lang="ja-JP"><span class="word">私は学生です。</span><span class="sub"><span class="hira">わたし は がくせい です。</span>　<span class="kata">ワタシ ハ ガクセイ デス。</span></span><span class="roma">Watashi wa gakusei desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">你準備好了嗎？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Are you ready?" data-lang="en-US"><span class="word">Are you ready?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Bist du bereit?" data-lang="de-DE"><span class="word">Bist du bereit?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Tu es prêt ?" data-lang="fr-FR"><span class="word">Tu es prêt ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="準備はいいですか。" data-lang="ja-JP"><span class="word">準備はいいですか。</span><span class="sub"><span class="hira">じゅんび は いい です か。</span>　<span class="kata">ジュンビ ハ イイ デス カ。</span></span><span class="roma">Junbi wa ii desu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">她是法國人。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="She is French." data-lang="en-US"><span class="word">She is French.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Sie ist Französin." data-lang="de-DE"><span class="word">Sie ist Französin.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Elle est française." data-lang="fr-FR"><span class="word">Elle est française.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼女はフランス人です。" data-lang="ja-JP"><span class="word">彼女はフランス人です。</span><span class="sub"><span class="hira">かのじょ は フランスじん です。</span>　<span class="kata">カノジョ ハ フランスジン デス。</span></span><span class="roma">Kanojo wa furansujin desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我們在台北。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="We are in Taipei." data-lang="en-US"><span class="word">We are in Taipei.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wir sind in Taipei." data-lang="de-DE"><span class="word">Wir sind in Taipei.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Nous sommes à Taipei." data-lang="fr-FR"><span class="word">Nous sommes à Taipei.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私たちは台北にいます。" data-lang="ja-JP"><span class="word">私たちは台北にいます。</span><span class="sub"><span class="hira">わたしたち は たいぺい に います。</span>　<span class="kata">ワタシタチ ハ タイペイ ニ イマス。</span></span><span class="roma">Watashitachi wa taipei ni imasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我有一本書。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I have a book." data-lang="en-US"><span class="word">I have a book.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich habe ein Buch." data-lang="de-DE"><span class="word">Ich habe ein Buch.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’ai un livre." data-lang="fr-FR"><span class="word">J’ai un livre.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="本があります。" data-lang="ja-JP"><span class="word">本があります。</span><span class="sub"><span class="hira">ほん が あります。</span>　<span class="kata">ホン ガ アリマス。</span></span><span class="roma">Hon ga arimasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">你有筆嗎？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Do you have a pen?" data-lang="en-US"><span class="word">Do you have a pen?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Hast du einen Stift?" data-lang="de-DE"><span class="word">Hast du einen Stift?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Tu as un stylo ?" data-lang="fr-FR"><span class="word">Tu as un stylo ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="ペンはありますか。" data-lang="ja-JP"><span class="word">ペンはありますか。</span><span class="sub"><span class="hira">ペン は あります か。</span>　<span class="kata">ペン ハ アリマス カ。</span></span><span class="roma">Pen wa arimasu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">他有一個兄弟。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="He has a brother." data-lang="en-US"><span class="word">He has a brother.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Er hat einen Bruder." data-lang="de-DE"><span class="word">Er hat einen Bruder.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Il a un frère." data-lang="fr-FR"><span class="word">Il a un frère.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼には兄弟がいます。" data-lang="ja-JP"><span class="word">彼には兄弟がいます。</span><span class="sub"><span class="hira">かれ に は きょうだい が います。</span>　<span class="kata">カレ ニ ハ キョウダイ ガ イマス。</span></span><span class="roma">Kare ni wa kyoudai ga imasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我叫 Hao-Cheng。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am called Hao-Cheng." data-lang="en-US"><span class="word">I am called Hao-Cheng.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich heiße Hao-Cheng." data-lang="de-DE"><span class="word">Ich heiße Hao-Cheng.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je m’appelle Hao-Cheng." data-lang="fr-FR"><span class="word">Je m’appelle Hao-Cheng.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私はハオチェンと言います。" data-lang="ja-JP"><span class="word">私はハオチェンと言います。</span><span class="sub"><span class="hira">わたし は ハオチェン と いいます。</span>　<span class="kata">ワタシ ハ ハオチェン ト イイマス。</span></span><span class="roma">Watashi wa haochen to iimasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">你叫什麼名字？</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="What are you called?" data-lang="en-US"><span class="word">What are you called?</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wie heißt du?" data-lang="de-DE"><span class="word">Wie heißt du?</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Tu t’appelles comment ?" data-lang="fr-FR"><span class="word">Tu t’appelles comment ?</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="お名前は何ですか。" data-lang="ja-JP"><span class="word">お名前は何ですか。</span><span class="sub"><span class="hira">おなまえ は なん です か。</span>　<span class="kata">オナマエ ハ ナン デス カ。</span></span><span class="roma">Onamae wa nan desu ka.</span></button></td></tr><tr class="vocab-row"><td class="zh">她叫 Marie。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="She is called Marie." data-lang="en-US"><span class="word">She is called Marie.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Sie heißt Marie." data-lang="de-DE"><span class="word">Sie heißt Marie.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Elle s’appelle Marie." data-lang="fr-FR"><span class="word">Elle s’appelle Marie.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="彼女はマリーと言います。" data-lang="ja-JP"><span class="word">彼女はマリーと言います。</span><span class="sub"><span class="hira">かのじょ は マリー と いいます。</span>　<span class="kata">カノジョ ハ マリー ト イイマス。</span></span><span class="roma">Kanojo wa marii to iimasu.</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>日文丁寧體不隨人稱變位；東西「有」用あります，人／動物用います。法文年齡用 avoir（J’ai 25 ans），英文與德文年齡用 be／sein。各語言專頁：<a href="../../en/hello-verbs/">英文</a> · <a href="../../de/hallo-verben/">德文</a> · <a href="../../fr/bonjour-verbes/">法文</a> · <a href="../../ja/konnichiwa-doushi/">日文</a>。</div>
+</main>
+<footer>打招呼動詞對照｜四語筆記</footer>
+<script>
+
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

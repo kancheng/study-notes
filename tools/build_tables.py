@@ -39,6 +39,61 @@ WH_SECTIONS = [
     ('例句對照', WH_EXAMPLES),
 ]
 
+# Hello verbs: be / sein / être / です · have / haben / avoir / あります · be called / heißen / s’appeler / と言います
+HELLO_VERBS = [
+    ('是', 'be', 'sein', 'être', 'です', 'です', 'desu'),
+    ('有', 'have', 'haben', 'avoir', 'あります／います', 'あります／います', 'arimasu / imasu'),
+    ('叫做', 'be called', 'heißen', 's’appeler', 'と言います', 'と いいます', 'to iimasu'),
+]
+
+HELLO_BE = [
+    ('我是', 'I am', 'ich bin', 'je suis', '私は学生です', 'わたし は がくせい です', 'watashi wa gakusei desu'),
+    ('你是', 'you are', 'du bist', 'tu es', 'あなたは先生です', 'あなた は せんせい です', 'anata wa sensei desu'),
+    ('他／她是', 'he / she is', 'er / sie ist', 'il / elle est', '彼女はフランス人です', 'かのじょ は フランスじん です', 'kanojo wa furansujin desu'),
+    ('我們是', 'we are', 'wir sind', 'nous sommes', '私たちは学生です', 'わたしたち は がくせい です', 'watashitachi wa gakusei desu'),
+    ('你們是', 'you are', 'ihr seid', 'vous êtes', 'あなたたちは学生です', 'あなたたち は がくせい です', 'anatatachi wa gakusei desu'),
+    ('他們是', 'they are', 'sie sind', 'ils / elles sont', '彼らは学生です', 'かれら は がくせい です', 'karera wa gakusei desu'),
+]
+
+HELLO_HAVE = [
+    ('我有', 'I have', 'ich habe', 'j’ai', '本があります', 'ほん が あります', 'hon ga arimasu'),
+    ('你有', 'you have', 'du hast', 'tu as', 'ペンはありますか', 'ペン は あります か', 'pen wa arimasu ka'),
+    ('他／她有', 'he / she has', 'er / sie hat', 'il / elle a', '彼には兄弟がいます', 'かれ に は きょうだい が います', 'kare ni wa kyoudai ga imasu'),
+    ('我們有', 'we have', 'wir haben', 'nous avons', '授業があります', 'じゅぎょう が あります', 'jugyou ga arimasu'),
+    ('你們有', 'you have', 'ihr habt', 'vous avez', '質問がありますか', 'しつもん が あります か', 'shitsumon ga arimasu ka'),
+    ('他們有', 'they have', 'sie haben', 'ils / elles ont', '彼らには友達がいます', 'かれら に は ともだち が います', 'karera ni wa tomodachi ga imasu'),
+]
+
+HELLO_NAME = [
+    ('我叫', 'I am called', 'ich heiße', 'je m’appelle', '私はハオチェンと言います', 'わたし は ハオチェン と いいます', 'watashi wa haochen to iimasu'),
+    ('你叫', 'you are called', 'du heißt', 'tu t’appelles', 'お名前は何ですか', 'おなまえ は なん です か', 'onamae wa nan desu ka'),
+    ('他／她叫', 'he / she is called', 'er / sie heißt', 'il / elle s’appelle', '彼女はマリーと言います', 'かのじょ は マリー と いいます', 'kanojo wa marii to iimasu'),
+    ('我們叫', 'we are called', 'wir heißen', 'nous nous appelons', '私たちは青組と言います', 'わたしたち は あおぐみ と いいます', 'watashitachi wa aogumi to iimasu'),
+    ('你們叫', 'you are called', 'ihr heißt', 'vous vous appelez', 'あなたたちは青組と言います', 'あなたたち は あおぐみ と いいます', 'anatatachi wa aogumi to iimasu'),
+    ('他們叫', 'they are called', 'sie heißen', 'ils / elles s’appellent', '彼らはポールとマークと言います', 'かれら は ポール と マーク と いいます', 'karera wa pooru to maaku to iimasu'),
+]
+
+HELLO_EXAMPLES = [
+    ('我是學生。', 'I am a student.', 'Ich bin Student.', 'Je suis étudiant.', '私は学生です。', 'わたし は がくせい です。', 'Watashi wa gakusei desu.'),
+    ('你準備好了嗎？', 'Are you ready?', 'Bist du bereit?', 'Tu es prêt ?', '準備はいいですか。', 'じゅんび は いい です か。', 'Junbi wa ii desu ka.'),
+    ('她是法國人。', 'She is French.', 'Sie ist Französin.', 'Elle est française.', '彼女はフランス人です。', 'かのじょ は フランスじん です。', 'Kanojo wa furansujin desu.'),
+    ('我們在台北。', 'We are in Taipei.', 'Wir sind in Taipei.', 'Nous sommes à Taipei.', '私たちは台北にいます。', 'わたしたち は たいぺい に います。', 'Watashitachi wa taipei ni imasu.'),
+    ('我有一本書。', 'I have a book.', 'Ich habe ein Buch.', 'J’ai un livre.', '本があります。', 'ほん が あります。', 'Hon ga arimasu.'),
+    ('你有筆嗎？', 'Do you have a pen?', 'Hast du einen Stift?', 'Tu as un stylo ?', 'ペンはありますか。', 'ペン は あります か。', 'Pen wa arimasu ka.'),
+    ('他有一個兄弟。', 'He has a brother.', 'Er hat einen Bruder.', 'Il a un frère.', '彼には兄弟がいます。', 'かれ に は きょうだい が います。', 'Kare ni wa kyoudai ga imasu.'),
+    ('我叫 Hao-Cheng。', 'I am called Hao-Cheng.', 'Ich heiße Hao-Cheng.', 'Je m’appelle Hao-Cheng.', '私はハオチェンと言います。', 'わたし は ハオチェン と いいます。', 'Watashi wa haochen to iimasu.'),
+    ('你叫什麼名字？', 'What are you called?', 'Wie heißt du?', 'Tu t’appelles comment ?', 'お名前は何ですか。', 'おなまえ は なん です か。', 'Onamae wa nan desu ka.'),
+    ('她叫 Marie。', 'She is called Marie.', 'Sie heißt Marie.', 'Elle s’appelle Marie.', '彼女はマリーと言います。', 'かのじょ は マリー と いいます。', 'Kanojo wa marii to iimasu.'),
+]
+
+HELLO_SECTIONS = [
+    ('三大動詞', HELLO_VERBS),
+    ('是 · 人稱對照', HELLO_BE),
+    ('有 · 人稱對照', HELLO_HAVE),
+    ('叫做 · 人稱對照', HELLO_NAME),
+    ('三大動詞例句', HELLO_EXAMPLES),
+]
+
 SPEECH_JS = r'''
 const rateInput = document.getElementById('rate');
 const rateLabel = document.getElementById('rate-label');
@@ -177,17 +232,23 @@ def slugify(title):
         '數位與大數': 'scales',
         '疑問詞': 'wh-words',
         '例句對照': 'wh-examples',
+        '三大動詞': 'hello-verbs',
+        '是 · 人稱對照': 'hello-be',
+        '有 · 人稱對照': 'hello-have',
+        '叫做 · 人稱對照': 'hello-name',
+        '三大動詞例句': 'hello-examples',
     }
     return mapping.get(title, title)
 
 
 def ja_cell(kanji, kana, roma):
-    hira = vocab.to_hiragana(kana)
+    # Keep mixed kana as provided (names often stay in katakana).
+    hira = kana
     if kana == 'ゼロ':
         hira = 'ぜろ'
         kata = 'ゼロ'
     else:
-        kata = vocab.to_katakana(hira)
+        kata = vocab.to_katakana(vocab.to_hiragana(kana))
     return (
         f'<button type="button" class="say ja" lang="ja" data-say="{html.escape(kanji)}" data-lang="ja-JP">'
         f'<span class="word">{html.escape(kanji)}</span>'
@@ -406,6 +467,18 @@ h2{{font-size:1.15rem;margin:36px 0 15px}}
 <a class="button" href="./wh-questions/">進入疑問詞對照 →</a>
 </article>
 <article class="item">
+<div class="meta">文法 · 三大動詞 · 跟讀</div>
+<h3>打招呼動詞對照</h3>
+<div class="langs">
+<span class="en">EN</span>
+<span class="de">DE</span>
+<span class="fr">FR</span>
+<span class="ja">JA</span>
+</div>
+<p>be／sein／être／です，have／haben／avoir／あります，be called／heißen／s’appeler／と言います。人稱變位與例句並排對照。</p>
+<a class="button" href="./hello-verbs/">進入打招呼動詞對照 →</a>
+</article>
+<article class="item">
 <div class="meta">五十音 · 平片假名 · 清濁半濁</div>
 <h3 lang="ja">日文五十音</h3>
 <div class="langs"><span class="ja">JA</span></div>
@@ -510,6 +583,98 @@ footer{{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
 '''
 
 
+def hello_page():
+    sections = ''.join(section_html(title, rows) for title, rows in HELLO_SECTIONS)
+    toc = '<nav class="toc" aria-label="章節">' + ''.join(
+        f'<a href="#{slugify(title)}">{html.escape(title)}</a>' for title, _ in HELLO_SECTIONS
+    ) + '</nav>'
+    return f'''<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日打招呼三大動詞對照：be／sein／être／です，have／haben／avoir／あります，be called／heißen／s’appeler／と言います。">
+<title>打招呼動詞對照｜四語筆記</title>
+<style>
+:root{{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}}
+*{{box-sizing:border-box}}
+body{{margin:0}}
+header{{background:{ACCENT};color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}}
+header .brand{{font-size:1.35rem;font-weight:800}}
+header a{{color:inherit;text-decoration:none}}
+main{{max-width:1180px;margin:auto;padding:32px 20px 70px}}
+h1{{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}}
+h2{{font-size:1.25rem;margin:32px 0 12px}}
+p{{line-height:1.7;color:#53647c}}
+.note{{font-size:.92rem;color:#52647d;margin:0 0 18px}}
+.toc{{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}}
+.toc a{{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:{ACCENT};text-decoration:none;font-weight:650;font-size:.92rem}}
+.toc a:hover,.toc a:focus-visible{{outline:2px solid {ACCENT};outline-offset:2px}}
+.controls{{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}}
+.controls-row{{display:flex;flex-wrap:wrap;gap:12px;align-items:center}}
+.ctrl{{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:{ACCENT};color:white}}
+.ctrl.stop{{background:#5c6675}}
+.ctrl:hover,.ctrl:focus-visible{{filter:brightness(.92);outline:2px solid {ACCENT};outline-offset:2px}}
+.rate,.loop{{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}}
+.rate input{{width:140px}}
+.status{{margin-top:10px;font-size:.9rem;color:#6a5870}}
+.tablewrap{{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}}
+table{{border-collapse:collapse;width:100%;min-width:920px}}
+th{{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}}
+.th-en{{color:{EN}}}
+.th-de{{color:{DE}}}
+.th-fr{{color:{FR}}}
+.th-ja{{color:{JA}}}
+td{{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}}
+.zh{{color:#53647c;font-weight:650;white-space:nowrap}}
+.say{{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}}
+.say:hover,.say:focus-visible{{outline:2px solid currentColor;outline-offset:2px}}
+.say .word{{font-size:1.05rem;font-weight:750}}
+.say.en,.th-en,.say.en .word{{color:{EN}}}
+.say.de,.th-de,.say.de .word{{color:{DE}}}
+.say.fr,.th-fr,.say.fr .word{{color:{FR}}}
+.say.ja,.th-ja,.say.ja .word{{color:{JA}}}
+.sub{{font-size:.9rem;color:#3d4d63}}
+.kata{{color:#6a5870}}
+.roma{{font-size:.82rem;color:#6a5870}}
+.vocab-row.active{{background:#fff4d8}}
+.tip{{background:white;border-left:4px solid {ACCENT};padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}}
+.tip a{{color:{ACCENT};font-weight:650;text-decoration:none}}
+.tip a:hover,.tip a:focus-visible{{text-decoration:underline}}
+footer{{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}}
+@media(max-width:700px){{main{{padding-top:25px}}.rate input{{width:100px}}}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　打招呼動詞對照</div></header>
+<main>
+<h1>四語打招呼動詞對照</h1>
+<p class="note">對應各語言入門三大動詞：be／sein／être／です，have／haben／avoir／あります・います，be called／heißen／s’appeler／と言います。含人稱變位與平行例句；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+{toc}
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+{sections}
+<div class="tip"><strong>用法提醒：</strong>日文丁寧體不隨人稱變位；東西「有」用あります，人／動物用います。法文年齡用 avoir（J’ai 25 ans），英文與德文年齡用 be／sein。各語言專頁：<a href="../../en/hello-verbs/">英文</a> · <a href="../../de/hallo-verben/">德文</a> · <a href="../../fr/bonjour-verbes/">法文</a> · <a href="../../ja/konnichiwa-doushi/">日文</a>。</div>
+</main>
+<footer>打招呼動詞對照｜四語筆記</footer>
+<script>
+{SPEECH_JS}
+</script>
+</body>
+</html>
+'''
+
+
 def main():
     out = ROOT / 'tables' / 'vocab'
     out.mkdir(parents=True, exist_ok=True)
@@ -521,6 +686,11 @@ def main():
     wh_path = wh_out / 'index.html'
     wh_path.write_text(wh_page(), encoding='utf-8')
     print(wh_path)
+    hello_out = ROOT / 'tables' / 'hello-verbs'
+    hello_out.mkdir(parents=True, exist_ok=True)
+    hello_path = hello_out / 'index.html'
+    hello_path.write_text(hello_page(), encoding='utf-8')
+    print(hello_path)
     index = ROOT / 'tables' / 'index.html'
     index.write_text(index_page(), encoding='utf-8')
     print(index)
