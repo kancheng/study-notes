@@ -38,12 +38,12 @@ HELLO = {
 }
 LESSONS = [HELLO, *A1, *A2, *B1, *B2]
 
-navy = HexColor('#17365e')
+navy = HexColor('#1d6a4f')
 muted = HexColor('#53677c')
-pale = HexColor('#eaf0f9')
+pale = HexColor('#e8f4ef')
 line_color = HexColor('#dae2ed')
 white = HexColor('#ffffff')
-light = HexColor('#dde9ff')
+light = HexColor('#cfe8dc')
 
 
 def require_glyphs(lessons):
@@ -173,7 +173,7 @@ PAGE = """<!doctype html>
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#182a45;background:#f3f6fb}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#132f55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
+header{{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
 header .brand{{font-size:1.35rem;font-weight:800}}
 header a{{color:inherit;text-decoration:none}}
 main{{max-width:1050px;margin:auto;padding:32px 20px 70px}}
@@ -183,25 +183,25 @@ p{{line-height:1.7}}
 .intro{{margin-bottom:24px}}
 .toolbar{{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0 28px}}
 .download,button{{cursor:pointer;border:0;border-radius:9px;font:inherit}}
-.download{{display:inline-block;background:#df3349;color:white;padding:12px 18px;text-decoration:none;font-weight:700}}
-.download:hover{{background:#b91f35}}
+.download{{display:inline-block;background:#1d6a4f;color:white;padding:12px 18px;text-decoration:none;font-weight:700}}
+.download:hover{{background:#124936}}
 .note{{font-size:.92rem;color:#52647d}}
 .card{{background:white;border:1px solid #dce4f0;border-radius:16px;box-shadow:0 8px 24px #142f5210;margin:20px 0;padding:23px}}
 .cardhead{{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}}
 .meaning{{color:#52647d}}
 .tablewrap{{overflow-x:auto;margin-top:18px}}
 table{{border-collapse:collapse;width:100%;min-width:680px;text-align:left}}
-th{{background:#eaf0f9;font-size:.9rem}}
+th{{background:#e8f4ef;font-size:.9rem}}
 th,td{{padding:13px 14px;border-bottom:1px solid #e4e9f1}}
-td:nth-child(2){{font-weight:750;color:#173e71}}
+td:nth-child(2){{font-weight:750;color:#1d6a4f}}
 .examples{{margin-top:22px}}
 .examples h3{{font-size:1.07rem;margin:0 0 10px}}
 .example{{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #edf0f5}}
 .line{{font-size:1.03rem;font-weight:700}}
 .zh{{color:#53637b;margin-top:3px}}
-.speak{{background:#e7f0fd;color:#163b6a;padding:9px 12px;min-width:84px}}
-.speak:hover,.speak:focus-visible{{background:#cedffa;outline:2px solid #3769a9;outline-offset:2px}}
-.tip{{background:#e9eff8;border-left:4px solid #5276aa;padding:14px 18px;border-radius:8px;margin-top:20px}}
+.speak{{background:#e7f5ef;color:#1d6a4f;padding:9px 12px;min-width:84px}}
+.speak:hover,.speak:focus-visible{{background:#cfe8dc;outline:2px solid #1d6a4f;outline-offset:2px}}
+.tip{{background:#e8f4ef;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin-top:20px}}
 .pager{{display:flex;justify-content:space-between;gap:12px;margin-top:22px}}
 .pager a{{color:#1d6a4f;font-weight:750;text-decoration:none}}
 .pager a:hover,.pager a:focus-visible{{text-decoration:underline}}
@@ -327,7 +327,7 @@ def write_index():
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#172b47;background:#f2f5fa}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#17355d;padding:20px max(20px,calc((100vw - 920px)/2))}}
+header{{background:#1d6a4f;padding:20px max(20px,calc((100vw - 920px)/2))}}
 header a{{color:white;text-decoration:none;font-weight:700}}
 main{{max-width:920px;margin:auto;padding:44px 20px 80px}}
 .eyebrow{{font-size:.9rem;font-weight:750;letter-spacing:.06em;color:#1d6a4f}}

@@ -30,7 +30,7 @@ LEVELS = [
 ]
 LESSONS = [*A1, *A2, *B1, *B2]
 
-navy = HexColor('#17365e')
+navy = HexColor('#b3482f')
 muted = HexColor('#53677c')
 pale = HexColor('#f8efe8')
 line_color = HexColor('#eadfd6')
@@ -164,7 +164,7 @@ PAGE = """<!doctype html>
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#182a45;background:#f7f4f2}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#8b321f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
+header{{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
 header .brand{{font-size:1.35rem;font-weight:800}}
 header a{{color:inherit;text-decoration:none}}
 main{{max-width:1050px;margin:auto;padding:32px 20px 70px}}
@@ -184,13 +184,13 @@ p{{line-height:1.7}}
 table{{border-collapse:collapse;width:100%;min-width:680px;text-align:left}}
 th{{background:#f8efe8;font-size:.9rem}}
 th,td{{padding:13px 14px;border-bottom:1px solid #f0e6df}}
-td:nth-child(2){{font-weight:750;color:#8b321f}}
+td:nth-child(2){{font-weight:750;color:#b3482f}}
 .examples{{margin-top:22px}}
 .examples h3{{font-size:1.07rem;margin:0 0 10px}}
 .example{{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #f3ebe6}}
 .line{{font-size:1.03rem;font-weight:700}}
 .zh{{color:#53637b;margin-top:3px}}
-.speak{{background:#f8efe8;color:#8b321f;padding:9px 12px;min-width:84px}}
+.speak{{background:#f8efe8;color:#b3482f;padding:9px 12px;min-width:84px}}
 .speak:hover,.speak:focus-visible{{background:#f0ddd2;outline:2px solid #b3482f;outline-offset:2px}}
 .tip{{background:#f8efe8;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:20px}}
 .pager{{display:flex;justify-content:space-between;gap:12px;margin-top:22px}}
@@ -318,10 +318,10 @@ def write_index():
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#172b47;background:#f7f4f2}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#17355d;padding:20px max(20px,calc((100vw - 920px)/2))}}
+header{{background:#b3482f;padding:20px max(20px,calc((100vw - 920px)/2))}}
 header a{{color:white;text-decoration:none;font-weight:700}}
 main{{max-width:920px;margin:auto;padding:44px 20px 80px}}
-.eyebrow{{font-size:.9rem;font-weight:750;letter-spacing:.06em;color:#a15723}}
+.eyebrow{{font-size:.9rem;font-weight:750;letter-spacing:.06em;color:#b3482f}}
 h1{{font-size:clamp(2rem,5vw,3rem);margin:10px 0}}
 p{{line-height:1.7;color:#53647c}}
 h2{{font-size:1.35rem;margin:36px 0 6px}}

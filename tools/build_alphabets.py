@@ -125,7 +125,7 @@ def write_en():
     page = page_shell(
         'en', '英文筆記', 'Alphabet｜英文字母', '英文字母表',
         '英文字母共 26 個。點選可聽字母名稱；下面標的是常見的美式讀法。',
-        '#154a85', '#f2f5fa', '#dce4ef', body, 'en-US',
+        '#17355d', '#f2f5fa', '#dce4ef', body, 'en-US',
     )
     out = ROOT / 'en' / 'alphabet'
     out.mkdir(parents=True, exist_ok=True)

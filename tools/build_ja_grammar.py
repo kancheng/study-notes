@@ -35,7 +35,7 @@ LESSONS = [*N5, *N4, *N3, *N2]
 GLUED = ('では', 'には', 'へは', 'とは', 'からは', 'までは', 'よりは', 'じゃありません')
 PUNCT = '。、？！「」『』'
 
-navy = HexColor('#17365e')
+navy = HexColor('#8d3a55')
 muted = HexColor('#53677c')
 pale = HexColor('#f8eef2')
 line_color = HexColor('#eadde2')
@@ -318,7 +318,7 @@ PAGE = """<!doctype html>
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f3f5}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#6e243c;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
+header{{background:#8d3a55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}}
 header .brand{{font-size:1.35rem;font-weight:800}}
 header a{{color:inherit;text-decoration:none}}
 main{{max-width:1050px;margin:auto;padding:32px 20px 70px}}
@@ -339,16 +339,16 @@ p{{line-height:1.7}}
 table{{border-collapse:collapse;width:100%;min-width:760px;text-align:left}}
 th{{background:#f8eef2;font-size:.9rem}}
 th,td{{padding:13px 14px;border-bottom:1px solid #f0e4e8}}
-td:nth-child(2){{font-weight:750;color:#6e243c}}
+td:nth-child(2){{font-weight:750;color:#8d3a55}}
 td:nth-child(3),td:nth-child(4){{color:#3d4d63}}
 .examples{{margin-top:22px}}
 .examples h3{{font-size:1.07rem;margin:0 0 10px}}
 .example{{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #f3e8ec}}
-.kanji{{font-size:1.08rem;font-weight:750;color:#6e243c}}
+.kanji{{font-size:1.08rem;font-weight:750;color:#8d3a55}}
 .kana{{color:#243044;margin-top:3px}}
 .roma{{color:#6a5870;margin-top:2px;font-size:.95rem}}
 .zh{{color:#53637b;margin-top:3px}}
-.speak{{background:#f6e8ee;color:#6b2740;padding:9px 12px;min-width:84px}}
+.speak{{background:#f6e8ee;color:#8d3a55;padding:9px 12px;min-width:84px}}
 .speak:hover,.speak:focus-visible{{background:#ecd3dc;outline:2px solid #8d3a55;outline-offset:2px}}
 .tip{{background:#f8eef2;border-left:4px solid #8d3a55;padding:14px 18px;border-radius:8px;margin-top:20px}}
 .pager{{display:flex;justify-content:space-between;gap:12px;margin-top:22px}}
@@ -479,7 +479,7 @@ def write_index():
 :root{{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#172b47;background:#f7f3f5}}
 *{{box-sizing:border-box}}
 body{{margin:0}}
-header{{background:#17355d;padding:20px max(20px,calc((100vw - 920px)/2))}}
+header{{background:#8d3a55;padding:20px max(20px,calc((100vw - 920px)/2))}}
 header a{{color:white;text-decoration:none;font-weight:700}}
 main{{max-width:920px;margin:auto;padding:44px 20px 80px}}
 .eyebrow{{font-size:.9rem;font-weight:750;letter-spacing:.06em;color:#8d3a55}}

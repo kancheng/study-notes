@@ -110,7 +110,7 @@ THEMES = {
         'title': 'Vocabulary｜英文單字',
         'h1': '英文單字表',
         'intro': '季節、月份、星期、數字與大數單位。點選單字可朗讀；也可用全部循環播放，並調整語速。',
-        'accent': '#154a85',
+        'accent': '#17355d',
         'bg': '#f2f5fa',
         'border': '#dce4ef',
         'lang': 'en-US',

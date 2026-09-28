@@ -9,39 +9,46 @@
 :root{font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif;color:#172b47;background:#f2f5fa}
 *{box-sizing:border-box}
 body{margin:0}
-header{background:#17355d;color:white;padding:20px max(20px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header{background:#445a7a;color:white;padding:20px max(20px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 header .brand{font-weight:750;font-size:1.17rem}
 header a.github{color:white;text-decoration:none;font-weight:700;font-size:.95rem;border:1px solid rgba(255,255,255,.35);border-radius:9px;padding:8px 14px}
-header a.github:hover,header a.github:focus-visible{background:rgba(255,255,255,.12);outline:2px solid #9eb6d8;outline-offset:2px}
+header a.github:hover,header a.github:focus-visible{background:rgba(255,255,255,.12);outline:2px solid #9aadc4;outline-offset:2px}
 main{max-width:1060px;margin:auto;padding:45px 20px 65px}
 h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.17;margin:0 0 12px}
 .lead{font-size:1.08rem;color:#53647d;line-height:1.7;max-width:720px;margin:0 0 30px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
 .card{display:block;background:white;border:1px solid #dae3ef;border-radius:17px;padding:26px;text-decoration:none;color:inherit;min-height:190px;box-shadow:0 9px 25px #172b470c;transition:transform .15s,box-shadow .15s}
-.card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:0 15px 35px #172b4720;outline:2px solid #547bb3}
+.card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:0 15px 35px #172b4720;outline:2px solid #445a7a}
 .eyebrow{font-size:.9rem;letter-spacing:.04em;color:#587195;font-weight:750}
 .card h2{font-size:1.85rem;margin:15px 0 8px}
 .card p{line-height:1.6;color:#52647a;margin:0}
-.badge{display:inline-block;margin-top:17px;color:#154a85;font-weight:750}
-.featured{border-color:#e5bb88;background:#fffaf2}
-.featured .badge{color:#aa4b20}
+.badge{display:inline-block;margin-top:17px;font-weight:750}
+.card-en .eyebrow,.card-en .badge{color:#17355d}
+.card-en:hover,.card-en:focus-visible{outline-color:#17355d}
+.card-fr .eyebrow,.card-fr .badge{color:#b3482f}
+.card-fr{border-color:#e5bb88;background:#fffaf2}
+.card-fr:hover,.card-fr:focus-visible{outline-color:#b3482f}
+.card-de .eyebrow,.card-de .badge{color:#1d6a4f}
+.card-de:hover,.card-de:focus-visible{outline-color:#1d6a4f}
+.card-ja .eyebrow,.card-ja .badge{color:#8d3a55}
+.card-ja:hover,.card-ja:focus-visible{outline-color:#8d3a55}
 .compare,.about{margin-top:46px}
 .compare h2,.about h2{font-size:1.7rem;margin:8px 0 8px}
 .compare .note,.about .note{color:#53647d;line-height:1.7;margin:0 0 16px}
 .compare a.entry{display:inline-block;background:white;border:1px solid #dae3ef;border-radius:12px;padding:14px 18px;text-decoration:none;color:inherit}
-.compare a.entry:hover,.compare a.entry:focus-visible{outline:2px solid #547bb3}
-.compare a.entry .badge{margin-top:0}
+.compare a.entry:hover,.compare a.entry:focus-visible{outline:2px solid #445a7a}
+.compare a.entry .badge{margin-top:0;color:#445a7a}
 .about-box{background:white;border:1px solid #dae3ef;border-radius:17px;padding:26px;box-shadow:0 9px 25px #172b470c}
 .about-box p{line-height:1.7;color:#52647a;margin:0 0 14px}
 .about-box p:last-child{margin-bottom:0}
-.about-box a{color:#154a85;font-weight:650;text-decoration:none}
+.about-box a{color:#445a7a;font-weight:650;text-decoration:none}
 .about-box a:hover,.about-box a:focus-visible{text-decoration:underline}
 .author{margin-top:18px;padding-top:18px;border-top:1px solid #e6edf5}
 .author h3{font-size:1.05rem;margin:0 0 10px}
 .author ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .author li{line-height:1.5;color:#52647a}
 footer{max-width:1060px;margin:auto;padding:10px 20px 35px;color:#6a7990;font-size:.9rem}
-footer a{color:#547bb3;text-decoration:none}
+footer a{color:#445a7a;text-decoration:none}
 footer a:hover,footer a:focus-visible{text-decoration:underline}
 @media(max-width:650px){.grid{grid-template-columns:1fr}main{padding-top:30px}.card{min-height:unset}}
 </style>
@@ -55,25 +62,25 @@ footer a:hover,footer a:focus-visible{text-decoration:underline}
 <h1>英、法、德、日，從基礎一路整理。</h1>
 <p class="lead">把課堂重點、動詞變位、例句與練習放在同一個地方。英文、法文與德文從 A1 排到 B2，日文依 JLPT 從 N5 排到 N2，附例句、發音與 PDF。</p>
 <div class="grid">
-<a class="card" href="./en/">
+<a class="card card-en" href="./en/">
 <div class="eyebrow">01 / ENGLISH</div>
 <h2>英文</h2>
 <p>基礎文法從 A1 排到 B2：動詞、子句與句型，附例句與發音。</p>
 <span class="badge">開始讀英文 →</span>
 </a>
-<a class="card featured" href="./fr/">
+<a class="card card-fr" href="./fr/">
 <div class="eyebrow">02 / FRANÇAIS</div>
 <h2>法文</h2>
 <p>基礎文法從 A1 排到 B2：動詞、冠詞與句型，依 CECRL，附例句與發音。</p>
 <span class="badge">開始讀法文 →</span>
 </a>
-<a class="card" href="./de/">
+<a class="card card-de" href="./de/">
 <div class="eyebrow">03 / DEUTSCH</div>
 <h2>德文</h2>
 <p>基礎文法從 A1 排到 B2：動詞、格變與從句，附例句與發音。</p>
 <span class="badge">開始讀德文 →</span>
 </a>
-<a class="card" href="./ja/">
+<a class="card card-ja" href="./ja/">
 <div class="eyebrow">04 / 日本語</div>
 <h2>日文</h2>
 <p>基礎文法從 N5 排到 N2：助詞、動詞與句型，例句附漢字、假名與羅馬拼音。</p>
