@@ -16,8 +16,18 @@ main{max-width:920px;margin:auto;padding:44px 20px 80px}
 h1{font-size:clamp(2rem,5vw,3rem);margin:10px 0}
 p{line-height:1.7;color:#53647c}
 h2{font-size:1.15rem;margin:36px 0 15px}
-.item{background:white;border:1px solid #dce4ef;border-radius:16px;padding:26px;box-shadow:0 10px 25px #172b470c}
-.item p{margin:0}
+.item{background:white;border:1px solid #dce4ef;border-radius:16px;padding:26px;box-shadow:0 10px 25px #172b470c;margin:0 0 14px}
+.item h3{font-size:1.45rem;margin:0 0 8px}
+.item p{margin:0 0 18px}
+.meta{font-size:.9rem;color:#776b5c;margin-bottom:10px}
+.button{display:inline-block;padding:11px 18px;border-radius:9px;background:#445a7a;color:white;text-decoration:none;font-weight:750}
+.button:hover,.button:focus-visible{background:#334761;outline:2px solid #334761;outline-offset:2px}
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.langs span{font-size:.85rem;font-weight:750}
+.langs .en{color:#17355d}
+.langs .de{color:#1d6a4f}
+.langs .fr{color:#b3482f}
+.langs .ja{color:#8d3a55}
 @media(max-width:600px){main{padding-top:30px}.item{padding:21px}}
 </style>
 </head>
@@ -29,7 +39,23 @@ h2{font-size:1.15rem;margin:36px 0 15px}
 <p>這一區獨立於英文、法文、德文、日文。多語比較表放在這裡，一張表並排四種語言。</p>
 <h2>比較清單</h2>
 <article class="item">
-<p>還沒有比較表。</p>
+<div class="meta">單字 · 四語對照 · 跟讀</div>
+<h3>單字對照</h3>
+<div class="langs">
+<span class="en">EN</span>
+<span class="de">DE</span>
+<span class="fr">FR</span>
+<span class="ja">JA</span>
+</div>
+<p>春夏秋冬、一到十二月、一周／周末／月／年、星期一到日、數字 0–30、個到兆。日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+<a class="button" href="./vocab/">進入單字對照 →</a>
+</article>
+<article class="item">
+<div class="meta">五十音 · 平片假名 · 清濁半濁</div>
+<h3 lang="ja">日文五十音</h3>
+<div class="langs"><span class="ja">JA</span></div>
+<p>平假名、片假名完整對照：清音、濁音、半濁音、拗音，並標平文式羅馬拼音。點選可朗讀。</p>
+<a class="button" href="../ja/gojuon/">進入五十音 →</a>
 </article>
 </main>
 </body>

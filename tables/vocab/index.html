@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日合併單字對照：季節、月份、星期、數字與大數單位。點選可朗讀。">
+<title>單字對照｜四語筆記</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#445a7a;color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1180px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:#445a7a;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #445a7a;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#445a7a;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #445a7a;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:920px}
+th{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}
+.th-en{color:#17355d}
+.th-de{color:#1d6a4f}
+.th-fr{color:#b3482f}
+.th-ja{color:#8d3a55}
+td{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}
+.zh{color:#53647c;font-weight:650;white-space:nowrap}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.say .word{font-size:1.05rem;font-weight:750}
+.say.en,.th-en,.say.en .word{color:#17355d}
+.say.de,.th-de,.say.de .word{color:#1d6a4f}
+.say.fr,.th-fr,.say.fr .word{color:#b3482f}
+.say.ja,.th-ja,.say.ja .word{color:#8d3a55}
+.sub{font-size:.9rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.82rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #445a7a;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip a{color:#445a7a;font-weight:650;text-decoration:none}
+.tip a:hover,.tip a:focus-visible{text-decoration:underline}
+footer{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:700px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　單字對照</div></header>
+<main>
+<h1>四語單字對照</h1>
+<p class="note">春夏秋冬、一到十二月、一周／周末／月／年、星期一到日、數字 0–30，以及個到兆。點選任一格可朗讀；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+<nav class="toc" aria-label="章節"><a href="#seasons">季節</a><a href="#months">月份</a><a href="#time">時間單位</a><a href="#weekdays">星期</a><a href="#numbers">數字 0–30</a><a href="#scales">數位與大數</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="seasons">
+<h2>季節</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">春天</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="spring" data-lang="en-US"><span class="word">spring</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Frühling" data-lang="de-DE"><span class="word">Frühling</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="printemps" data-lang="fr-FR"><span class="word">printemps</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="春" data-lang="ja-JP"><span class="word">春</span><span class="sub"><span class="hira">はる</span>　<span class="kata">ハル</span></span><span class="roma">haru</span></button></td></tr><tr class="vocab-row"><td class="zh">夏天</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="summer" data-lang="en-US"><span class="word">summer</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Sommer" data-lang="de-DE"><span class="word">Sommer</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="été" data-lang="fr-FR"><span class="word">été</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="夏" data-lang="ja-JP"><span class="word">夏</span><span class="sub"><span class="hira">なつ</span>　<span class="kata">ナツ</span></span><span class="roma">natsu</span></button></td></tr><tr class="vocab-row"><td class="zh">秋天</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="autumn" data-lang="en-US"><span class="word">autumn</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Herbst" data-lang="de-DE"><span class="word">Herbst</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="automne" data-lang="fr-FR"><span class="word">automne</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="秋" data-lang="ja-JP"><span class="word">秋</span><span class="sub"><span class="hira">あき</span>　<span class="kata">アキ</span></span><span class="roma">aki</span></button></td></tr><tr class="vocab-row"><td class="zh">冬天</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="winter" data-lang="en-US"><span class="word">winter</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Winter" data-lang="de-DE"><span class="word">Winter</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="hiver" data-lang="fr-FR"><span class="word">hiver</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="冬" data-lang="ja-JP"><span class="word">冬</span><span class="sub"><span class="hira">ふゆ</span>　<span class="kata">フユ</span></span><span class="roma">fuyu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="months">
+<h2>月份</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">一月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="January" data-lang="en-US"><span class="word">January</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Januar" data-lang="de-DE"><span class="word">Januar</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="janvier" data-lang="fr-FR"><span class="word">janvier</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="一月" data-lang="ja-JP"><span class="word">一月</span><span class="sub"><span class="hira">いちがつ</span>　<span class="kata">イチガツ</span></span><span class="roma">ichigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">二月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="February" data-lang="en-US"><span class="word">February</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Februar" data-lang="de-DE"><span class="word">Februar</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="février" data-lang="fr-FR"><span class="word">février</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二月" data-lang="ja-JP"><span class="word">二月</span><span class="sub"><span class="hira">にがつ</span>　<span class="kata">ニガツ</span></span><span class="roma">nigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">三月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="March" data-lang="en-US"><span class="word">March</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="März" data-lang="de-DE"><span class="word">März</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mars" data-lang="fr-FR"><span class="word">mars</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="三月" data-lang="ja-JP"><span class="word">三月</span><span class="sub"><span class="hira">さんがつ</span>　<span class="kata">サンガツ</span></span><span class="roma">sangatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">四月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="April" data-lang="en-US"><span class="word">April</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="April" data-lang="de-DE"><span class="word">April</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="avril" data-lang="fr-FR"><span class="word">avril</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="四月" data-lang="ja-JP"><span class="word">四月</span><span class="sub"><span class="hira">しがつ</span>　<span class="kata">シガツ</span></span><span class="roma">shigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">五月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="May" data-lang="en-US"><span class="word">May</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Mai" data-lang="de-DE"><span class="word">Mai</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mai" data-lang="fr-FR"><span class="word">mai</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="五月" data-lang="ja-JP"><span class="word">五月</span><span class="sub"><span class="hira">ごがつ</span>　<span class="kata">ゴガツ</span></span><span class="roma">gogatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">六月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="June" data-lang="en-US"><span class="word">June</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Juni" data-lang="de-DE"><span class="word">Juni</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="juin" data-lang="fr-FR"><span class="word">juin</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="六月" data-lang="ja-JP"><span class="word">六月</span><span class="sub"><span class="hira">ろくがつ</span>　<span class="kata">ロクガツ</span></span><span class="roma">rokugatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">七月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="July" data-lang="en-US"><span class="word">July</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Juli" data-lang="de-DE"><span class="word">Juli</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="juillet" data-lang="fr-FR"><span class="word">juillet</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="七月" data-lang="ja-JP"><span class="word">七月</span><span class="sub"><span class="hira">しちがつ</span>　<span class="kata">シチガツ</span></span><span class="roma">shichigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">八月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="August" data-lang="en-US"><span class="word">August</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="August" data-lang="de-DE"><span class="word">August</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="août" data-lang="fr-FR"><span class="word">août</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="八月" data-lang="ja-JP"><span class="word">八月</span><span class="sub"><span class="hira">はちがつ</span>　<span class="kata">ハチガツ</span></span><span class="roma">hachigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">九月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="September" data-lang="en-US"><span class="word">September</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="September" data-lang="de-DE"><span class="word">September</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="septembre" data-lang="fr-FR"><span class="word">septembre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="九月" data-lang="ja-JP"><span class="word">九月</span><span class="sub"><span class="hira">くがつ</span>　<span class="kata">クガツ</span></span><span class="roma">kugatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">十月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="October" data-lang="en-US"><span class="word">October</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Oktober" data-lang="de-DE"><span class="word">Oktober</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="octobre" data-lang="fr-FR"><span class="word">octobre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十月" data-lang="ja-JP"><span class="word">十月</span><span class="sub"><span class="hira">じゅうがつ</span>　<span class="kata">ジュウガツ</span></span><span class="roma">juugatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">十一月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="November" data-lang="en-US"><span class="word">November</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="November" data-lang="de-DE"><span class="word">November</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="novembre" data-lang="fr-FR"><span class="word">novembre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十一月" data-lang="ja-JP"><span class="word">十一月</span><span class="sub"><span class="hira">じゅういちがつ</span>　<span class="kata">ジュウイチガツ</span></span><span class="roma">juuichigatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">十二月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="December" data-lang="en-US"><span class="word">December</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Dezember" data-lang="de-DE"><span class="word">Dezember</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="décembre" data-lang="fr-FR"><span class="word">décembre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十二月" data-lang="ja-JP"><span class="word">十二月</span><span class="sub"><span class="hira">じゅうにがつ</span>　<span class="kata">ジュウニガツ</span></span><span class="roma">juunigatsu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="time">
+<h2>時間單位</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">一周／一週</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="week" data-lang="en-US"><span class="word">week</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Woche" data-lang="de-DE"><span class="word">Woche</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="semaine" data-lang="fr-FR"><span class="word">semaine</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="週" data-lang="ja-JP"><span class="word">週</span><span class="sub"><span class="hira">しゅう</span>　<span class="kata">シュウ</span></span><span class="roma">shuu</span></button></td></tr><tr class="vocab-row"><td class="zh">周末</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="weekend" data-lang="en-US"><span class="word">weekend</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Wochenende" data-lang="de-DE"><span class="word">Wochenende</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="week-end" data-lang="fr-FR"><span class="word">week-end</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="週末" data-lang="ja-JP"><span class="word">週末</span><span class="sub"><span class="hira">しゅうまつ</span>　<span class="kata">シュウマツ</span></span><span class="roma">shuumatsu</span></button></td></tr><tr class="vocab-row"><td class="zh">月</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="month" data-lang="en-US"><span class="word">month</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Monat" data-lang="de-DE"><span class="word">Monat</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mois" data-lang="fr-FR"><span class="word">mois</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="月" data-lang="ja-JP"><span class="word">月</span><span class="sub"><span class="hira">つき</span>　<span class="kata">ツキ</span></span><span class="roma">tsuki</span></button></td></tr><tr class="vocab-row"><td class="zh">年</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="year" data-lang="en-US"><span class="word">year</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Jahr" data-lang="de-DE"><span class="word">Jahr</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="année" data-lang="fr-FR"><span class="word">année</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="年" data-lang="ja-JP"><span class="word">年</span><span class="sub"><span class="hira">とし</span>　<span class="kata">トシ</span></span><span class="roma">toshi</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="weekdays">
+<h2>星期</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">星期一</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Monday" data-lang="en-US"><span class="word">Monday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Montag" data-lang="de-DE"><span class="word">Montag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="lundi" data-lang="fr-FR"><span class="word">lundi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="月曜日" data-lang="ja-JP"><span class="word">月曜日</span><span class="sub"><span class="hira">げつようび</span>　<span class="kata">ゲツヨウビ</span></span><span class="roma">getsuyoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期二</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Tuesday" data-lang="en-US"><span class="word">Tuesday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Dienstag" data-lang="de-DE"><span class="word">Dienstag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mardi" data-lang="fr-FR"><span class="word">mardi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="火曜日" data-lang="ja-JP"><span class="word">火曜日</span><span class="sub"><span class="hira">かようび</span>　<span class="kata">カヨウビ</span></span><span class="roma">kayoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期三</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Wednesday" data-lang="en-US"><span class="word">Wednesday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Mittwoch" data-lang="de-DE"><span class="word">Mittwoch</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mercredi" data-lang="fr-FR"><span class="word">mercredi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="水曜日" data-lang="ja-JP"><span class="word">水曜日</span><span class="sub"><span class="hira">すいようび</span>　<span class="kata">スイヨウビ</span></span><span class="roma">suiyoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期四</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Thursday" data-lang="en-US"><span class="word">Thursday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Donnerstag" data-lang="de-DE"><span class="word">Donnerstag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="jeudi" data-lang="fr-FR"><span class="word">jeudi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="木曜日" data-lang="ja-JP"><span class="word">木曜日</span><span class="sub"><span class="hira">もくようび</span>　<span class="kata">モクヨウビ</span></span><span class="roma">mokuyoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期五</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Friday" data-lang="en-US"><span class="word">Friday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Freitag" data-lang="de-DE"><span class="word">Freitag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vendredi" data-lang="fr-FR"><span class="word">vendredi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="金曜日" data-lang="ja-JP"><span class="word">金曜日</span><span class="sub"><span class="hira">きんようび</span>　<span class="kata">キンヨウビ</span></span><span class="roma">kinyoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期六</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Saturday" data-lang="en-US"><span class="word">Saturday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Samstag" data-lang="de-DE"><span class="word">Samstag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="samedi" data-lang="fr-FR"><span class="word">samedi</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="土曜日" data-lang="ja-JP"><span class="word">土曜日</span><span class="sub"><span class="hira">どようび</span>　<span class="kata">ドヨウビ</span></span><span class="roma">doyoubi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期日</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="Sunday" data-lang="en-US"><span class="word">Sunday</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Sonntag" data-lang="de-DE"><span class="word">Sonntag</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dimanche" data-lang="fr-FR"><span class="word">dimanche</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="日曜日" data-lang="ja-JP"><span class="word">日曜日</span><span class="sub"><span class="hira">にちようび</span>　<span class="kata">ニチヨウビ</span></span><span class="roma">nichiyoubi</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="numbers">
+<h2>數字 0–30</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">0</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="zero" data-lang="en-US"><span class="word">zero</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="null" data-lang="de-DE"><span class="word">null</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="zéro" data-lang="fr-FR"><span class="word">zéro</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="零" data-lang="ja-JP"><span class="word">零</span><span class="sub"><span class="hira">ぜろ</span>　<span class="kata">ゼロ</span></span><span class="roma">zero</span></button></td></tr><tr class="vocab-row"><td class="zh">1</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="one" data-lang="en-US"><span class="word">one</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="eins" data-lang="de-DE"><span class="word">eins</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="un" data-lang="fr-FR"><span class="word">un</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="一" data-lang="ja-JP"><span class="word">一</span><span class="sub"><span class="hira">いち</span>　<span class="kata">イチ</span></span><span class="roma">ichi</span></button></td></tr><tr class="vocab-row"><td class="zh">2</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="two" data-lang="en-US"><span class="word">two</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zwei" data-lang="de-DE"><span class="word">zwei</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="deux" data-lang="fr-FR"><span class="word">deux</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二" data-lang="ja-JP"><span class="word">二</span><span class="sub"><span class="hira">に</span>　<span class="kata">ニ</span></span><span class="roma">ni</span></button></td></tr><tr class="vocab-row"><td class="zh">3</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="three" data-lang="en-US"><span class="word">three</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="drei" data-lang="de-DE"><span class="word">drei</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="trois" data-lang="fr-FR"><span class="word">trois</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="三" data-lang="ja-JP"><span class="word">三</span><span class="sub"><span class="hira">さん</span>　<span class="kata">サン</span></span><span class="roma">san</span></button></td></tr><tr class="vocab-row"><td class="zh">4</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="four" data-lang="en-US"><span class="word">four</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="vier" data-lang="de-DE"><span class="word">vier</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="quatre" data-lang="fr-FR"><span class="word">quatre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="四" data-lang="ja-JP"><span class="word">四</span><span class="sub"><span class="hira">よん</span>　<span class="kata">ヨン</span></span><span class="roma">yon</span></button></td></tr><tr class="vocab-row"><td class="zh">5</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="five" data-lang="en-US"><span class="word">five</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="fünf" data-lang="de-DE"><span class="word">fünf</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="cinq" data-lang="fr-FR"><span class="word">cinq</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="五" data-lang="ja-JP"><span class="word">五</span><span class="sub"><span class="hira">ご</span>　<span class="kata">ゴ</span></span><span class="roma">go</span></button></td></tr><tr class="vocab-row"><td class="zh">6</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="six" data-lang="en-US"><span class="word">six</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sechs" data-lang="de-DE"><span class="word">sechs</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="six" data-lang="fr-FR"><span class="word">six</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="六" data-lang="ja-JP"><span class="word">六</span><span class="sub"><span class="hira">ろく</span>　<span class="kata">ロク</span></span><span class="roma">roku</span></button></td></tr><tr class="vocab-row"><td class="zh">7</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="seven" data-lang="en-US"><span class="word">seven</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sieben" data-lang="de-DE"><span class="word">sieben</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="sept" data-lang="fr-FR"><span class="word">sept</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="七" data-lang="ja-JP"><span class="word">七</span><span class="sub"><span class="hira">なな</span>　<span class="kata">ナナ</span></span><span class="roma">nana</span></button></td></tr><tr class="vocab-row"><td class="zh">8</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="eight" data-lang="en-US"><span class="word">eight</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="acht" data-lang="de-DE"><span class="word">acht</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="huit" data-lang="fr-FR"><span class="word">huit</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="八" data-lang="ja-JP"><span class="word">八</span><span class="sub"><span class="hira">はち</span>　<span class="kata">ハチ</span></span><span class="roma">hachi</span></button></td></tr><tr class="vocab-row"><td class="zh">9</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="nine" data-lang="en-US"><span class="word">nine</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="neun" data-lang="de-DE"><span class="word">neun</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="neuf" data-lang="fr-FR"><span class="word">neuf</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="九" data-lang="ja-JP"><span class="word">九</span><span class="sub"><span class="hira">きゅう</span>　<span class="kata">キュウ</span></span><span class="roma">kyuu</span></button></td></tr><tr class="vocab-row"><td class="zh">10</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="ten" data-lang="en-US"><span class="word">ten</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zehn" data-lang="de-DE"><span class="word">zehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix" data-lang="fr-FR"><span class="word">dix</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十" data-lang="ja-JP"><span class="word">十</span><span class="sub"><span class="hira">じゅう</span>　<span class="kata">ジュウ</span></span><span class="roma">juu</span></button></td></tr><tr class="vocab-row"><td class="zh">11</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="eleven" data-lang="en-US"><span class="word">eleven</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="elf" data-lang="de-DE"><span class="word">elf</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="onze" data-lang="fr-FR"><span class="word">onze</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十一" data-lang="ja-JP"><span class="word">十一</span><span class="sub"><span class="hira">じゅういち</span>　<span class="kata">ジュウイチ</span></span><span class="roma">juuichi</span></button></td></tr><tr class="vocab-row"><td class="zh">12</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twelve" data-lang="en-US"><span class="word">twelve</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zwölf" data-lang="de-DE"><span class="word">zwölf</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="douze" data-lang="fr-FR"><span class="word">douze</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十二" data-lang="ja-JP"><span class="word">十二</span><span class="sub"><span class="hira">じゅうに</span>　<span class="kata">ジュウニ</span></span><span class="roma">juuni</span></button></td></tr><tr class="vocab-row"><td class="zh">13</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="thirteen" data-lang="en-US"><span class="word">thirteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="dreizehn" data-lang="de-DE"><span class="word">dreizehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="treize" data-lang="fr-FR"><span class="word">treize</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十三" data-lang="ja-JP"><span class="word">十三</span><span class="sub"><span class="hira">じゅうさん</span>　<span class="kata">ジュウサン</span></span><span class="roma">juusan</span></button></td></tr><tr class="vocab-row"><td class="zh">14</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="fourteen" data-lang="en-US"><span class="word">fourteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="vierzehn" data-lang="de-DE"><span class="word">vierzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="quatorze" data-lang="fr-FR"><span class="word">quatorze</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十四" data-lang="ja-JP"><span class="word">十四</span><span class="sub"><span class="hira">じゅうよん</span>　<span class="kata">ジュウヨン</span></span><span class="roma">juuyon</span></button></td></tr><tr class="vocab-row"><td class="zh">15</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="fifteen" data-lang="en-US"><span class="word">fifteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="fünfzehn" data-lang="de-DE"><span class="word">fünfzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="quinze" data-lang="fr-FR"><span class="word">quinze</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十五" data-lang="ja-JP"><span class="word">十五</span><span class="sub"><span class="hira">じゅうご</span>　<span class="kata">ジュウゴ</span></span><span class="roma">juugo</span></button></td></tr><tr class="vocab-row"><td class="zh">16</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="sixteen" data-lang="en-US"><span class="word">sixteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sechzehn" data-lang="de-DE"><span class="word">sechzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="seize" data-lang="fr-FR"><span class="word">seize</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十六" data-lang="ja-JP"><span class="word">十六</span><span class="sub"><span class="hira">じゅうろく</span>　<span class="kata">ジュウロク</span></span><span class="roma">juuroku</span></button></td></tr><tr class="vocab-row"><td class="zh">17</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="seventeen" data-lang="en-US"><span class="word">seventeen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="siebzehn" data-lang="de-DE"><span class="word">siebzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix-sept" data-lang="fr-FR"><span class="word">dix-sept</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十七" data-lang="ja-JP"><span class="word">十七</span><span class="sub"><span class="hira">じゅうなな</span>　<span class="kata">ジュウナナ</span></span><span class="roma">juunana</span></button></td></tr><tr class="vocab-row"><td class="zh">18</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="eighteen" data-lang="en-US"><span class="word">eighteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="achtzehn" data-lang="de-DE"><span class="word">achtzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix-huit" data-lang="fr-FR"><span class="word">dix-huit</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十八" data-lang="ja-JP"><span class="word">十八</span><span class="sub"><span class="hira">じゅうはち</span>　<span class="kata">ジュウハチ</span></span><span class="roma">juuhachi</span></button></td></tr><tr class="vocab-row"><td class="zh">19</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="nineteen" data-lang="en-US"><span class="word">nineteen</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="neunzehn" data-lang="de-DE"><span class="word">neunzehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix-neuf" data-lang="fr-FR"><span class="word">dix-neuf</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十九" data-lang="ja-JP"><span class="word">十九</span><span class="sub"><span class="hira">じゅうきゅう</span>　<span class="kata">ジュウキュウ</span></span><span class="roma">juukyuu</span></button></td></tr><tr class="vocab-row"><td class="zh">20</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty" data-lang="en-US"><span class="word">twenty</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zwanzig" data-lang="de-DE"><span class="word">zwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt" data-lang="fr-FR"><span class="word">vingt</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十" data-lang="ja-JP"><span class="word">二十</span><span class="sub"><span class="hira">にじゅう</span>　<span class="kata">ニジュウ</span></span><span class="roma">nijuu</span></button></td></tr><tr class="vocab-row"><td class="zh">21</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-one" data-lang="en-US"><span class="word">twenty-one</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="einundzwanzig" data-lang="de-DE"><span class="word">einundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt et un" data-lang="fr-FR"><span class="word">vingt et un</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十一" data-lang="ja-JP"><span class="word">二十一</span><span class="sub"><span class="hira">にじゅういち</span>　<span class="kata">ニジュウイチ</span></span><span class="roma">nijuuichi</span></button></td></tr><tr class="vocab-row"><td class="zh">22</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-two" data-lang="en-US"><span class="word">twenty-two</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zweiundzwanzig" data-lang="de-DE"><span class="word">zweiundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-deux" data-lang="fr-FR"><span class="word">vingt-deux</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十二" data-lang="ja-JP"><span class="word">二十二</span><span class="sub"><span class="hira">にじゅうに</span>　<span class="kata">ニジュウニ</span></span><span class="roma">nijuuni</span></button></td></tr><tr class="vocab-row"><td class="zh">23</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-three" data-lang="en-US"><span class="word">twenty-three</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="dreiundzwanzig" data-lang="de-DE"><span class="word">dreiundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-trois" data-lang="fr-FR"><span class="word">vingt-trois</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十三" data-lang="ja-JP"><span class="word">二十三</span><span class="sub"><span class="hira">にじゅうさん</span>　<span class="kata">ニジュウサン</span></span><span class="roma">nijuusan</span></button></td></tr><tr class="vocab-row"><td class="zh">24</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-four" data-lang="en-US"><span class="word">twenty-four</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="vierundzwanzig" data-lang="de-DE"><span class="word">vierundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-quatre" data-lang="fr-FR"><span class="word">vingt-quatre</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十四" data-lang="ja-JP"><span class="word">二十四</span><span class="sub"><span class="hira">にじゅうよん</span>　<span class="kata">ニジュウヨン</span></span><span class="roma">nijuuyon</span></button></td></tr><tr class="vocab-row"><td class="zh">25</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-five" data-lang="en-US"><span class="word">twenty-five</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="fünfundzwanzig" data-lang="de-DE"><span class="word">fünfundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-cinq" data-lang="fr-FR"><span class="word">vingt-cinq</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十五" data-lang="ja-JP"><span class="word">二十五</span><span class="sub"><span class="hira">にじゅうご</span>　<span class="kata">ニジュウゴ</span></span><span class="roma">nijuugo</span></button></td></tr><tr class="vocab-row"><td class="zh">26</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-six" data-lang="en-US"><span class="word">twenty-six</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="sechsundzwanzig" data-lang="de-DE"><span class="word">sechsundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-six" data-lang="fr-FR"><span class="word">vingt-six</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十六" data-lang="ja-JP"><span class="word">二十六</span><span class="sub"><span class="hira">にじゅうろく</span>　<span class="kata">ニジュウロク</span></span><span class="roma">nijuuroku</span></button></td></tr><tr class="vocab-row"><td class="zh">27</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-seven" data-lang="en-US"><span class="word">twenty-seven</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="siebenundzwanzig" data-lang="de-DE"><span class="word">siebenundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-sept" data-lang="fr-FR"><span class="word">vingt-sept</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十七" data-lang="ja-JP"><span class="word">二十七</span><span class="sub"><span class="hira">にじゅうなな</span>　<span class="kata">ニジュウナナ</span></span><span class="roma">nijuunana</span></button></td></tr><tr class="vocab-row"><td class="zh">28</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-eight" data-lang="en-US"><span class="word">twenty-eight</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="achtundzwanzig" data-lang="de-DE"><span class="word">achtundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-huit" data-lang="fr-FR"><span class="word">vingt-huit</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十八" data-lang="ja-JP"><span class="word">二十八</span><span class="sub"><span class="hira">にじゅうはち</span>　<span class="kata">ニジュウハチ</span></span><span class="roma">nijuuhachi</span></button></td></tr><tr class="vocab-row"><td class="zh">29</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="twenty-nine" data-lang="en-US"><span class="word">twenty-nine</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="neunundzwanzig" data-lang="de-DE"><span class="word">neunundzwanzig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="vingt-neuf" data-lang="fr-FR"><span class="word">vingt-neuf</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="二十九" data-lang="ja-JP"><span class="word">二十九</span><span class="sub"><span class="hira">にじゅうきゅう</span>　<span class="kata">ニジュウキュウ</span></span><span class="roma">nijuukyuu</span></button></td></tr><tr class="vocab-row"><td class="zh">30</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="thirty" data-lang="en-US"><span class="word">thirty</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="dreißig" data-lang="de-DE"><span class="word">dreißig</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="trente" data-lang="fr-FR"><span class="word">trente</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="三十" data-lang="ja-JP"><span class="word">三十</span><span class="sub"><span class="hira">さんじゅう</span>　<span class="kata">サンジュウ</span></span><span class="roma">sanjuu</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="scales">
+<h2>數位與大數</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">個</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="ones" data-lang="en-US"><span class="word">ones</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Einer" data-lang="de-DE"><span class="word">Einer</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="unité" data-lang="fr-FR"><span class="word">unité</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="一" data-lang="ja-JP"><span class="word">一</span><span class="sub"><span class="hira">いち</span>　<span class="kata">イチ</span></span><span class="roma">ichi</span></button></td></tr><tr class="vocab-row"><td class="zh">十</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="ten" data-lang="en-US"><span class="word">ten</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Zehn" data-lang="de-DE"><span class="word">Zehn</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix" data-lang="fr-FR"><span class="word">dix</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十" data-lang="ja-JP"><span class="word">十</span><span class="sub"><span class="hira">じゅう</span>　<span class="kata">ジュウ</span></span><span class="roma">juu</span></button></td></tr><tr class="vocab-row"><td class="zh">百</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="hundred" data-lang="en-US"><span class="word">hundred</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Hundert" data-lang="de-DE"><span class="word">Hundert</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="cent" data-lang="fr-FR"><span class="word">cent</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="百" data-lang="ja-JP"><span class="word">百</span><span class="sub"><span class="hira">ひゃく</span>　<span class="kata">ヒャク</span></span><span class="roma">hyaku</span></button></td></tr><tr class="vocab-row"><td class="zh">千</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="thousand" data-lang="en-US"><span class="word">thousand</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Tausend" data-lang="de-DE"><span class="word">Tausend</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="mille" data-lang="fr-FR"><span class="word">mille</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="千" data-lang="ja-JP"><span class="word">千</span><span class="sub"><span class="hira">せん</span>　<span class="kata">セン</span></span><span class="roma">sen</span></button></td></tr><tr class="vocab-row"><td class="zh">十萬</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="hundred thousand" data-lang="en-US"><span class="word">hundred thousand</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="hunderttausend" data-lang="de-DE"><span class="word">hunderttausend</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="cent mille" data-lang="fr-FR"><span class="word">cent mille</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="十万" data-lang="ja-JP"><span class="word">十万</span><span class="sub"><span class="hira">じゅうまん</span>　<span class="kata">ジュウマン</span></span><span class="roma">juuman</span></button></td></tr><tr class="vocab-row"><td class="zh">百萬</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="million" data-lang="en-US"><span class="word">million</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Million" data-lang="de-DE"><span class="word">Million</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="million" data-lang="fr-FR"><span class="word">million</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="百万" data-lang="ja-JP"><span class="word">百万</span><span class="sub"><span class="hira">ひゃくまん</span>　<span class="kata">ヒャクマン</span></span><span class="roma">hyakuman</span></button></td></tr><tr class="vocab-row"><td class="zh">千萬</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="ten million" data-lang="en-US"><span class="word">ten million</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="zehn Millionen" data-lang="de-DE"><span class="word">zehn Millionen</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="dix millions" data-lang="fr-FR"><span class="word">dix millions</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="千万" data-lang="ja-JP"><span class="word">千万</span><span class="sub"><span class="hira">せんまん</span>　<span class="kata">センマン</span></span><span class="roma">senman</span></button></td></tr><tr class="vocab-row"><td class="zh">億</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="hundred million" data-lang="en-US"><span class="word">hundred million</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="hundert Millionen" data-lang="de-DE"><span class="word">hundert Millionen</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="cent millions" data-lang="fr-FR"><span class="word">cent millions</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="億" data-lang="ja-JP"><span class="word">億</span><span class="sub"><span class="hira">おく</span>　<span class="kata">オク</span></span><span class="roma">oku</span></button></td></tr><tr class="vocab-row"><td class="zh">兆</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="trillion" data-lang="en-US"><span class="word">trillion</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Billion" data-lang="de-DE"><span class="word">Billion</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="billion" data-lang="fr-FR"><span class="word">billion</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="兆" data-lang="ja-JP"><span class="word">兆</span><span class="sub"><span class="hira">ちょう</span>　<span class="kata">チョウ</span></span><span class="roma">chou</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選單字可單獨朗讀；「全部循環播放」依英→德→法→日順序逐格朗讀。日文朗讀漢字寫法。德文「Billion」對應英文 trillion（10<sup>12</sup>）；東亞「億」是 10<sup>8</sup>、「兆」是 10<sup>12</sup>。五十音表見 <a href="../../ja/gojuon/">日文五十音</a>。</div>
+</main>
+<footer>單字對照｜四語筆記</footer>
+<script>
+
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
