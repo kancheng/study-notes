@@ -510,6 +510,13 @@ h2{{font-size:1.35rem;margin:36px 0 6px}}
 <p>平假名、片假名對照：清音、濁音、半濁音、拗音與羅馬拼音。</p>
 <a class="button" href="./gojuon/">進入 五十音 →</a>
 </article>
+<h2>單字表</h2>
+<article class="item">
+<div class="meta">單字 · 跟讀</div>
+<h3 lang="ja">単語</h3>
+<p>季節、月份、星期、數字與大數：漢字、平片假名、羅馬拼音；可單字朗讀或全部循環播放並調語速。</p>
+<a class="button" href="./vocab/">進入 単語 →</a>
+</article>
 {''.join(sections)}
 </main>
 </body>

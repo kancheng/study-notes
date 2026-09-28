@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="季節、月份、星期、數字與大數單位。點選單字可朗讀；也可用全部循環播放，並調整語速。">
+<title>Vocabulaire｜法文單字</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:420px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:10px 14px;border-top:1px solid #eadfd6;vertical-align:middle}
+.zh{color:#53647c;width:34%}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word,.kanji{font-size:1.15rem;font-weight:750;color:#b3482f}
+.kana{font-size:.98rem;color:#3d4d63}
+.hira{margin-right:0}
+.kata{color:#6a5870}
+.roma{font-size:.88rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Vocabulaire</div></header>
+<main>
+<h1>法文單字表</h1>
+<p class="note">季節、月份、星期、數字與大數單位。點選單字可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+<h2>季節</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">春天</td><td><button type="button" class="say" lang="fr" data-say="printemps" data-lang="fr-FR"><span class="word">printemps</span></button></td></tr><tr class="vocab-row"><td class="zh">夏天</td><td><button type="button" class="say" lang="fr" data-say="été" data-lang="fr-FR"><span class="word">été</span></button></td></tr><tr class="vocab-row"><td class="zh">秋天</td><td><button type="button" class="say" lang="fr" data-say="automne" data-lang="fr-FR"><span class="word">automne</span></button></td></tr><tr class="vocab-row"><td class="zh">冬天</td><td><button type="button" class="say" lang="fr" data-say="hiver" data-lang="fr-FR"><span class="word">hiver</span></button></td></tr></tbody></table></div><h2>月份</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">一月</td><td><button type="button" class="say" lang="fr" data-say="janvier" data-lang="fr-FR"><span class="word">janvier</span></button></td></tr><tr class="vocab-row"><td class="zh">二月</td><td><button type="button" class="say" lang="fr" data-say="février" data-lang="fr-FR"><span class="word">février</span></button></td></tr><tr class="vocab-row"><td class="zh">三月</td><td><button type="button" class="say" lang="fr" data-say="mars" data-lang="fr-FR"><span class="word">mars</span></button></td></tr><tr class="vocab-row"><td class="zh">四月</td><td><button type="button" class="say" lang="fr" data-say="avril" data-lang="fr-FR"><span class="word">avril</span></button></td></tr><tr class="vocab-row"><td class="zh">五月</td><td><button type="button" class="say" lang="fr" data-say="mai" data-lang="fr-FR"><span class="word">mai</span></button></td></tr><tr class="vocab-row"><td class="zh">六月</td><td><button type="button" class="say" lang="fr" data-say="juin" data-lang="fr-FR"><span class="word">juin</span></button></td></tr><tr class="vocab-row"><td class="zh">七月</td><td><button type="button" class="say" lang="fr" data-say="juillet" data-lang="fr-FR"><span class="word">juillet</span></button></td></tr><tr class="vocab-row"><td class="zh">八月</td><td><button type="button" class="say" lang="fr" data-say="août" data-lang="fr-FR"><span class="word">août</span></button></td></tr><tr class="vocab-row"><td class="zh">九月</td><td><button type="button" class="say" lang="fr" data-say="septembre" data-lang="fr-FR"><span class="word">septembre</span></button></td></tr><tr class="vocab-row"><td class="zh">十月</td><td><button type="button" class="say" lang="fr" data-say="octobre" data-lang="fr-FR"><span class="word">octobre</span></button></td></tr><tr class="vocab-row"><td class="zh">十一月</td><td><button type="button" class="say" lang="fr" data-say="novembre" data-lang="fr-FR"><span class="word">novembre</span></button></td></tr><tr class="vocab-row"><td class="zh">十二月</td><td><button type="button" class="say" lang="fr" data-say="décembre" data-lang="fr-FR"><span class="word">décembre</span></button></td></tr></tbody></table></div><h2>時間單位</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">一周／一週</td><td><button type="button" class="say" lang="fr" data-say="semaine" data-lang="fr-FR"><span class="word">semaine</span></button></td></tr><tr class="vocab-row"><td class="zh">周末</td><td><button type="button" class="say" lang="fr" data-say="week-end" data-lang="fr-FR"><span class="word">week-end</span></button></td></tr><tr class="vocab-row"><td class="zh">月</td><td><button type="button" class="say" lang="fr" data-say="mois" data-lang="fr-FR"><span class="word">mois</span></button></td></tr><tr class="vocab-row"><td class="zh">年</td><td><button type="button" class="say" lang="fr" data-say="année" data-lang="fr-FR"><span class="word">année</span></button></td></tr></tbody></table></div><h2>星期</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">星期一</td><td><button type="button" class="say" lang="fr" data-say="lundi" data-lang="fr-FR"><span class="word">lundi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期二</td><td><button type="button" class="say" lang="fr" data-say="mardi" data-lang="fr-FR"><span class="word">mardi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期三</td><td><button type="button" class="say" lang="fr" data-say="mercredi" data-lang="fr-FR"><span class="word">mercredi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期四</td><td><button type="button" class="say" lang="fr" data-say="jeudi" data-lang="fr-FR"><span class="word">jeudi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期五</td><td><button type="button" class="say" lang="fr" data-say="vendredi" data-lang="fr-FR"><span class="word">vendredi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期六</td><td><button type="button" class="say" lang="fr" data-say="samedi" data-lang="fr-FR"><span class="word">samedi</span></button></td></tr><tr class="vocab-row"><td class="zh">星期日</td><td><button type="button" class="say" lang="fr" data-say="dimanche" data-lang="fr-FR"><span class="word">dimanche</span></button></td></tr></tbody></table></div><h2>數字 0–30</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">0</td><td><button type="button" class="say" lang="fr" data-say="zéro" data-lang="fr-FR"><span class="word">zéro</span></button></td></tr><tr class="vocab-row"><td class="zh">1</td><td><button type="button" class="say" lang="fr" data-say="un" data-lang="fr-FR"><span class="word">un</span></button></td></tr><tr class="vocab-row"><td class="zh">2</td><td><button type="button" class="say" lang="fr" data-say="deux" data-lang="fr-FR"><span class="word">deux</span></button></td></tr><tr class="vocab-row"><td class="zh">3</td><td><button type="button" class="say" lang="fr" data-say="trois" data-lang="fr-FR"><span class="word">trois</span></button></td></tr><tr class="vocab-row"><td class="zh">4</td><td><button type="button" class="say" lang="fr" data-say="quatre" data-lang="fr-FR"><span class="word">quatre</span></button></td></tr><tr class="vocab-row"><td class="zh">5</td><td><button type="button" class="say" lang="fr" data-say="cinq" data-lang="fr-FR"><span class="word">cinq</span></button></td></tr><tr class="vocab-row"><td class="zh">6</td><td><button type="button" class="say" lang="fr" data-say="six" data-lang="fr-FR"><span class="word">six</span></button></td></tr><tr class="vocab-row"><td class="zh">7</td><td><button type="button" class="say" lang="fr" data-say="sept" data-lang="fr-FR"><span class="word">sept</span></button></td></tr><tr class="vocab-row"><td class="zh">8</td><td><button type="button" class="say" lang="fr" data-say="huit" data-lang="fr-FR"><span class="word">huit</span></button></td></tr><tr class="vocab-row"><td class="zh">9</td><td><button type="button" class="say" lang="fr" data-say="neuf" data-lang="fr-FR"><span class="word">neuf</span></button></td></tr><tr class="vocab-row"><td class="zh">10</td><td><button type="button" class="say" lang="fr" data-say="dix" data-lang="fr-FR"><span class="word">dix</span></button></td></tr><tr class="vocab-row"><td class="zh">11</td><td><button type="button" class="say" lang="fr" data-say="onze" data-lang="fr-FR"><span class="word">onze</span></button></td></tr><tr class="vocab-row"><td class="zh">12</td><td><button type="button" class="say" lang="fr" data-say="douze" data-lang="fr-FR"><span class="word">douze</span></button></td></tr><tr class="vocab-row"><td class="zh">13</td><td><button type="button" class="say" lang="fr" data-say="treize" data-lang="fr-FR"><span class="word">treize</span></button></td></tr><tr class="vocab-row"><td class="zh">14</td><td><button type="button" class="say" lang="fr" data-say="quatorze" data-lang="fr-FR"><span class="word">quatorze</span></button></td></tr><tr class="vocab-row"><td class="zh">15</td><td><button type="button" class="say" lang="fr" data-say="quinze" data-lang="fr-FR"><span class="word">quinze</span></button></td></tr><tr class="vocab-row"><td class="zh">16</td><td><button type="button" class="say" lang="fr" data-say="seize" data-lang="fr-FR"><span class="word">seize</span></button></td></tr><tr class="vocab-row"><td class="zh">17</td><td><button type="button" class="say" lang="fr" data-say="dix-sept" data-lang="fr-FR"><span class="word">dix-sept</span></button></td></tr><tr class="vocab-row"><td class="zh">18</td><td><button type="button" class="say" lang="fr" data-say="dix-huit" data-lang="fr-FR"><span class="word">dix-huit</span></button></td></tr><tr class="vocab-row"><td class="zh">19</td><td><button type="button" class="say" lang="fr" data-say="dix-neuf" data-lang="fr-FR"><span class="word">dix-neuf</span></button></td></tr><tr class="vocab-row"><td class="zh">20</td><td><button type="button" class="say" lang="fr" data-say="vingt" data-lang="fr-FR"><span class="word">vingt</span></button></td></tr><tr class="vocab-row"><td class="zh">21</td><td><button type="button" class="say" lang="fr" data-say="vingt et un" data-lang="fr-FR"><span class="word">vingt et un</span></button></td></tr><tr class="vocab-row"><td class="zh">22</td><td><button type="button" class="say" lang="fr" data-say="vingt-deux" data-lang="fr-FR"><span class="word">vingt-deux</span></button></td></tr><tr class="vocab-row"><td class="zh">23</td><td><button type="button" class="say" lang="fr" data-say="vingt-trois" data-lang="fr-FR"><span class="word">vingt-trois</span></button></td></tr><tr class="vocab-row"><td class="zh">24</td><td><button type="button" class="say" lang="fr" data-say="vingt-quatre" data-lang="fr-FR"><span class="word">vingt-quatre</span></button></td></tr><tr class="vocab-row"><td class="zh">25</td><td><button type="button" class="say" lang="fr" data-say="vingt-cinq" data-lang="fr-FR"><span class="word">vingt-cinq</span></button></td></tr><tr class="vocab-row"><td class="zh">26</td><td><button type="button" class="say" lang="fr" data-say="vingt-six" data-lang="fr-FR"><span class="word">vingt-six</span></button></td></tr><tr class="vocab-row"><td class="zh">27</td><td><button type="button" class="say" lang="fr" data-say="vingt-sept" data-lang="fr-FR"><span class="word">vingt-sept</span></button></td></tr><tr class="vocab-row"><td class="zh">28</td><td><button type="button" class="say" lang="fr" data-say="vingt-huit" data-lang="fr-FR"><span class="word">vingt-huit</span></button></td></tr><tr class="vocab-row"><td class="zh">29</td><td><button type="button" class="say" lang="fr" data-say="vingt-neuf" data-lang="fr-FR"><span class="word">vingt-neuf</span></button></td></tr><tr class="vocab-row"><td class="zh">30</td><td><button type="button" class="say" lang="fr" data-say="trente" data-lang="fr-FR"><span class="word">trente</span></button></td></tr></tbody></table></div><h2>數位與大數</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">個</td><td><button type="button" class="say" lang="fr" data-say="unité" data-lang="fr-FR"><span class="word">unité</span></button></td></tr><tr class="vocab-row"><td class="zh">十</td><td><button type="button" class="say" lang="fr" data-say="dix" data-lang="fr-FR"><span class="word">dix</span></button></td></tr><tr class="vocab-row"><td class="zh">百</td><td><button type="button" class="say" lang="fr" data-say="cent" data-lang="fr-FR"><span class="word">cent</span></button></td></tr><tr class="vocab-row"><td class="zh">千</td><td><button type="button" class="say" lang="fr" data-say="mille" data-lang="fr-FR"><span class="word">mille</span></button></td></tr><tr class="vocab-row"><td class="zh">十萬</td><td><button type="button" class="say" lang="fr" data-say="cent mille" data-lang="fr-FR"><span class="word">cent mille</span></button></td></tr><tr class="vocab-row"><td class="zh">百萬</td><td><button type="button" class="say" lang="fr" data-say="million" data-lang="fr-FR"><span class="word">million</span></button></td></tr><tr class="vocab-row"><td class="zh">千萬</td><td><button type="button" class="say" lang="fr" data-say="dix millions" data-lang="fr-FR"><span class="word">dix millions</span></button></td></tr><tr class="vocab-row"><td class="zh">億</td><td><button type="button" class="say" lang="fr" data-say="cent millions" data-lang="fr-FR"><span class="word">cent millions</span></button></td></tr><tr class="vocab-row"><td class="zh">兆</td><td><button type="button" class="say" lang="fr" data-say="billion" data-lang="fr-FR"><span class="word">billion</span></button></td></tr></tbody></table></div>
+<div class="tip"><strong>用法提醒：</strong>點選單字可單獨朗讀。「全部循環播放」會依頁面順序朗讀；勾選「播完從頭再播」會一直循環，直到按停止。語速可用滑桿調整。</div>
+</main>
+<footer>Vocabulaire｜法文單字</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+let current = null;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { current = null; if (onend) onend(); };
+  u.onerror = () => { current = null; if (onend) onend(); };
+  current = u;
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  current = null;
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

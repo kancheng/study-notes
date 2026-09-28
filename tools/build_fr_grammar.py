@@ -348,6 +348,13 @@ h2{{font-size:1.35rem;margin:36px 0 6px}}
 <p>法文字母 A–Z，以及重音與合字：名稱與朗讀。</p>
 <a class="button" href="./alphabet/">進入 Alphabet →</a>
 </article>
+<h2>單字表</h2>
+<article class="item">
+<div class="meta">單字 · 跟讀</div>
+<h3 lang="fr">Vocabulaire</h3>
+<p>季節、月份、星期、數字與大數單位：可單字朗讀，也可全部循環播放並調語速。</p>
+<a class="button" href="./vocab/">進入 Vocabulaire →</a>
+</article>
 {''.join(sections)}
 </main>
 </body>
