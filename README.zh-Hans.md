@@ -1,8 +1,10 @@
 # 四语笔记 · Polyglot Study Notes
 
-[繁體中文](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [English](README.en.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+[English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
-英语、法语、德语、日语的学习笔记，含语法、词汇、例句、朗读与可下载讲义。网站界面是繁体中文，例句是正在学的那种语言。
+**读者优先说明：** 本项目目前优先支持华语圈使用者学习。说明、翻译与网站界面以中文为主（线上版为繁体中文），方便以中文为主要语言的人学习英文、法文、德文与日文。
+
+英语、法语、德语、日语的学习笔记，含语法、词汇、例句、朗读与可下载讲义。例句是正在学的那种语言。
 
 英文、法文与德文依欧洲语言共同参考框架从 A1 排到 B2。日文依 JLPT 从 N5 排到 N2，例句附汉字、假名与罗马拼音。
 
@@ -20,7 +22,8 @@
 - `fr/`：法文基础语法，依 CECRL 的 A1、A2、B1、B2 排列
 - `de/`：德文基础语法，依 GER 的 A1、A2、B1、B2 排列
 - `ja/`：日文基础语法，依 JLPT 的 N5、N4、N3、N2 排列
-- `tools/generate_pdf.py`：PDF 生成程序
+- `tables/`：多语对照表
+- `tools/`：页面与 PDF 构建程序
 - `tools/NotoSansTC.ttf`：PDF 用的中文字体
 
 ## 部署至 GitHub Pages
@@ -29,7 +32,7 @@
 
 GitHub repository name：`polyglot-study-notes`
 
-GitHub About：`English, French, German, and Japanese study notes with grammar, vocabulary, examples, audio practice, and downloadable learning sheets.`
+GitHub About：`Study notes for English, French, German, and Japanese—built first for Chinese-speaking learners—with grammar, vocabulary, examples, audio, and downloadable sheets.`
 
 ## 新增文章
 
@@ -37,4 +40,4 @@ GitHub About：`English, French, German, and Japanese study notes with grammar, 
 
 ## 生成 PDF
 
-英、德的 PDF 用 `python3 tools/generate_pdf.py`。法文页面与 PDF 用 `python3 tools/build_fr_grammar.py`。日文页面与 PDF 用 `python3 tools/build_ja_grammar.py`。这些程序都需要 `reportlab`。中文与法文使用项目内的 `tools/NotoSansTC.ttf`。日文 PDF 优先使用 `tools/NotoSansJP.otf`，否则使用系统的 Yu Gothic。
+英文：`python3 tools/build_en_grammar.py`。德文：`python3 tools/build_de_grammar.py`。法文：`python3 tools/build_fr_grammar.py`。日文：`python3 tools/build_ja_grammar.py`。这些程序都需要 `reportlab`。中文与法文使用项目内的 `tools/NotoSansTC.ttf`。日文 PDF 优先使用 `tools/NotoSansJP.otf`，否则使用系统的 Yu Gothic。

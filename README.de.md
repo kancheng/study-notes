@@ -1,8 +1,10 @@
 # Viersprachige Notizen · Polyglot Study Notes
 
-[繁體中文](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [English](README.en.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+[English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
-Lernnotizen für Englisch, Französisch, Deutsch und Japanisch, mit Grammatik, Wortschatz, Beispielsätzen, Audio und herunterladbaren Blättern. Die Oberfläche der Website ist auf Traditionellem Chinesisch. Die Beispielsätze stehen in der Sprache, die gerade gelernt wird.
+**Zielgruppe zuerst:** Dieses Projekt ist vorrangig für Lernende aus dem chinesischsprachigen Raum gedacht. Erklärungen, Übersetzungen und die Website-Oberfläche sind auf Chinesisch (auf der Live-Site Traditionelles Chinesisch), damit Menschen, deren Hauptsprache Chinesisch ist, Englisch, Französisch, Deutsch und Japanisch leichter lernen können.
+
+Lernnotizen für Englisch, Französisch, Deutsch und Japanisch, mit Grammatik, Wortschatz, Beispielsätzen, Audio und herunterladbaren Blättern. Die Beispielsätze stehen in der Sprache, die gerade gelernt wird.
 
 Englisch, Französisch und Deutsch folgen dem GER von A1 bis B2. Japanisch folgt dem JLPT von N5 bis N2. Jedes japanische Beispiel zeigt Kanji, Kana und Romaji.
 
@@ -20,7 +22,8 @@ Englisch, Französisch und Deutsch folgen dem GER von A1 bis B2. Japanisch folgt
 - `fr/`: französische Grammatik von A1 bis B2 nach dem GER
 - `de/`: deutsche Grammatik von A1 bis B2 nach dem GER
 - `ja/`: japanische Grammatik von JLPT N5 bis N2
-- `tools/generate_pdf.py`: Programm, das die PDFs erzeugt
+- `tables/`: mehrsprachige Vergleichstabellen
+- `tools/`: Programme für Seiten und PDFs
 - `tools/NotoSansTC.ttf`: chinesische Schrift für die PDFs
 
 ## Auf GitHub Pages veröffentlichen
@@ -29,7 +32,7 @@ Legen Sie die Dateien dieses Ordners ins **Veröffentlichungsverzeichnis** eines
 
 GitHub-Repository-Name: `polyglot-study-notes`
 
-GitHub About: `English, French, German, and Japanese study notes with grammar, vocabulary, examples, audio practice, and downloadable learning sheets.`
+GitHub About: `Study notes for English, French, German, and Japanese—built first for Chinese-speaking learners—with grammar, vocabulary, examples, audio, and downloadable sheets.`
 
 ## Eine Lektion hinzufügen
 
@@ -37,4 +40,4 @@ Legen Sie den neuen Text in den Ordner der Sprache, tragen Sie ihn in die Liste 
 
 ## PDFs erzeugen
 
-PDFs für Englisch und Deutsch erzeugt `python3 tools/generate_pdf.py`. Französische Seiten und PDFs erzeugt `python3 tools/build_fr_grammar.py`. Japanische Seiten und PDFs erzeugt `python3 tools/build_ja_grammar.py`. Dafür wird `reportlab` benötigt. Chinesisch und Französisch nutzen `tools/NotoSansTC.ttf`. Japanische PDFs nutzen `tools/NotoSansJP.otf`, falls vorhanden, sonst Yu Gothic.
+Englisch: `python3 tools/build_en_grammar.py`. Deutsch: `python3 tools/build_de_grammar.py`. Französisch: `python3 tools/build_fr_grammar.py`. Japanisch: `python3 tools/build_ja_grammar.py`. Dafür wird `reportlab` benötigt. Chinesisch und Französisch nutzen `tools/NotoSansTC.ttf`. Japanische PDFs nutzen `tools/NotoSansJP.otf`, falls vorhanden, sonst Yu Gothic.

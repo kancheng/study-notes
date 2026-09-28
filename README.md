@@ -1,40 +1,43 @@
-# 四語筆記 · Polyglot Study Notes
+# Polyglot Study Notes
 
-[繁體中文](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [English](README.en.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+[English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
-英語、法語、德語、日語的學習筆記，含文法、詞彙、例句、朗讀與可下載講義。網站介面是繁體中文，例句是正在學的那種語言。
+**Audience first:** This project is built primarily for Chinese-speaking learners. Explanations, translations, and the site UI are in Chinese (Traditional Chinese on the live site), so people who use Chinese as their main language can study English, French, German, and Japanese more easily.
 
-英文、法文與德文依歐洲語言共同參考架構從 A1 排到 B2。日文依 JLPT 從 N5 排到 N2，例句附漢字、假名與羅馬拼音。
+Study notes for English, French, German, and Japanese, with grammar, vocabulary, examples, audio practice, and downloadable sheets. Example sentences are in the language being studied.
 
-| 語言 | 教材 | 內容 |
+English, French, and German follow the CEFR from A1 through B2. Japanese follows the JLPT from N5 through N2, and every example shows kanji, kana, and romaji.
+
+| Language | Lessons | Contents |
 | --- | --- | --- |
-| 英文 | [`en/`](en/) | A1 到 B2 基礎文法，從 be、have、be called 開始 |
-| 法文 | [`fr/`](fr/) | A1 到 B2 基礎文法，依 CECRL，從 être、avoir、s’appeler 開始 |
-| 德文 | [`de/`](de/) | A1 到 B2 基礎文法，依 GER，從 sein、haben、heißen 開始 |
-| 日文 | [`ja/`](ja/) | N5 到 N2 基礎文法，例句附漢字、假名與羅馬拼音 |
+| English | [`en/`](en/) | A1–B2 grammar, starting with be, have, be called |
+| French | [`fr/`](fr/) | A1–B2 grammar on the CEFR scale, starting with être, avoir, s’appeler |
+| German | [`de/`](de/) | A1–B2 grammar on the CEFR scale, starting with sein, haben, heißen |
+| Japanese | [`ja/`](ja/) | N5–N2 grammar, with kanji, kana, and romaji on every example |
 
-## 網站結構
+## Site layout
 
-- `index.html`：英、法、德、日入口
-- `en/`：英文基礎文法，依 A1、A2、B1、B2 排列
-- `fr/`：法文基礎文法，依 CECRL 的 A1、A2、B1、B2 排列
-- `de/`：德文基礎文法，依 GER 的 A1、A2、B1、B2 排列
-- `ja/`：日文基礎文法，依 JLPT 的 N5、N4、N3、N2 排列
-- `tools/generate_pdf.py`：PDF 產生程式
-- `tools/NotoSansTC.ttf`：PDF 用的中文字型
+- `index.html`: entry point for English, French, German, and Japanese
+- `en/`: English grammar from A1 through B2
+- `fr/`: French grammar from CEFR A1 to B2
+- `de/`: German grammar from A1 to B2, following the CEFR
+- `ja/`: Japanese grammar from JLPT N5 to N2
+- `tables/`: multilingual comparison tables
+- `tools/`: page and PDF builders
+- `tools/NotoSansTC.ttf`: Chinese font used in the PDFs
 
-## 部署至 GitHub Pages
+## Deploy to GitHub Pages
 
-將本目錄中的檔案放到 GitHub Pages 儲存庫的**發佈根目錄**，讓 `index.html` 位於該目錄最上層。若放在既有個人網站的子目錄（例如 `study-notes/`），網址會是 `https://<username>.github.io/study-notes/`。網站使用相對路徑，兩種方式都能使用。
+Put the files in this directory at the **publishing root** of a GitHub Pages repository, so `index.html` sits at the top of that directory. If the site lives in a subdirectory of an existing personal site (for example `study-notes/`), the URL is `https://<username>.github.io/study-notes/`. Links are relative, so both setups work.
 
-GitHub repository name：`polyglot-study-notes`
+GitHub repository name: `polyglot-study-notes`
 
-GitHub About：`English, French, German, and Japanese study notes with grammar, vocabulary, examples, audio practice, and downloadable learning sheets.`
+GitHub About: `Study notes for English, French, German, and Japanese—built first for Chinese-speaking learners—with grammar, vocabulary, examples, audio, and downloadable sheets.`
 
-## 新增文章
+## Add a lesson
 
-各語言的新文章可放入對應資料夾，修改該語言 `index.html` 的文章清單，再從首頁導向該區。例句朗讀使用瀏覽器的 Web Speech API：法文 `fr-FR`、英文 `en-US`、德文 `de-DE`、日文 `ja-JP`。發音品質依裝置內安裝的語音而異。
+Put a new article in that language’s folder, add it to the list in that language’s `index.html`, and link to the section from the home page. Example audio uses the browser Web Speech API: French `fr-FR`, English `en-US`, German `de-DE`, Japanese `ja-JP`. Pronunciation depends on the voices installed on the device.
 
-## 產生 PDF
+## Generate the PDFs
 
-英、德的 PDF 用 `python3 tools/generate_pdf.py`。法文頁面與 PDF 用 `python3 tools/build_fr_grammar.py`。日文頁面與 PDF 用 `python3 tools/build_ja_grammar.py`。這些程式都需要 `reportlab`。中文與法文使用專案內的 `tools/NotoSansTC.ttf`。日文 PDF 優先使用 `tools/NotoSansJP.otf`，否則使用系統的 Yu Gothic。
+English PDFs: `python3 tools/build_en_grammar.py`. German: `python3 tools/build_de_grammar.py`. French: `python3 tools/build_fr_grammar.py`. Japanese: `python3 tools/build_ja_grammar.py`. These need `reportlab`. Chinese and French use the bundled `tools/NotoSansTC.ttf`. Japanese PDFs use `tools/NotoSansJP.otf` when present, otherwise Yu Gothic.
