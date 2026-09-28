@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="簡易自我介紹句子。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Vorstellung｜德文自我介紹</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#1d6a4f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #1d6a4f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh{color:#53647c;width:34%;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.word,.kanji{font-size:1.08rem;font-weight:750;color:#1d6a4f;line-height:1.45}
+.kana{font-size:.95rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.85rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}.zh{width:40%}}
+</style>
+</head>
+<body data-lang="de-DE">
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　Vorstellung</div></header>
+<main>
+<h1>德文自我介紹</h1>
+<p class="note">簡易自我介紹句子。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#1d6a4f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+<h2>自我介紹</h2><div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">德文</th></tr></thead><tbody><tr class="vocab-row"><td class="zh">我叫 Hao-Cheng。</td><td><button type="button" class="say" lang="de" data-say="Ich heiße Hao-Cheng." data-lang="de-DE"><span class="word">Ich heiße Hao-Cheng.</span></button></td></tr><tr class="vocab-row"><td class="zh">我今年三十三歲。</td><td><button type="button" class="say" lang="de" data-say="Ich bin 33 Jahre alt." data-lang="de-DE"><span class="word">Ich bin 33 Jahre alt.</span></button></td></tr><tr class="vocab-row"><td class="zh">我來自台灣。</td><td><button type="button" class="say" lang="de" data-say="Ich komme aus Taiwan." data-lang="de-DE"><span class="word">Ich komme aus Taiwan.</span></button></td></tr><tr class="vocab-row"><td class="zh">我目前住在桃園，在台北工作。</td><td><button type="button" class="say" lang="de" data-say="Ich wohne derzeit in Taoyuan und arbeite in Taipei." data-lang="de-DE"><span class="word">Ich wohne derzeit in Taoyuan und arbeite in Taipei.</span></button></td></tr><tr class="vocab-row"><td class="zh">我的母語是中文。</td><td><button type="button" class="say" lang="de" data-say="Meine Muttersprache ist Chinesisch." data-lang="de-DE"><span class="word">Meine Muttersprache ist Chinesisch.</span></button></td></tr><tr class="vocab-row"><td class="zh">我會說中文、英文、德文、法文、日文。</td><td><button type="button" class="say" lang="de" data-say="Ich spreche Chinesisch, Englisch, Deutsch, Französisch und Japanisch." data-lang="de-DE"><span class="word">Ich spreche Chinesisch, Englisch, Deutsch, Französisch und Japanisch.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡讀書、慢跑和旅遊。</td><td><button type="button" class="say" lang="de" data-say="Ich lese gerne, jogge gerne und reise gerne." data-lang="de-DE"><span class="word">Ich lese gerne, jogge gerne und reise gerne.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡看古老的教堂、寺廟、戰場紀念碑和博物館。</td><td><button type="button" class="say" lang="de" data-say="Ich besuche gerne alte Kirchen, Tempel, Schlachtfeld-Denkmäler und Museen." data-lang="de-DE"><span class="word">Ich besuche gerne alte Kirchen, Tempel, Schlachtfeld-Denkmäler und Museen.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡台灣的老建築。</td><td><button type="button" class="say" lang="de" data-say="Ich mag Taiwans alte Architektur." data-lang="de-DE"><span class="word">Ich mag Taiwans alte Architektur.</span></button></td></tr><tr class="vocab-row"><td class="zh">我很常喝咖啡和茶。</td><td><button type="button" class="say" lang="de" data-say="Ich trinke oft Kaffee und Tee." data-lang="de-DE"><span class="word">Ich trinke oft Kaffee und Tee.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡東亞的日本與中國文化。</td><td><button type="button" class="say" lang="de" data-say="Ich mag die ostasiatische Kultur Japans und Chinas." data-lang="de-DE"><span class="word">Ich mag die ostasiatische Kultur Japans und Chinas.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡歐洲的法國與德國文化。</td><td><button type="button" class="say" lang="de" data-say="Ich mag die europäische Kultur Frankreichs und Deutschlands." data-lang="de-DE"><span class="word">Ich mag die europäische Kultur Frankreichs und Deutschlands.</span></button></td></tr></tbody></table></div>
+<div class="tip"><strong>用法提醒：</strong>點選句子可單獨朗讀。「全部循環播放」會依頁面順序朗讀；勾選「播完從頭再播」會一直循環，直到按停止。語速可用滑桿調整。 年齡用 sein：Ich bin 33 Jahre alt。</div>
+</main>
+<footer>Vorstellung｜德文自我介紹</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

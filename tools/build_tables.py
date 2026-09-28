@@ -9,6 +9,10 @@ spec = importlib.util.spec_from_file_location('build_vocab', Path(__file__).pare
 vocab = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(vocab)
 
+spec2 = importlib.util.spec_from_file_location('self_intro_data', Path(__file__).parent / 'self_intro_data.py')
+self_intro_data = importlib.util.module_from_spec(spec2)
+spec2.loader.exec_module(self_intro_data)
+
 ACCENT = '#445a7a'
 EN = '#17355d'
 DE = '#1d6a4f'
@@ -93,6 +97,8 @@ HELLO_SECTIONS = [
     ('叫做 · 人稱對照', HELLO_NAME),
     ('三大動詞例句', HELLO_EXAMPLES),
 ]
+
+SELF_INTRO_SECTIONS = list(self_intro_data.SECTIONS)
 
 SPEECH_JS = r'''
 const rateInput = document.getElementById('rate');
@@ -237,6 +243,7 @@ def slugify(title):
         '有 · 人稱對照': 'hello-have',
         '叫做 · 人稱對照': 'hello-name',
         '三大動詞例句': 'hello-examples',
+        '自我介紹': 'self-intro',
     }
     return mapping.get(title, title)
 
@@ -479,6 +486,18 @@ h2{{font-size:1.15rem;margin:36px 0 15px}}
 <a class="button" href="./hello-verbs/">進入打招呼動詞對照 →</a>
 </article>
 <article class="item">
+<div class="meta">會話 · 自我介紹 · 跟讀</div>
+<h3>自我介紹對照</h3>
+<div class="langs">
+<span class="en">EN</span>
+<span class="de">DE</span>
+<span class="fr">FR</span>
+<span class="ja">JA</span>
+</div>
+<p>姓名、年齡、出身、居住與工作、母語、會說的語言，以及讀書、旅遊、建築、咖啡茶與文化興趣。四語並排對照。</p>
+<a class="button" href="./self-intro/">進入自我介紹對照 →</a>
+</article>
+<article class="item">
 <div class="meta">五十音 · 平片假名 · 清濁半濁</div>
 <h3 lang="ja">日文五十音</h3>
 <div class="langs"><span class="ja">JA</span></div>
@@ -675,6 +694,98 @@ footer{{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
 '''
 
 
+def self_intro_page():
+    sections = ''.join(section_html(title, rows) for title, rows in SELF_INTRO_SECTIONS)
+    toc = '<nav class="toc" aria-label="章節">' + ''.join(
+        f'<a href="#{slugify(title)}">{html.escape(title)}</a>' for title, _ in SELF_INTRO_SECTIONS
+    ) + '</nav>'
+    return f'''<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日自我介紹對照：姓名、年齡、出身、居住工作、語言與興趣。">
+<title>自我介紹對照｜四語筆記</title>
+<style>
+:root{{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}}
+*{{box-sizing:border-box}}
+body{{margin:0}}
+header{{background:{ACCENT};color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}}
+header .brand{{font-size:1.35rem;font-weight:800}}
+header a{{color:inherit;text-decoration:none}}
+main{{max-width:1180px;margin:auto;padding:32px 20px 70px}}
+h1{{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}}
+h2{{font-size:1.25rem;margin:32px 0 12px}}
+p{{line-height:1.7;color:#53647c}}
+.note{{font-size:.92rem;color:#52647d;margin:0 0 18px}}
+.toc{{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}}
+.toc a{{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:{ACCENT};text-decoration:none;font-weight:650;font-size:.92rem}}
+.toc a:hover,.toc a:focus-visible{{outline:2px solid {ACCENT};outline-offset:2px}}
+.controls{{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}}
+.controls-row{{display:flex;flex-wrap:wrap;gap:12px;align-items:center}}
+.ctrl{{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:{ACCENT};color:white}}
+.ctrl.stop{{background:#5c6675}}
+.ctrl:hover,.ctrl:focus-visible{{filter:brightness(.92);outline:2px solid {ACCENT};outline-offset:2px}}
+.rate,.loop{{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}}
+.rate input{{width:140px}}
+.status{{margin-top:10px;font-size:.9rem;color:#6a5870}}
+.tablewrap{{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}}
+table{{border-collapse:collapse;width:100%;min-width:920px}}
+th{{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}}
+.th-en{{color:{EN}}}
+.th-de{{color:{DE}}}
+.th-fr{{color:{FR}}}
+.th-ja{{color:{JA}}}
+td{{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}}
+.zh{{color:#53647c;font-weight:650;line-height:1.5}}
+.say{{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}}
+.say:hover,.say:focus-visible{{outline:2px solid currentColor;outline-offset:2px}}
+.say .word{{font-size:1.02rem;font-weight:750;line-height:1.45}}
+.say.en,.th-en,.say.en .word{{color:{EN}}}
+.say.de,.th-de,.say.de .word{{color:{DE}}}
+.say.fr,.th-fr,.say.fr .word{{color:{FR}}}
+.say.ja,.th-ja,.say.ja .word{{color:{JA}}}
+.sub{{font-size:.9rem;color:#3d4d63}}
+.kata{{color:#6a5870}}
+.roma{{font-size:.82rem;color:#6a5870}}
+.vocab-row.active{{background:#fff4d8}}
+.tip{{background:white;border-left:4px solid {ACCENT};padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}}
+.tip a{{color:{ACCENT};font-weight:650;text-decoration:none}}
+.tip a:hover,.tip a:focus-visible{{text-decoration:underline}}
+footer{{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}}
+@media(max-width:700px){{main{{padding-top:25px}}.rate input{{width:100px}}}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　自我介紹對照</div></header>
+<main>
+<h1>四語自我介紹對照</h1>
+<p class="note">姓名、年齡、出身、居住與工作、母語、會說的語言，以及讀書、慢跑、旅遊、建築、咖啡茶與文化興趣。點選可朗讀；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+{toc}
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+{sections}
+<div class="tip"><strong>用法提醒：</strong>法文年齡用 avoir（J’ai 33 ans）；英文與德文用 be／sein。日文「住んでいて」是て形接續。各語言專頁：<a href="../../en/self-intro/">英文</a> · <a href="../../de/self-intro/">德文</a> · <a href="../../fr/self-intro/">法文</a> · <a href="../../ja/self-intro/">日文</a>。</div>
+</main>
+<footer>自我介紹對照｜四語筆記</footer>
+<script>
+{SPEECH_JS}
+</script>
+</body>
+</html>
+'''
+
+
 def main():
     out = ROOT / 'tables' / 'vocab'
     out.mkdir(parents=True, exist_ok=True)
@@ -691,6 +802,11 @@ def main():
     hello_path = hello_out / 'index.html'
     hello_path.write_text(hello_page(), encoding='utf-8')
     print(hello_path)
+    intro_out = ROOT / 'tables' / 'self-intro'
+    intro_out.mkdir(parents=True, exist_ok=True)
+    intro_path = intro_out / 'index.html'
+    intro_path.write_text(self_intro_page(), encoding='utf-8')
+    print(intro_path)
     index = ROOT / 'tables' / 'index.html'
     index.write_text(index_page(), encoding='utf-8')
     print(index)

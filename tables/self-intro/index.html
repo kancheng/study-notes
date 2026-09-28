@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、德、法、日自我介紹對照：姓名、年齡、出身、居住工作、語言與興趣。">
+<title>自我介紹對照｜四語筆記</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#445a7a;color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1180px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:#445a7a;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #445a7a;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#445a7a;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #445a7a;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:920px}
+th{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}
+.th-en{color:#17355d}
+.th-de{color:#1d6a4f}
+.th-fr{color:#b3482f}
+.th-ja{color:#8d3a55}
+td{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}
+.zh{color:#53647c;font-weight:650;line-height:1.5}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.say .word{font-size:1.02rem;font-weight:750;line-height:1.45}
+.say.en,.th-en,.say.en .word{color:#17355d}
+.say.de,.th-de,.say.de .word{color:#1d6a4f}
+.say.fr,.th-fr,.say.fr .word{color:#b3482f}
+.say.ja,.th-ja,.say.ja .word{color:#8d3a55}
+.sub{font-size:.9rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.82rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #445a7a;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip a{color:#445a7a;font-weight:650;text-decoration:none}
+.tip a:hover,.tip a:focus-visible{text-decoration:underline}
+footer{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:700px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　自我介紹對照</div></header>
+<main>
+<h1>四語自我介紹對照</h1>
+<p class="note">姓名、年齡、出身、居住與工作、母語、會說的語言，以及讀書、慢跑、旅遊、建築、咖啡茶與文化興趣。點選可朗讀；日文欄附漢字、平假名、片假名與羅馬拼音。</p>
+<nav class="toc" aria-label="章節"><a href="#self-intro">自我介紹</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="self-intro">
+<h2>自我介紹</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th scope="col">中文</th>
+<th scope="col" class="th-en">英文</th>
+<th scope="col" class="th-de">德文</th>
+<th scope="col" class="th-fr">法文</th>
+<th scope="col" class="th-ja">日文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">我叫 Hao-Cheng。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="My name is Hao-Cheng." data-lang="en-US"><span class="word">My name is Hao-Cheng.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich heiße Hao-Cheng." data-lang="de-DE"><span class="word">Ich heiße Hao-Cheng.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je m’appelle Hao-Cheng." data-lang="fr-FR"><span class="word">Je m’appelle Hao-Cheng.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私はハオチェンと言います。" data-lang="ja-JP"><span class="word">私はハオチェンと言います。</span><span class="sub"><span class="hira">わたし は ハオチェン と いいます。</span>　<span class="kata">ワタシ ハ ハオチェン ト イイマス。</span></span><span class="roma">Watashi wa haochen to iimasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我今年三十三歲。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am 33 years old." data-lang="en-US"><span class="word">I am 33 years old.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich bin 33 Jahre alt." data-lang="de-DE"><span class="word">Ich bin 33 Jahre alt.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’ai 33 ans." data-lang="fr-FR"><span class="word">J’ai 33 ans.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="私は三十三歳です。" data-lang="ja-JP"><span class="word">私は三十三歳です。</span><span class="sub"><span class="hira">わたし は さんじゅうさんさい です。</span>　<span class="kata">ワタシ ハ サンジュウサンサイ デス。</span></span><span class="roma">Watashi wa sanjuusansai desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我來自台灣。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I am from Taiwan." data-lang="en-US"><span class="word">I am from Taiwan.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich komme aus Taiwan." data-lang="de-DE"><span class="word">Ich komme aus Taiwan.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je viens de Taïwan." data-lang="fr-FR"><span class="word">Je viens de Taïwan.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="台湾出身です。" data-lang="ja-JP"><span class="word">台湾出身です。</span><span class="sub"><span class="hira">たいわん しゅっしん です。</span>　<span class="kata">タイワン シュッシン デス。</span></span><span class="roma">Taiwan shusshin desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我目前住在桃園，在台北工作。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I currently live in Taoyuan and work in Taipei." data-lang="en-US"><span class="word">I currently live in Taoyuan and work in Taipei.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich wohne derzeit in Taoyuan und arbeite in Taipei." data-lang="de-DE"><span class="word">Ich wohne derzeit in Taoyuan und arbeite in Taipei.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’habite actuellement à Taoyuan et je travaille à Taipei." data-lang="fr-FR"><span class="word">J’habite actuellement à Taoyuan et je travaille à Taipei.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="今は桃園に住んでいて、台北で働いています。" data-lang="ja-JP"><span class="word">今は桃園に住んでいて、台北で働いています。</span><span class="sub"><span class="hira">いま は とうえん に すんでいて、 たいぺい で はたらいて います。</span>　<span class="kata">イマ ハ トウエン ニ スンデイテ、 タイペイ デ ハタライテ イマス。</span></span><span class="roma">Ima wa touen ni sundeite, taipei de hataraite imasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我的母語是中文。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="My native language is Chinese." data-lang="en-US"><span class="word">My native language is Chinese.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Meine Muttersprache ist Chinesisch." data-lang="de-DE"><span class="word">Meine Muttersprache ist Chinesisch.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Ma langue maternelle est le chinois." data-lang="fr-FR"><span class="word">Ma langue maternelle est le chinois.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="母語は中国語です。" data-lang="ja-JP"><span class="word">母語は中国語です。</span><span class="sub"><span class="hira">ぼご は ちゅうごくご です。</span>　<span class="kata">ボゴ ハ チュウゴクゴ デス。</span></span><span class="roma">Bogo wa chuugokugo desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我會說中文、英文、德文、法文、日文。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I speak Chinese, English, German, French, and Japanese." data-lang="en-US"><span class="word">I speak Chinese, English, German, French, and Japanese.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich spreche Chinesisch, Englisch, Deutsch, Französisch und Japanisch." data-lang="de-DE"><span class="word">Ich spreche Chinesisch, Englisch, Deutsch, Französisch und Japanisch.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je parle chinois, anglais, allemand, français et japonais." data-lang="fr-FR"><span class="word">Je parle chinois, anglais, allemand, français et japonais.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="中国語と英語とドイツ語とフランス語と日本語が話せます。" data-lang="ja-JP"><span class="word">中国語と英語とドイツ語とフランス語と日本語が話せます。</span><span class="sub"><span class="hira">ちゅうごくご と えいご と ドイツご と フランスご と にほんご が はなせます。</span>　<span class="kata">チュウゴクゴ ト エイゴ ト ドイツゴ ト フランスゴ ト ニホンゴ ガ ハナセマス。</span></span><span class="roma">Chuugokugo to eigo to doitsugo to furansugo to nihongo ga hanasemasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡讀書、慢跑和旅遊。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I like reading, jogging, and traveling." data-lang="en-US"><span class="word">I like reading, jogging, and traveling.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich lese gerne, jogge gerne und reise gerne." data-lang="de-DE"><span class="word">Ich lese gerne, jogge gerne und reise gerne.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’aime lire, faire du jogging et voyager." data-lang="fr-FR"><span class="word">J’aime lire, faire du jogging et voyager.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="読書とジョギングと旅行が好きです。" data-lang="ja-JP"><span class="word">読書とジョギングと旅行が好きです。</span><span class="sub"><span class="hira">どくしょ と ジョギング と りょこう が すき です。</span>　<span class="kata">ドクショ ト ジョギング ト リョコウ ガ スキ デス。</span></span><span class="roma">Dokusho to jogingu to ryokou ga suki desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡看古老的教堂、寺廟、戰場紀念碑和博物館。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I enjoy visiting old churches, temples, battlefield memorials, and museums." data-lang="en-US"><span class="word">I enjoy visiting old churches, temples, battlefield memorials, and museums.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich besuche gerne alte Kirchen, Tempel, Schlachtfeld-Denkmäler und Museen." data-lang="de-DE"><span class="word">Ich besuche gerne alte Kirchen, Tempel, Schlachtfeld-Denkmäler und Museen.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’aime visiter les vieilles églises, les temples, les monuments de champs de bataille et les musées." data-lang="fr-FR"><span class="word">J’aime visiter les vieilles églises, les temples, les monuments de champs de bataille et les musées.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="古い教会やお寺、戦場の記念碑や博物館を見るのが好きです。" data-lang="ja-JP"><span class="word">古い教会やお寺、戦場の記念碑や博物館を見るのが好きです。</span><span class="sub"><span class="hira">ふるい きょうかい や おてら、 せんじょう の きねんひ や はくぶつかん を みる の が すき です。</span>　<span class="kata">フルイ キョウカイ ヤ オテラ、 センジョウ ノ キネンヒ ヤ ハクブツカン ヲ ミル ノ ガ スキ デス。</span></span><span class="roma">Furui kyoukai ya otera, senjou no kinenhi ya hakubutsukan o miru no ga suki desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡台灣的老建築。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I like Taiwan’s historic architecture." data-lang="en-US"><span class="word">I like Taiwan’s historic architecture.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich mag Taiwans alte Architektur." data-lang="de-DE"><span class="word">Ich mag Taiwans alte Architektur.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’aime l’architecture ancienne de Taïwan." data-lang="fr-FR"><span class="word">J’aime l’architecture ancienne de Taïwan.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="台湾の古い建物が好きです。" data-lang="ja-JP"><span class="word">台湾の古い建物が好きです。</span><span class="sub"><span class="hira">たいわん の ふるい たてもの が すき です。</span>　<span class="kata">タイワン ノ フルイ タテモノ ガ スキ デス。</span></span><span class="roma">Taiwan no furui tatemono ga suki desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我很常喝咖啡和茶。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I often drink coffee and tea." data-lang="en-US"><span class="word">I often drink coffee and tea.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich trinke oft Kaffee und Tee." data-lang="de-DE"><span class="word">Ich trinke oft Kaffee und Tee.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="Je bois souvent du café et du thé." data-lang="fr-FR"><span class="word">Je bois souvent du café et du thé.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="よくコーヒーやお茶を飲みます。" data-lang="ja-JP"><span class="word">よくコーヒーやお茶を飲みます。</span><span class="sub"><span class="hira">よく コーヒー や おちゃ を のみます。</span>　<span class="kata">ヨク コーヒー ヤ オチャ ヲ ノミマス。</span></span><span class="roma">Yoku koohii ya ocha o nomimasu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡東亞的日本與中國文化。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I like East Asian cultures—Japanese and Chinese." data-lang="en-US"><span class="word">I like East Asian cultures—Japanese and Chinese.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich mag die ostasiatische Kultur Japans und Chinas." data-lang="de-DE"><span class="word">Ich mag die ostasiatische Kultur Japans und Chinas.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’aime les cultures est-asiatiques du Japon et de la Chine." data-lang="fr-FR"><span class="word">J’aime les cultures est-asiatiques du Japon et de la Chine.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="東アジアの日本と中国の文化が好きです。" data-lang="ja-JP"><span class="word">東アジアの日本と中国の文化が好きです。</span><span class="sub"><span class="hira">ひがしアジア の にほん と ちゅうごく の ぶんか が すき です。</span>　<span class="kata">ヒガシアジア ノ ニホン ト チュウゴク ノ ブンカ ガ スキ デス。</span></span><span class="roma">Higashi ajia no nihon to chuugoku no bunka ga suki desu.</span></button></td></tr><tr class="vocab-row"><td class="zh">我喜歡歐洲的法國與德國文化。</td><td class="col-en"><button type="button" class="say en" lang="en" data-say="I like European cultures—French and German." data-lang="en-US"><span class="word">I like European cultures—French and German.</span></button></td><td class="col-de"><button type="button" class="say de" lang="de" data-say="Ich mag die europäische Kultur Frankreichs und Deutschlands." data-lang="de-DE"><span class="word">Ich mag die europäische Kultur Frankreichs und Deutschlands.</span></button></td><td class="col-fr"><button type="button" class="say fr" lang="fr" data-say="J’aime les cultures européennes de la France et de l’Allemagne." data-lang="fr-FR"><span class="word">J’aime les cultures européennes de la France et de l’Allemagne.</span></button></td><td class="col-ja"><button type="button" class="say ja" lang="ja" data-say="ヨーロッパのフランスとドイツの文化が好きです。" data-lang="ja-JP"><span class="word">ヨーロッパのフランスとドイツの文化が好きです。</span><span class="sub"><span class="hira">ヨーロッパ の フランス と ドイツ の ぶんか が すき です。</span>　<span class="kata">ヨーロッパ ノ フランス ト ドイツ ノ ブンカ ガ スキ デス。</span></span><span class="roma">Yooroppa no furansu to doitsu no bunka ga suki desu.</span></button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>法文年齡用 avoir（J’ai 33 ans）；英文與德文用 be／sein。日文「住んでいて」是て形接續。各語言專頁：<a href="../../en/self-intro/">英文</a> · <a href="../../de/self-intro/">德文</a> · <a href="../../fr/self-intro/">法文</a> · <a href="../../ja/self-intro/">日文</a>。</div>
+</main>
+<footer>自我介紹對照｜四語筆記</footer>
+<script>
+
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
