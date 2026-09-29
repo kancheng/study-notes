@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="電子郵件入門：結構說明、一封完整範例，以及逐行講解。點選句子可朗讀，也可全部循環播放。">
+<title>Email Writing｜英文電子郵件寫作</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#17355d;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 10px}
+h3{font-size:1.02rem;margin:0 0 6px;color:#17355d}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#17355d;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.intro-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:0 0 8px}
+.intro-item{background:white;border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c}
+.intro-item p{margin:0;font-size:.95rem}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:22px 0;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#17355d;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #17355d;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.mail{background:white;border:1px solid #dce4ef;border-radius:14px;padding:18px 20px;box-shadow:0 6px 18px #142f520c;display:flex;flex-direction:column;gap:10px}
+.mail-line{border-radius:8px;padding:4px 2px}
+.mail-line.subject{padding-bottom:12px;margin-bottom:4px;border-bottom:1px dashed #dce4ef}
+.mail-label{display:block;font-size:.82rem;font-weight:700;color:#6a5870;margin:0 0 4px}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.part{color:#17355d;font-weight:750;white-space:nowrap;width:7.5rem}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.word,.kanji{font-size:1.05rem;font-weight:750;color:#17355d;line-height:1.45}
+.kana{font-size:.95rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.85rem;color:#6a5870}
+.vocab-row.active,.mail-line.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #17355d;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}.part{white-space:normal}}
+</style>
+</head>
+<body data-lang="en-US">
+<header><div class="brand"><a href="../index.html">← 英文筆記</a>　/　Email Writing</div></header>
+<main>
+<h1>英文電子郵件寫作</h1>
+<p class="note">電子郵件入門：結構說明、一封完整範例，以及逐行講解。點選句子可朗讀，也可全部循環播放。</p>
+<nav class="toc" aria-label="章節"><a href="#intro">寫作入門</a><a href="#example">完整範例</a><a href="#lines">逐行說明</a></nav>
+<section class="intro-sec" id="intro"><h2>電子郵件寫作入門</h2><p class="note">先掌握結構與語氣，再套用下面的完整範例。正式程度依收件人調整；不確定時，選稍正式的寫法較安全。</p><div class="intro-grid"><div class="intro-item"><h3>先想清楚目的</h3><p>寫信前先決定：通知、詢問、請求，還是道謝。目的清楚，主旨與正文才會短而準。</p></div><div class="intro-item"><h3>主旨一行說完</h3><p>收件人常只看主旨決定是否開啟。寫「誰／什麼事／何時」，避免只有 Hi 或 您好。</p></div><div class="intro-item"><h3>基本結構</h3><p>常見順序是：主旨 → 稱呼 → 開頭（自我介紹或來意）→ 正文（重點與請求）→ 結尾禮貌語 → 署名。</p></div><div class="intro-item"><h3>一段一件事</h3><p>一段話只講一個重點。請求要明確，並標出時間、地點或回覆期限，方便對方回答。</p></div><div class="intro-item"><h3>語氣對人</h3><p>正式場合用較客氣的稱呼與結尾；熟人或同事可用較短、較口語的寫法。寧願稍正式，也不要太隨便。</p></div><div class="intro-item"><h3>英文常用套語</h3><p>稱呼多用 Dear Mr./Ms. + 姓；熟識可用 Hi + 名。結尾常見 Best regards、Kind regards；很熟可用 Best。</p></div><div class="intro-item"><h3>開頭怎麼寫</h3><p>第一次聯絡可先自我介紹：My name is… I am writing to…。回信可用 Thank you for your email. 再接正文。</p></div></div></section>
+
+<div class="controls" style="--accent:#17355d">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="example"><h2>完整範例</h2><p class="note">情境：Hao-Cheng 第一次寫信給田中女士，請求下週短短開會討論專案時程。點選任一行可朗讀。</p><div class="mail"><div class="mail-line subject vocab-row"><span class="mail-label">Subject</span><button type="button" class="say" lang="en" data-say="Request for a short meeting next week" data-lang="en-US"><span class="word">Request for a short meeting next week</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="Dear Ms. Tanaka," data-lang="en-US"><span class="word">Dear Ms. Tanaka,</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="My name is Hao-Cheng, and I work in Taipei." data-lang="en-US"><span class="word">My name is Hao-Cheng, and I work in Taipei.</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="I am writing to ask if we could meet briefly next week." data-lang="en-US"><span class="word">I am writing to ask if we could meet briefly next week.</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="I would like to discuss the project schedule." data-lang="en-US"><span class="word">I would like to discuss the project schedule.</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="Would Tuesday afternoon work for you?" data-lang="en-US"><span class="word">Would Tuesday afternoon work for you?</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="Thank you for your time." data-lang="en-US"><span class="word">Thank you for your time.</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="Best regards," data-lang="en-US"><span class="word">Best regards,</span></button></div><div class="mail-line vocab-row"><button type="button" class="say" lang="en" data-say="Hao-Cheng" data-lang="en-US"><span class="word">Hao-Cheng</span></button></div></div></section>
+<section id="lines"><h2>逐行說明</h2><p class="note">每一行對應範例中的一個區塊：看說法、聽發音，並對照中文說明為什麼這樣寫。</p><div class="tablewrap"><table><thead><tr><th scope="col">段落</th><th scope="col">英文</th><th scope="col">說明</th></tr></thead><tbody><tr class="vocab-row"><td class="part">主旨</td><td><button type="button" class="say" lang="en" data-say="Request for a short meeting next week" data-lang="en-US"><span class="word">Request for a short meeting next week</span></button></td><td class="zh">主旨直接寫請求與時間範圍，收件人一看就懂。</td></tr><tr class="vocab-row"><td class="part">稱呼</td><td><button type="button" class="say" lang="en" data-say="Dear Ms. Tanaka," data-lang="en-US"><span class="word">Dear Ms. Tanaka,</span></button></td><td class="zh">正式稱呼：Dear + Ms./Mr. + 姓，後面加逗號。</td></tr><tr class="vocab-row"><td class="part">開頭・自我介紹</td><td><button type="button" class="say" lang="en" data-say="My name is Hao-Cheng, and I work in Taipei." data-lang="en-US"><span class="word">My name is Hao-Cheng, and I work in Taipei.</span></button></td><td class="zh">第一次聯絡先報姓名與工作地，讓對方知道你是誰。</td></tr><tr class="vocab-row"><td class="part">來意</td><td><button type="button" class="say" lang="en" data-say="I am writing to ask if we could meet briefly next week." data-lang="en-US"><span class="word">I am writing to ask if we could meet briefly next week.</span></button></td><td class="zh">I am writing to… 是說明寫信目的的常用句型。</td></tr><tr class="vocab-row"><td class="part">正文・目的</td><td><button type="button" class="say" lang="en" data-say="I would like to discuss the project schedule." data-lang="en-US"><span class="word">I would like to discuss the project schedule.</span></button></td><td class="zh">I would like to… 比 I want to… 更客氣，適合公事。</td></tr><tr class="vocab-row"><td class="part">請求・具體時間</td><td><button type="button" class="say" lang="en" data-say="Would Tuesday afternoon work for you?" data-lang="en-US"><span class="word">Would Tuesday afternoon work for you?</span></button></td><td class="zh">用問句提出具體時段，方便對方回答 yes／no 或另約。</td></tr><tr class="vocab-row"><td class="part">結尾禮貌</td><td><button type="button" class="say" lang="en" data-say="Thank you for your time." data-lang="en-US"><span class="word">Thank you for your time.</span></button></td><td class="zh">感謝對方撥空，語氣禮貌且簡短。</td></tr><tr class="vocab-row"><td class="part">結尾敬語</td><td><button type="button" class="say" lang="en" data-say="Best regards," data-lang="en-US"><span class="word">Best regards,</span></button></td><td class="zh">半正式到正式都常用；也可寫 Kind regards。</td></tr><tr class="vocab-row"><td class="part">署名</td><td><button type="button" class="say" lang="en" data-say="Hao-Cheng" data-lang="en-US"><span class="word">Hao-Cheng</span></button></td><td class="zh">署名單獨一行；商務信可再加職稱與聯絡方式。</td></tr></tbody></table></div></section>
+<div class="tip"><strong>用法提醒：</strong>主旨保持簡短清楚。正式信用 Dear Ms./Mr. + 姓與 Best regards；回信可先 Thank you for your email. 上方「全部循環播放」會依頁面可點讀句子順序朗讀；可調語速，勾選後會循環直到按停止。</div>
+</main>
+<footer>Email Writing｜英文電子郵件寫作</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  // Prefer line-by-line table so the full sample is not spoken twice.
+  const scope = document.querySelectorAll('#lines [data-say]');
+  const nodes = scope.length ? scope : document.querySelectorAll('[data-say]');
+  return [...nodes].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active, .mail-line.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row, .mail-line');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row, .mail-line');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
