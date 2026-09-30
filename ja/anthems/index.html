@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="整理日本國歌《君が代》：逐行漢字、平假名、片假名、羅馬拼音、中文翻譯與解釋；點選可朗讀。">
+<title>国歌｜日文國歌</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f3f5}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#8d3a55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.35rem;margin:36px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #eadde2;color:#8d3a55;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #8d3a55;outline-offset:2px}
+.meta-box{background:white;border:1px solid #eadde2;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadde2;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:22px 0;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#8d3a55;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl.ghost{background:white;color:#8d3a55;border:1px solid #eadde2}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #8d3a55;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadde2;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadde2;vertical-align:top}
+.zh,.explain{color:#53647c;line-height:1.55}
+.explain{font-size:.95rem}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #8d3a55;outline-offset:2px}
+.kanji{font-size:1.05rem;font-weight:750;color:#8d3a55;line-height:1.45}
+.kana{font-size:.95rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.85rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.section-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:8px 0 10px}
+.section-head h2{margin:0}
+.tip{background:white;border-left:4px solid #8d3a55;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadde2;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="ja-JP">
+<header><div class="brand"><a href="../index.html">← 日文筆記</a>　/　日文國歌</div></header>
+<main>
+<h1>日文國歌</h1>
+<p class="note">整理日本國歌《君が代》：逐行漢字、平假名、片假名、羅馬拼音、中文翻譯與解釋；點選可朗讀，也可全部循環播放。</p>
+<nav class="toc" aria-label="國歌目錄"><a href="#jp">日本 · 君が代（Kimigayo）</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="jp">
+<div class="section-head">
+  <h2>日本 · <span lang="ja">君が代（Kimigayo）</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="jp">▶ 播放此首</button>
+</div>
+<div class="meta-box">日本國歌。歌詞源自平安時代和歌，全曲極短。正式場合唱全曲。下列每行附漢字、平假名、片假名與羅馬拼音；朗讀使用漢字句。</div>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">漢字 · 平假名 · 片假名 · 羅馬拼音</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="君が代は" data-lang="ja-JP"><span class="kanji">君が代は</span><span class="kana"><span class="hira">きみがよ は</span>　<span class="kata">キミガヨ ハ</span></span><span class="roma">Kimigayo wa</span></button></td><td class="zh">君之代啊，</td><td class="explain">君（きみ）＝天皇／主君；代（よ）＝世代、時代；は標示主題。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="千代に八千代に" data-lang="ja-JP"><span class="kanji">千代に八千代に</span><span class="kana"><span class="hira">ちよ に やちよ に</span>　<span class="kata">チヨ ニ ヤチヨ ニ</span></span><span class="roma">Chiyo ni yachiyo ni</span></button></td><td class="zh">一千代、八千代地，</td><td class="explain">千代・八千代＝極言歲月長久；に＝在…之中／持續至。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="さざれ石の" data-lang="ja-JP"><span class="kanji">さざれ石の</span><span class="kana"><span class="hira">さざれいし の</span>　<span class="kata">サザレイシ ノ</span></span><span class="roma">Sazareishi no</span></button></td><td class="zh">細石之（直至），</td><td class="explain">さざれ石＝細小的礫石；の連接下行「變成巨岩」。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="いわおとなりて" data-lang="ja-JP"><span class="kanji">いわおとなりて</span><span class="kana"><span class="hira">いわお と なりて</span>　<span class="kata">イワオ ト ナリテ</span></span><span class="roma">Iwao to narite</span></button></td><td class="zh">成為巨岩，</td><td class="explain">いわお＝巨岩；となりて＝變成…（て形，表經過）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="こけのむすまで" data-lang="ja-JP"><span class="kanji">こけのむすまで</span><span class="kana"><span class="hira">こけ の むす まで</span>　<span class="kata">コケ ノ ムス マデ</span></span><span class="roma">Koke no musu made</span></button></td><td class="zh">直到長出苔蘚為止。</td><td class="explain">こけ＝苔；むす＝生、長；まで＝直到…為止。祝願國運極長久。</td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選任一歌詞行可單獨朗讀；每首國歌旁有「播放此首」。上方「全部循環播放」會依頁面順序朗讀全部歌詞。語速可調，勾選後會循環直到按停止。內容供語言學習；正式場合請以各國官方版本為準。</div>
+</main>
+<footer>国歌｜日文國歌</footer>
+<script>
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const target = lang.toLowerCase().replace('_', '-');
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang.toLowerCase().replace('_', '-') === target)
+    || voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(target.slice(0, 2)));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function itemsIn(scope) {
+  const root = scope || document;
+  return [...root.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(itemsIn(document), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const sectionBtn = e.target.closest('[data-play-section]');
+  if (sectionBtn) {
+    const sec = document.getElementById(sectionBtn.dataset.playSection);
+    startQueue(itemsIn(sec), 0);
+    return;
+  }
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>

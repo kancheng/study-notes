@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="整理法文國歌（法國、加拿大、瑞士、比利時）：逐行原文、中文翻譯與解釋；點選可朗讀。">
+<title>Hymnes nationaux｜法文國歌</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Segoe UI',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.35rem;margin:36px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #eadfd6;color:#b3482f;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.meta-box{background:white;border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:22px 0;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl.ghost{background:white;color:#b3482f;border:1px solid #eadfd6}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a4a42}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh,.explain{color:#53647c;line-height:1.55}
+.explain{font-size:.95rem}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.section-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:8px 0 10px}
+.section-head h2{margin:0}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　法文國歌</div></header>
+<main>
+<h1>法文國歌</h1>
+<p class="note">整理法國、加拿大、瑞士、比利時四首法文國歌：逐行原文、中文翻譯與解釋；點選可朗讀，也可依首或全部循環播放。</p>
+<nav class="toc" aria-label="國歌目錄">
+  <a href="#fr">法國 · La Marseillaise</a>
+  <a href="#ca">加拿大 · Ô Canada</a>
+  <a href="#ch">瑞士 · Cantique suisse</a>
+  <a href="#be">比利時 · La Brabançonne</a>
+</nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="fr">
+<div class="section-head">
+  <h2>法國 · <span lang="fr">La Marseillaise</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="fr">▶ 播放此首</button>
+</div>
+<div class="meta-box">法國國歌。1792 年 Rouget de Lisle 所作。正式場合常唱第一段與副歌。歌詞反映法國大革命時代語氣。</div>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Allons enfants de la Patrie," data-lang="fr-FR"><span class="word">Allons enfants de la Patrie,</span></button></td><td class="zh">前進吧，祖國的孩子們，</td><td class="explain">Allons＝我們走／前進；enfants de la Patrie＝祖國之子。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Le jour de gloire est arrivé!" data-lang="fr-FR"><span class="word">Le jour de gloire est arrivé!</span></button></td><td class="zh">光榮的日子已經到來！</td><td class="explain">jour de gloire＝榮耀之日，號召覺醒與行動。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Contre nous de la tyrannie" data-lang="fr-FR"><span class="word">Contre nous de la tyrannie</span></button></td><td class="zh">暴政的血旗</td><td class="explain">tyrannie＝暴政；此行與下行相連。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="L'étendard sanglant est levé." data-lang="fr-FR"><span class="word">L'étendard sanglant est levé.</span></button></td><td class="zh">已向我們升起。</td><td class="explain">étendard sanglant＝染血的軍旗；描寫壓迫勢力。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Entendez-vous dans les campagnes" data-lang="fr-FR"><span class="word">Entendez-vous dans les campagnes</span></button></td><td class="zh">你們可聽見，在田野上</td><td class="explain">Entendez-vous＝你們聽見嗎；營造緊迫感。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Mugir ces féroces soldats?" data-lang="fr-FR"><span class="word">Mugir ces féroces soldats?</span></button></td><td class="zh">那些兇殘士兵的咆哮嗎？</td><td class="explain">mugir＝吼叫；féroces soldats＝兇猛的士兵。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Ils viennent jusque dans vos bras" data-lang="fr-FR"><span class="word">Ils viennent jusque dans vos bras</span></button></td><td class="zh">他們一路逼近到你們懷中</td><td class="explain">強調威脅已到身邊。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Égorger vos fils, vos compagnes!" data-lang="fr-FR"><span class="word">Égorger vos fils, vos compagnes!</span></button></td><td class="zh">要屠殺你們的兒子與伴侶！</td><td class="explain">égorger＝割喉殺害；革命歌曲中的激憤用語。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Aux armes, citoyens!" data-lang="fr-FR"><span class="word">Aux armes, citoyens!</span></button></td><td class="zh">拿起武器，公民們！</td><td class="explain">副歌起句；citoyens＝公民，大革命關鍵詞。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Formez vos bataillons!" data-lang="fr-FR"><span class="word">Formez vos bataillons!</span></button></td><td class="zh">組成你們的隊伍！</td><td class="explain">bataillons＝營／隊伍，號召組織起來。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Marchons, marchons!" data-lang="fr-FR"><span class="word">Marchons, marchons!</span></button></td><td class="zh">前進，前進！</td><td class="explain">重複 marchons，強化行進節奏。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Qu'un sang impur" data-lang="fr-FR"><span class="word">Qu'un sang impur</span></button></td><td class="zh">讓不潔之血</td><td class="explain">與下行連成一句；sang impur＝不潔之血（指敵人）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Abreuve nos sillons!" data-lang="fr-FR"><span class="word">Abreuve nos sillons!</span></button></td><td class="zh">灌滿我們的犁溝！</td><td class="explain">abreuve＝灌溉；sillons＝犁溝／田畦；副歌著名結尾。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="ca">
+<div class="section-head">
+  <h2>加拿大 · <span lang="fr">Ô Canada</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="ca">▶ 播放此首</button>
+</div>
+<div class="meta-box">加拿大國歌法文版（官方與英文版並用）。歌詞與英語版意涵相近，但並非逐字對譯。</div>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Ô Canada! Terre de nos aïeux," data-lang="fr-CA"><span class="word">Ô Canada! Terre de nos aïeux,</span></button></td><td class="zh">喔加拿大！我們祖先的土地，</td><td class="explain">aïeux＝祖先；開場強調傳承。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Ton front est ceint de fleurons glorieux!" data-lang="fr-CA"><span class="word">Ton front est ceint de fleurons glorieux!</span></button></td><td class="zh">你的額上環繞著榮耀的花飾！</td><td class="explain">front＝額；ceint de＝環繞；fleurons＝花飾／榮光。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Car ton bras sait porter l'épée," data-lang="fr-CA"><span class="word">Car ton bras sait porter l'épée,</span></button></td><td class="zh">因為你的手臂懂得持劍，</td><td class="explain">porter l'épée＝持劍，象徵防衛能力。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Il sait porter la croix!" data-lang="fr-CA"><span class="word">Il sait porter la croix!</span></button></td><td class="zh">也懂得背負十字架！</td><td class="explain">porter la croix＝承擔信仰／苦難，文武並舉。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Ton histoire est une épopée" data-lang="fr-CA"><span class="word">Ton histoire est une épopée</span></button></td><td class="zh">你的歷史是一部史詩</td><td class="explain">épopée＝史詩，讚頌國家歷程。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Des plus brillants exploits." data-lang="fr-CA"><span class="word">Des plus brillants exploits.</span></button></td><td class="zh">滿是最輝煌的功績。</td><td class="explain">exploits＝功績、英勇事蹟。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Et ta valeur, de foi trempée," data-lang="fr-CA"><span class="word">Et ta valeur, de foi trempée,</span></button></td><td class="zh">而你那浸潤著信仰的勇氣，</td><td class="explain">valeur＝勇氣／氣概；trempée＝淬鍊／浸潤。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Protégera nos foyers et nos droits." data-lang="fr-CA"><span class="word">Protégera nos foyers et nos droits.</span></button></td><td class="zh">將保護我們的家園與權利。</td><td class="explain">foyers＝家園；droits＝權利。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Protégera nos foyers et nos droits." data-lang="fr-CA"><span class="word">Protégera nos foyers et nos droits.</span></button></td><td class="zh">將保護我們的家園與權利。</td><td class="explain">末句重複，常見於演唱。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="ch">
+<div class="section-head">
+  <h2>瑞士 · <span lang="fr">Cantique suisse</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="ch">▶ 播放此首</button>
+</div>
+<div class="meta-box">瑞士國歌法文版（德文名 Schweizerpsalm）。1841 年歌詞，1961 年起為正式國歌。以下為法文第一段。</div>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Sur nos monts, quand le soleil" data-lang="fr-CH"><span class="word">Sur nos monts, quand le soleil</span></button></td><td class="zh">在我們的山上，當太陽</td><td class="explain">monts＝山嶺；以阿爾卑斯日出開場。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Annonce un brillant réveil," data-lang="fr-CH"><span class="word">Annonce un brillant réveil,</span></button></td><td class="zh">宣告燦爛的甦醒，</td><td class="explain">brillant réveil＝光明的覺醒／清晨。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Et prédit d'un plus pur éclat" data-lang="fr-CH"><span class="word">Et prédit d'un plus pur éclat</span></button></td><td class="zh">並以更純淨的光輝預示</td><td class="explain">prédit＝預告；plus pur éclat＝更純的光芒。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Le progrès d'un plus beau jour." data-lang="fr-CH"><span class="word">Le progrès d'un plus beau jour.</span></button></td><td class="zh">更美好一日的來臨。</td><td class="explain">progrès＝進展／到來；plus beau jour＝更美的一天。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Au ciel montent en torrents" data-lang="fr-CH"><span class="word">Au ciel montent en torrents</span></button></td><td class="zh">如洪流般升向天空的是</td><td class="explain">montent en torrents＝如急流般上昇。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Les accents d'un pieux concert." data-lang="fr-CH"><span class="word">Les accents d'un pieux concert.</span></button></td><td class="zh">一場虔誠合奏的聲音。</td><td class="explain">accents＝聲調／樂音；pieux concert＝虔誠的合唱。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Avant-coureurs de l'aurore," data-lang="fr-CH"><span class="word">Avant-coureurs de l'aurore,</span></button></td><td class="zh">黎明的先驅啊，</td><td class="explain">avant-coureurs＝先驅；aurore＝黎明。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Dans le ciel bleu, éclate encore" data-lang="fr-CH"><span class="word">Dans le ciel bleu, éclate encore</span></button></td><td class="zh">在藍天上，再次迸發</td><td class="explain">éclate＝綻放／迸發。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="La chanson du digne précurseur." data-lang="fr-CH"><span class="word">La chanson du digne précurseur.</span></button></td><td class="zh">那可敬先驅的歌聲。</td><td class="explain">précurseur＝先驅者；段末收束。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="be">
+<div class="section-head">
+  <h2>比利時 · <span lang="fr">La Brabançonne</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="be">▶ 播放此首</button>
+</div>
+<div class="meta-box">比利時國歌法文版（另有荷蘭文、德文版）。以下為現行法文歌詞常用段落。</div>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Ô Belgique, ô mère chérie," data-lang="fr-BE"><span class="word">Ô Belgique, ô mère chérie,</span></button></td><td class="zh">喔比利時，喔親愛的母親，</td><td class="explain">mère chérie＝親愛的母親，將國家擬人為母親。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="À toi nos cœurs, à toi nos bras," data-lang="fr-BE"><span class="word">À toi nos cœurs, à toi nos bras,</span></button></td><td class="zh">我們的心歸於你，我們的臂膀歸於你，</td><td class="explain">cœurs／bras＝情感與力量都奉獻國家。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="À toi notre sang, ô Patrie!" data-lang="fr-BE"><span class="word">À toi notre sang, ô Patrie!</span></button></td><td class="zh">我們的血也歸於你，喔祖國！</td><td class="explain">Patrie＝祖國；表達徹底效忠。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Nous le jurons tous, tu vivras!" data-lang="fr-BE"><span class="word">Nous le jurons tous, tu vivras!</span></button></td><td class="zh">我們一同起誓：你必長存！</td><td class="explain">jurons＝起誓；tu vivras＝你將活下去。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Tu vivras toujours grande et belle" data-lang="fr-BE"><span class="word">Tu vivras toujours grande et belle</span></button></td><td class="zh">你將永遠偉大而美麗</td><td class="explain">grande et belle＝偉大且美麗。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Et ton invincible unité" data-lang="fr-BE"><span class="word">Et ton invincible unité</span></button></td><td class="zh">而你那不可戰勝的團結</td><td class="explain">invincible unité＝無法摧毀的統一。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Aura pour devise immortelle:" data-lang="fr-BE"><span class="word">Aura pour devise immortelle:</span></button></td><td class="zh">將以不朽的格言為訓：</td><td class="explain">devise＝格言／座右銘；immortelle＝不朽的。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Le Roi, la Loi, la Liberté!" data-lang="fr-BE"><span class="word">Le Roi, la Loi, la Liberté!</span></button></td><td class="zh">國王、法律、自由！</td><td class="explain">比利時傳統口號：君主、法治與自由並重。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Le Roi, la Loi, la Liberté!" data-lang="fr-BE"><span class="word">Le Roi, la Loi, la Liberté!</span></button></td><td class="zh">國王、法律、自由！</td><td class="explain">重複強調三元素。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Le Roi, la Loi, la Liberté!" data-lang="fr-BE"><span class="word">Le Roi, la Loi, la Liberté!</span></button></td><td class="zh">國王、法律、自由！</td><td class="explain">三次重複，便於齊唱收束。</td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選任一歌詞行可單獨朗讀；每首國歌旁有「播放此首」。上方「全部循環播放」會依頁面順序朗讀全部歌詞。語速可調，勾選後會循環直到按停止。內容供語言學習；正式場合請以各國官方版本為準。</div>
+</main>
+<footer>Hymnes nationaux｜法文國歌</footer>
+<script>
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const target = lang.toLowerCase().replace('_', '-');
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang.toLowerCase().replace('_', '-') === target)
+    || voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(target.slice(0, 2)));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function itemsIn(scope) {
+  const root = scope || document;
+  return [...root.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(itemsIn(document), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const sectionBtn = e.target.closest('[data-play-section]');
+  if (sectionBtn) {
+    const sec = document.getElementById(sectionBtn.dataset.playSection);
+    startQueue(itemsIn(sec), 0);
+    return;
+  }
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>

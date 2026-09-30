@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="整理英語國家國歌歌詞：逐行中文翻譯與解釋，點選可朗讀，也可全部循環播放。">
+<title>National Anthems｜英文國歌</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#17355d;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.35rem;margin:36px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#17355d;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.meta-box{background:white;border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:22px 0;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#17355d;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl.ghost{background:white;color:#17355d;border:1px solid #dce4ef}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #17355d;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh,.explain{color:#53647c;line-height:1.55}
+.explain{font-size:.95rem}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#17355d;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.section-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:8px 0 10px}
+.section-head h2{margin:0}
+.tip{background:white;border-left:4px solid #17355d;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="en-US">
+<header><div class="brand"><a href="../index.html">← 英文筆記</a>　/　英文國歌</div></header>
+<main>
+<h1>英文國歌</h1>
+<p class="note">整理英語國家國歌歌詞：逐行中文翻譯與解釋，點選可朗讀，也可全部循環播放。</p>
+<nav class="toc" aria-label="國歌目錄"><a href="#us">美國 · The Star-Spangled Banner</a><a href="#uk">英國 · God Save the King</a><a href="#ca">加拿大 · O Canada</a><a href="#au">澳洲 · Advance Australia Fair</a><a href="#nz">紐西蘭 · God Defend New Zealand</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="us">
+<div class="section-head">
+  <h2>美國 · <span lang="en">The Star-Spangled Banner</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="us">▶ 播放此首</button>
+</div>
+<div class="meta-box">美國國歌。歌詞出自 Francis Scott Key（1814）。正式場合通常只唱第一段。以下為第一段。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O say can you see, by the dawn's early light," data-lang="en-US"><span class="word">O say can you see, by the dawn's early light,</span></button></td><td class="zh">喔，你可看見，藉著黎明的微光，</td><td class="explain">開場以設問喚起現場：黎明時分，能不能還看見旗幟。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="What so proudly we hailed at the twilight's last gleaming," data-lang="en-US"><span class="word">What so proudly we hailed at the twilight's last gleaming,</span></button></td><td class="zh">我們在暮色最後一抹餘暉中，曾自豪地向它歡呼的那面旗，</td><td class="explain">twilight's last gleaming＝天黑前最後的光；指前一晚還看得見的星條旗。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Whose broad stripes and bright stars through the perilous fight," data-lang="en-US"><span class="word">Whose broad stripes and bright stars through the perilous fight,</span></button></td><td class="zh">那寬闊的條紋與明亮的星，在艱險的戰鬥中，</td><td class="explain">broad stripes／bright stars＝星條旗上的條紋與星星。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O'er the ramparts we watched, were so gallantly streaming?" data-lang="en-US"><span class="word">O'er the ramparts we watched, were so gallantly streaming?</span></button></td><td class="zh">在我們守望的壁壘上空，是否仍英勇地飄揚？</td><td class="explain">ramparts＝防禦牆／堡壘；gallantly streaming＝英勇地飄動。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="And the rocket's red glare, the bombs bursting in air," data-lang="en-US"><span class="word">And the rocket's red glare, the bombs bursting in air,</span></button></td><td class="zh">火箭的紅光、炸彈在空中炸開，</td><td class="explain">描寫英軍炮火；red glare 反而照亮了旗幟。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Gave proof through the night that our flag was still there;" data-lang="en-US"><span class="word">Gave proof through the night that our flag was still there;</span></button></td><td class="zh">整晚證明我們的旗仍在那裡；</td><td class="explain">炮火的光成了「旗還在」的證據。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O say does that star-spangled banner yet wave" data-lang="en-US"><span class="word">O say does that star-spangled banner yet wave</span></button></td><td class="zh">喔，請問那面星條旗是否仍在飄揚，</td><td class="explain">star-spangled＝綴滿星星的；banner＝旗幟；國歌名由此而來。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O'er the land of the free and the home of the brave?" data-lang="en-US"><span class="word">O'er the land of the free and the home of the brave?</span></button></td><td class="zh">在自由之地、勇士之家的上空？</td><td class="explain">結尾名句：the land of the free／the home of the brave＝美國的自我形象。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="uk">
+<div class="section-head">
+  <h2>英國 · <span lang="en">God Save the King</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="uk">▶ 播放此首</button>
+</div>
+<div class="meta-box">英國國歌（亦用於部分大英國協場合）。君主為女王時改唱 God Save the Queen。以下為常見第一段（King 版）。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God save our gracious King!" data-lang="en-GB"><span class="word">God save our gracious King!</span></button></td><td class="zh">上帝保佑我們仁慈的國王！</td><td class="explain">gracious＝仁慈、莊重；開場直接祈願君主平安。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Long live our noble King!" data-lang="en-GB"><span class="word">Long live our noble King!</span></button></td><td class="zh">我們高貴的國王萬歲！</td><td class="explain">noble＝高貴；Long live… 是傳統的「萬歲」句式。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God save the King!" data-lang="en-GB"><span class="word">God save the King!</span></button></td><td class="zh">上帝保佑國王！</td><td class="explain">短句重複，加強祈願與合唱感。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Send him victorious," data-lang="en-GB"><span class="word">Send him victorious,</span></button></td><td class="zh">賜他得勝，</td><td class="explain">祈求軍事／國事上勝利（victorious）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Happy and glorious," data-lang="en-GB"><span class="word">Happy and glorious,</span></button></td><td class="zh">幸福且榮耀，</td><td class="explain">happy＝幸福；glorious＝榮耀，並列祝願。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Long to reign over us," data-lang="en-GB"><span class="word">Long to reign over us,</span></button></td><td class="zh">長久統治我們，</td><td class="explain">reign＝在位、統治；祝君主在位長久。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God save the King!" data-lang="en-GB"><span class="word">God save the King!</span></button></td><td class="zh">上帝保佑國王！</td><td class="explain">再次收束於同一祈願，易於齊唱。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="ca">
+<div class="section-head">
+  <h2>加拿大 · <span lang="en">O Canada</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="ca">▶ 播放此首</button>
+</div>
+<div class="meta-box">加拿大國歌。官方有英語與法語版本；此處為英語歌詞（常用第一段）。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O Canada! Our home and native land!" data-lang="en-CA"><span class="word">O Canada! Our home and native land!</span></button></td><td class="zh">喔加拿大！我們的家園與故土！</td><td class="explain">home and native land＝家與出生之地，開場定調歸屬感。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="True patriot love in all of us command." data-lang="en-CA"><span class="word">True patriot love in all of us command.</span></button></td><td class="zh">願真正的愛國之情，統御我們每一個人。</td><td class="explain">command＝要求／統御；呼籲人人懷有 patriot love。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="With glowing hearts we see thee rise," data-lang="en-CA"><span class="word">With glowing hearts we see thee rise,</span></button></td><td class="zh">我們懷著熾熱的心，看你升起，</td><td class="explain">glowing hearts＝熱忱；thee＝你（古語，指加拿大）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="The True North strong and free!" data-lang="en-CA"><span class="word">The True North strong and free!</span></button></td><td class="zh">真正的北方，堅強而自由！</td><td class="explain">True North 是加拿大常用自稱；strong and free 為核心意象。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="From far and wide, O Canada," data-lang="en-CA"><span class="word">From far and wide, O Canada,</span></button></td><td class="zh">從遙遠與遼闊各處，喔加拿大，</td><td class="explain">far and wide＝四面八方，涵蓋廣土與多元。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="We stand on guard for thee." data-lang="en-CA"><span class="word">We stand on guard for thee.</span></button></td><td class="zh">我們為你守衛。</td><td class="explain">stand on guard＝站崗守衛，國歌中反覆出現的承諾。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God keep our land glorious and free!" data-lang="en-CA"><span class="word">God keep our land glorious and free!</span></button></td><td class="zh">願上帝保守我們的土地榮耀且自由！</td><td class="explain">祈求土地保持 glorious and free。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O Canada, we stand on guard for thee." data-lang="en-CA"><span class="word">O Canada, we stand on guard for thee.</span></button></td><td class="zh">喔加拿大，我們為你守衛。</td><td class="explain">重複收束，強化齊唱與責任感。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="O Canada, we stand on guard for thee." data-lang="en-CA"><span class="word">O Canada, we stand on guard for thee.</span></button></td><td class="zh">喔加拿大，我們為你守衛。</td><td class="explain">末句再唱一次，常見於正式演唱結尾。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="au">
+<div class="section-head">
+  <h2>澳洲 · <span lang="en">Advance Australia Fair</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="au">▶ 播放此首</button>
+</div>
+<div class="meta-box">澳洲國歌（1984 年起正式採用）。以下為官方常用兩段。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Australians all let us rejoice," data-lang="en-AU"><span class="word">Australians all let us rejoice,</span></button></td><td class="zh">澳洲人啊，讓我們一同歡喜，</td><td class="explain">第一段開場：號召全體 Australians 一起 rejoice。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="For we are one and free;" data-lang="en-AU"><span class="word">For we are one and free;</span></button></td><td class="zh">因為我們合而為一、且自由；</td><td class="explain">one and free＝團結與自由，點出國族主題。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="We've golden soil and wealth for toil;" data-lang="en-AU"><span class="word">We've golden soil and wealth for toil;</span></button></td><td class="zh">我們有金色土壤，辛勞換來富庶；</td><td class="explain">golden soil＝豐饒土地；wealth for toil＝工作帶來財富。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Our home is girt by sea;" data-lang="en-AU"><span class="word">Our home is girt by sea;</span></button></td><td class="zh">我們的家園四面環海；</td><td class="explain">girt by sea＝被海環繞（girt 為 gird 的過去分詞，文語）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Our land abounds in nature's gifts" data-lang="en-AU"><span class="word">Our land abounds in nature's gifts</span></button></td><td class="zh">我們的土地充滿自然的恩賜</td><td class="explain">abounds in＝充滿；nature's gifts＝自然資源與美景。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Of beauty rich and rare;" data-lang="en-AU"><span class="word">Of beauty rich and rare;</span></button></td><td class="zh">那豐富而罕見的美麗；</td><td class="explain">rich and rare＝豐美且獨特。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="In history's page, let every stage" data-lang="en-AU"><span class="word">In history's page, let every stage</span></button></td><td class="zh">在歷史的篇章裡，讓每一階段</td><td class="explain">呼籲在歷史各階段都向前進。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Advance Australia Fair." data-lang="en-AU"><span class="word">Advance Australia Fair.</span></button></td><td class="zh">前進吧，美麗的澳洲。</td><td class="explain">歌名句：Advance＝前進；Fair＝美好／美麗。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="In joyful strains then let us sing," data-lang="en-AU"><span class="word">In joyful strains then let us sing,</span></button></td><td class="zh">那就用歡喜的旋律讓我們歌唱，</td><td class="explain">strains＝樂曲／歌聲；第二段轉入齊唱召喚。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Advance Australia Fair." data-lang="en-AU"><span class="word">Advance Australia Fair.</span></button></td><td class="zh">前進吧，美麗的澳洲。</td><td class="explain">第一段結尾重複歌名，易於合唱。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Beneath our radiant Southern Cross" data-lang="en-AU"><span class="word">Beneath our radiant Southern Cross</span></button></td><td class="zh">在我們燦爛的南十字星之下</td><td class="explain">Southern Cross＝南十字星，南半球天空象徵，見於澳洲國旗。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="We'll toil with hearts and hands;" data-lang="en-AU"><span class="word">We'll toil with hearts and hands;</span></button></td><td class="zh">我們將用心與手辛勤工作；</td><td class="explain">toil＝辛勞；hearts and hands＝全心全力。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="To make this Commonwealth of ours" data-lang="en-AU"><span class="word">To make this Commonwealth of ours</span></button></td><td class="zh">為使我們這個聯邦</td><td class="explain">Commonwealth＝澳洲聯邦（正式國名之一）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Renowned of all the lands;" data-lang="en-AU"><span class="word">Renowned of all the lands;</span></button></td><td class="zh">名揚於萬邦；</td><td class="explain">renowned＝聞名；願國家受人尊敬。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="For those who've come across the seas" data-lang="en-AU"><span class="word">For those who've come across the seas</span></button></td><td class="zh">為那些漂洋過海而來的人</td><td class="explain">指移民與後來者，納入多元社會。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="We've boundless plains to share;" data-lang="en-AU"><span class="word">We've boundless plains to share;</span></button></td><td class="zh">我們有無垠的平原可共享；</td><td class="explain">boundless plains＝遼闊平原；share＝共享土地。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="With courage let us all combine" data-lang="en-AU"><span class="word">With courage let us all combine</span></button></td><td class="zh">讓我們以勇氣團結起來</td><td class="explain">combine＝聯合；強調團結與勇氣。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="To Advance Australia Fair." data-lang="en-AU"><span class="word">To Advance Australia Fair.</span></button></td><td class="zh">去推進美麗的澳洲。</td><td class="explain">再次點題：共同推進國家。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="In joyful strains then let us sing," data-lang="en-AU"><span class="word">In joyful strains then let us sing,</span></button></td><td class="zh">那就用歡喜的旋律讓我們歌唱，</td><td class="explain">與第一段相同的合唱句。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Advance Australia Fair." data-lang="en-AU"><span class="word">Advance Australia Fair.</span></button></td><td class="zh">前進吧，美麗的澳洲。</td><td class="explain">全曲收束於歌名。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="nz">
+<div class="section-head">
+  <h2>紐西蘭 · <span lang="en">God Defend New Zealand</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="nz">▶ 播放此首</button>
+</div>
+<div class="meta-box">紐西蘭國歌之一（與 God Save the King 並列）。毛利語版名為 Aotearoa。此處為英語版第一段。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God of Nations at Thy feet," data-lang="en-NZ"><span class="word">God of Nations at Thy feet,</span></button></td><td class="zh">萬國之神啊，在祢腳前，</td><td class="explain">以祈禱開場；Thy＝祢的（古語）。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="In the bonds of love we meet," data-lang="en-NZ"><span class="word">In the bonds of love we meet,</span></button></td><td class="zh">我們在愛的羈絆中相聚，</td><td class="explain">bonds of love＝愛的連結，強調合一。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Hear our voices, we entreat," data-lang="en-NZ"><span class="word">Hear our voices, we entreat,</span></button></td><td class="zh">請聽我們的聲音，我們懇求，</td><td class="explain">entreat＝懇求、祈求。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God defend our free land." data-lang="en-NZ"><span class="word">God defend our free land.</span></button></td><td class="zh">上帝防衛我們自由的土地。</td><td class="explain">defend＝防衛；free land＝自由土地，點出歌名。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Guard Pacific's triple star" data-lang="en-NZ"><span class="word">Guard Pacific's triple star</span></button></td><td class="zh">守護太平洋的三星</td><td class="explain">triple star 常解作紐西蘭（或南太平洋）的象徵性說法。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="From the shafts of strife and war," data-lang="en-NZ"><span class="word">From the shafts of strife and war,</span></button></td><td class="zh">遠離爭鬥與戰爭的箭矢，</td><td class="explain">shafts＝箭；strife and war＝紛爭與戰爭。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="Make her praises heard afar," data-lang="en-NZ"><span class="word">Make her praises heard afar,</span></button></td><td class="zh">使她的讚譽遠播，</td><td class="explain">praises heard afar＝美名遠揚。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="en" data-say="God defend New Zealand." data-lang="en-NZ"><span class="word">God defend New Zealand.</span></button></td><td class="zh">上帝防衛紐西蘭。</td><td class="explain">每段常見的收束句，亦即歌名。</td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選任一歌詞行可單獨朗讀；每首國歌旁有「播放此首」。上方「全部循環播放」會依頁面順序朗讀全部歌詞。語速可調，勾選後會循環直到按停止。內容供語言學習；正式場合請以各國官方版本為準。</div>
+</main>
+<footer>National Anthems｜英文國歌</footer>
+<script>
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const target = lang.toLowerCase().replace('_', '-');
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang.toLowerCase().replace('_', '-') === target)
+    || voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(target.slice(0, 2)));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function itemsIn(scope) {
+  const root = scope || document;
+  return [...root.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(itemsIn(document), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const sectionBtn = e.target.closest('[data-play-section]');
+  if (sectionBtn) {
+    const sec = document.getElementById(sectionBtn.dataset.playSection);
+    startQueue(itemsIn(sec), 0);
+    return;
+  }
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>

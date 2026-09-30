@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="整理德語國歌歌詞：逐行中文翻譯與解釋，點選可朗讀，也可全部循環播放。">
+<title>Nationalhymnen｜德文國歌</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.35rem;margin:36px 0 10px}
+h3{font-size:1.05rem;margin:18px 0 8px;color:#1d6a4f}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#1d6a4f;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.meta-box{background:white;border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:22px 0;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#1d6a4f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl.ghost{background:white;color:#1d6a4f;border:1px solid #dce4ef}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #1d6a4f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh,.explain{color:#53647c;line-height:1.55}
+.explain{font-size:.95rem}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.word,.kanji{font-size:1.05rem;font-weight:750;color:#1d6a4f;line-height:1.45}
+.kana{font-size:.95rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.85rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.section-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:8px 0 10px}
+.section-head h2{margin:0}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="de-DE">
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　德文國歌</div></header>
+<main>
+<h1>德文國歌</h1>
+<p class="note">整理德語國歌歌詞：逐行中文翻譯與解釋，點選可朗讀，也可全部循環播放。</p>
+<nav class="toc" aria-label="國歌目錄"><a href="#de">德國 · Deutschlandlied（第三段）</a><a href="#at">奧地利 · Land der Berge, Land am Strome</a><a href="#ch">瑞士 · Schweizerpsalm</a><a href="#be">比利時 · Brabançonne（德文版）</a><a href="#li">列支敦士登 · Oben am jungen Rhein</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="de">
+<div class="section-head">
+  <h2>德國 · <span lang="de">Deutschlandlied（第三段）</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="de">▶ 播放此首</button>
+</div>
+<div class="meta-box">德國國歌採用 Hoffmann von Fallersleben 的《Deutschlandlied》歌詞，正式場合只唱第三段（Einigkeit und Recht und Freiheit…）。第一、二段不在官方儀式使用。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Einigkeit und Recht und Freiheit" data-lang="de-DE"><span class="word">Einigkeit und Recht und Freiheit</span></button></td><td class="zh">統一、正義與自由</td><td class="explain">德國官方核心價值三詞：Einigkeit／Recht／Freiheit。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Für das deutsche Vaterland!" data-lang="de-DE"><span class="word">Für das deutsche Vaterland!</span></button></td><td class="zh">為了德意志祖國！</td><td class="explain">Vaterland＝祖國；說明這三價值獻給國家。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Danach lasst uns alle streben" data-lang="de-DE"><span class="word">Danach lasst uns alle streben</span></button></td><td class="zh">讓我們都為此努力奮鬥</td><td class="explain">danach streben＝朝此追求；呼叫全民同心。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Brüderlich mit Herz und Hand!" data-lang="de-DE"><span class="word">Brüderlich mit Herz und Hand!</span></button></td><td class="zh">兄弟般地，用心與手！</td><td class="explain">brüderlich＝兄弟般；Herz und Hand＝全心全力。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Einigkeit und Recht und Freiheit" data-lang="de-DE"><span class="word">Einigkeit und Recht und Freiheit</span></button></td><td class="zh">統一、正義與自由</td><td class="explain">再次重複三價值，加深記憶與合唱。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Sind des Glückes Unterpfand:" data-lang="de-DE"><span class="word">Sind des Glückes Unterpfand:</span></button></td><td class="zh">是幸福的保證：</td><td class="explain">Unterpfand＝抵押／保證；指幸福的基礎。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Blüh' im Glanze dieses Glückes," data-lang="de-DE"><span class="word">Blüh' im Glanze dieses Glückes,</span></button></td><td class="zh">在這幸福的光輝中繁盛吧，</td><td class="explain">blühen＝綻放繁榮；Glanz＝光輝。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Blühe, deutsches Vaterland!" data-lang="de-DE"><span class="word">Blühe, deutsches Vaterland!</span></button></td><td class="zh">繁盛吧，德意志祖國！</td><td class="explain">對祖國的祝福收束。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Blüh' im Glanze dieses Glückes," data-lang="de-DE"><span class="word">Blüh' im Glanze dieses Glückes,</span></button></td><td class="zh">在這幸福的光輝中繁盛吧，</td><td class="explain">重複上一祝願。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Blühe, deutsches Vaterland!" data-lang="de-DE"><span class="word">Blühe, deutsches Vaterland!</span></button></td><td class="zh">繁盛吧，德意志祖國！</td><td class="explain">正式演唱常見的結尾重複。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="at">
+<div class="section-head">
+  <h2>奧地利 · <span lang="de">Land der Berge, Land am Strome</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="at">▶ 播放此首</button>
+</div>
+<div class="meta-box">奧地利國歌。歌詞 Paula von Preradović，旋律曾歸於 Mozart 圈子。以下為三段全文（正式場合可唱）。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Land der Berge, Land am Strome," data-lang="de-AT"><span class="word">Land der Berge, Land am Strome,</span></button></td><td class="zh">山嶽之國，河畔之國，</td><td class="explain">Berge＝山；Strom＝大河（多瑙河意象）。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Land der Äcker, Land der Dome," data-lang="de-AT"><span class="word">Land der Äcker, Land der Dome,</span></button></td><td class="zh">田畝之國，教堂穹頂之國，</td><td class="explain">Äcker＝農田；Dome＝大教堂圓頂。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Land der Hämmer, zukunftsreich!" data-lang="de-AT"><span class="word">Land der Hämmer, zukunftsreich!</span></button></td><td class="zh">鐵鎚之國，充滿未來！</td><td class="explain">Hämmer＝錘子（工業）；zukunftsreich＝富於未來。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Heimat bist du großer Söhne," data-lang="de-AT"><span class="word">Heimat bist du großer Söhne,</span></button></td><td class="zh">你是偉大兒女的家鄉，</td><td class="explain">Heimat＝家鄉；großer Söhne＝傑出的子孫。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Volk, begnadet für das Schöne," data-lang="de-AT"><span class="word">Volk, begnadet für das Schöne,</span></button></td><td class="zh">民族啊，蒙受美的恩賜，</td><td class="explain">begnadet＝蒙恩；für das Schöne＝對於美。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgerühmtes Österreich!" data-lang="de-AT"><span class="word">Vielgerühmtes Österreich!</span></button></td><td class="zh">備受讚譽的奧地利！</td><td class="explain">vielgerühmt＝廣受稱頌。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgerühmtes Österreich!" data-lang="de-AT"><span class="word">Vielgerühmtes Österreich!</span></button></td><td class="zh">備受讚譽的奧地利！</td><td class="explain">段末重複國名讚歎。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Heiß umfehdet, wild umstritten," data-lang="de-AT"><span class="word">Heiß umfehdet, wild umstritten,</span></button></td><td class="zh">曾被激烈圍攻、猛烈爭執，</td><td class="explain">描寫歷史上的爭戰與動盪。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Liegst dem Erdteil du inmitten" data-lang="de-AT"><span class="word">Liegst dem Erdteil du inmitten</span></button></td><td class="zh">你位於大陸正中</td><td class="explain">Erdteil＝大洲；inmitten＝在中間（歐洲中心位置）。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Einem starken Herzen gleich." data-lang="de-AT"><span class="word">Einem starken Herzen gleich.</span></button></td><td class="zh">如同強韌的心臟。</td><td class="explain">把奧地利比作歐洲的心。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hast seit frühen Ahnentagen" data-lang="de-AT"><span class="word">Hast seit frühen Ahnentagen</span></button></td><td class="zh">自遠祖的日子以來</td><td class="explain">Ahnentagen＝祖先的時代。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hoher Sendung Last getragen," data-lang="de-AT"><span class="word">Hoher Sendung Last getragen,</span></button></td><td class="zh">肩負崇高使命的重擔，</td><td class="explain">Sendung＝使命；Last＝重擔。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgeprüftes Österreich!" data-lang="de-AT"><span class="word">Vielgeprüftes Österreich!</span></button></td><td class="zh">歷經考驗的奧地利！</td><td class="explain">vielgeprüft＝飽經考驗。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgeprüftes Österreich!" data-lang="de-AT"><span class="word">Vielgeprüftes Österreich!</span></button></td><td class="zh">歷經考驗的奧地利！</td><td class="explain">重複收束第二段。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Mutig in die neuen Zeiten," data-lang="de-AT"><span class="word">Mutig in die neuen Zeiten,</span></button></td><td class="zh">勇敢地走進新時代，</td><td class="explain">第三段轉向未來與勇氣。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Frei und gläubig sieh uns schreiten," data-lang="de-AT"><span class="word">Frei und gläubig sieh uns schreiten,</span></button></td><td class="zh">看我們自由而篤信地邁步，</td><td class="explain">frei und gläubig＝自由且懷有信念。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Arbeitsfroh und hoffnungsreich." data-lang="de-AT"><span class="word">Arbeitsfroh und hoffnungsreich.</span></button></td><td class="zh">樂於工作、充滿希望。</td><td class="explain">arbeitsfroh＝以工作為樂；hoffnungsreich＝充滿希望。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Einig lass in Jubelchören," data-lang="de-AT"><span class="word">Einig lass in Jubelchören,</span></button></td><td class="zh">讓我們在歡騰合唱中團結，</td><td class="explain">einig＝一致團結；Jubelchöre＝歡騰的合唱。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vaterland, dir Treue schwören." data-lang="de-AT"><span class="word">Vaterland, dir Treue schwören.</span></button></td><td class="zh">祖國啊，向你宣誓效忠。</td><td class="explain">Treue schwören＝宣誓忠誠。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgeliebtes Österreich!" data-lang="de-AT"><span class="word">Vielgeliebtes Österreich!</span></button></td><td class="zh">備受摯愛的奧地利！</td><td class="explain">vielgeliebt＝深受愛戴。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vielgeliebtes Österreich!" data-lang="de-AT"><span class="word">Vielgeliebtes Österreich!</span></button></td><td class="zh">備受摯愛的奧地利！</td><td class="explain">全曲結尾重複。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="ch">
+<div class="section-head">
+  <h2>瑞士 · <span lang="de">Schweizerpsalm</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="ch">▶ 播放此首</button>
+</div>
+<div class="meta-box">瑞士國歌德文版（法文為 Cantique suisse）。以下為德文第一段。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Trittst im Morgenrot daher," data-lang="de-CH"><span class="word">Trittst im Morgenrot daher,</span></button></td><td class="zh">你在朝霞中走來，</td><td class="explain">Morgenrot＝晨曦／朝紅；以日出開場。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Seh' ich dich im Strahlenmeer," data-lang="de-CH"><span class="word">Seh' ich dich im Strahlenmeer,</span></button></td><td class="zh">我看見你在光芒之海中，</td><td class="explain">Strahlenmeer＝光的海洋。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Dich, du Hocherhabener, Herrlicher!" data-lang="de-CH"><span class="word">Dich, du Hocherhabener, Herrlicher!</span></button></td><td class="zh">你啊，至高至尊、輝煌者！</td><td class="explain">對上帝的稱呼：Hocherhabener／Herrlicher。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Wenn der Alpen Firn sich rötet," data-lang="de-CH"><span class="word">Wenn der Alpen Firn sich rötet,</span></button></td><td class="zh">當阿爾卑斯的永雪染紅，</td><td class="explain">Firn＝高山永雪；rötet＝變紅。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Betet, freie Schweizer, betet!" data-lang="de-CH"><span class="word">Betet, freie Schweizer, betet!</span></button></td><td class="zh">祈禱吧，自由的瑞士人，祈禱吧！</td><td class="explain">freie Schweizer＝自由的瑞士人。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Eure fromme Seele ahnt" data-lang="de-CH"><span class="word">Eure fromme Seele ahnt</span></button></td><td class="zh">你們虔誠的靈魂預感</td><td class="explain">fromme Seele＝虔誠的靈魂；ahnt＝預感。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Gott im hehren Vaterland," data-lang="de-CH"><span class="word">Gott im hehren Vaterland,</span></button></td><td class="zh">上帝在莊嚴的祖國，</td><td class="explain">hehren Vaterland＝崇高的祖國。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Gott, den Herrn, im hehren Vaterland." data-lang="de-CH"><span class="word">Gott, den Herrn, im hehren Vaterland.</span></button></td><td class="zh">上帝、主，在莊嚴的祖國。</td><td class="explain">段末完整收束。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="be">
+<div class="section-head">
+  <h2>比利時 · <span lang="de">Brabançonne（德文版）</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="be">▶ 播放此首</button>
+</div>
+<div class="meta-box">比利時國歌德文版。內容與法文版對應，核心口號同樣是「國王、法律、自由」。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="O liebes Land, o Belgiens Erde," data-lang="de-DE"><span class="word">O liebes Land, o Belgiens Erde,</span></button></td><td class="zh">喔親愛的土地，喔比利時的大地，</td><td class="explain">開場呼喚國家土地。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Dir unser Herz, dir unsere Hand," data-lang="de-DE"><span class="word">Dir unser Herz, dir unsere Hand,</span></button></td><td class="zh">我們的心歸你，我們的手歸你，</td><td class="explain">Herz／Hand＝情感與行動。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Dir unser Blut, o Heimaterde," data-lang="de-DE"><span class="word">Dir unser Blut, o Heimaterde,</span></button></td><td class="zh">我們的血歸你，喔家鄉的土地，</td><td class="explain">Heimaterde＝家鄉之土。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Wir schwören's dir, o Vaterland!" data-lang="de-DE"><span class="word">Wir schwören's dir, o Vaterland!</span></button></td><td class="zh">我們向你起誓，喔祖國！</td><td class="explain">schwören＝起誓。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="So blühe froh in voller Schöne," data-lang="de-DE"><span class="word">So blühe froh in voller Schöne,</span></button></td><td class="zh">願你在全然的美中快樂繁盛，</td><td class="explain">blühe＝願你繁盛；Schöne＝美。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Zu der die Freiheit dich erhob," data-lang="de-DE"><span class="word">Zu der die Freiheit dich erhob,</span></button></td><td class="zh">自由曾使你上昇到這境界，</td><td class="explain">erhob＝舉起／提升。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Und fortan singen deine Söhne:" data-lang="de-DE"><span class="word">Und fortan singen deine Söhne:</span></button></td><td class="zh">此後你的子孫將歌唱：</td><td class="explain">fortan＝從今以後。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Gesetz und König und die Freiheit hoch!" data-lang="de-DE"><span class="word">Gesetz und König und die Freiheit hoch!</span></button></td><td class="zh">法律、國王與自由萬歲！</td><td class="explain">對應法文 Le Roi, la Loi, la Liberté。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Gesetz und König und die Freiheit hoch!" data-lang="de-DE"><span class="word">Gesetz und König und die Freiheit hoch!</span></button></td><td class="zh">法律、國王與自由萬歲！</td><td class="explain">重複口號。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Gesetz und König und die Freiheit hoch!" data-lang="de-DE"><span class="word">Gesetz und König und die Freiheit hoch!</span></button></td><td class="zh">法律、國王與自由萬歲！</td><td class="explain">三次重複收束。</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="li">
+<div class="section-head">
+  <h2>列支敦士登 · <span lang="de">Oben am jungen Rhein</span></h2>
+  <button type="button" class="ctrl ghost" data-play-section="li">▶ 播放此首</button>
+</div>
+<div class="meta-box">列支敦士登國歌。旋律與英國 God Save the King 相同，歌詞不同。以下為常用段落。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">原文</th><th scope="col">中文翻譯</th><th scope="col">解釋</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Oben am jungen Rhein" data-lang="de-DE"><span class="word">Oben am jungen Rhein</span></button></td><td class="zh">在年輕的萊茵河上游</td><td class="explain">junger Rhein＝萊茵河上游（流經列支敦士登）。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Lehnet sich Liechtenstein" data-lang="de-DE"><span class="word">Lehnet sich Liechtenstein</span></button></td><td class="zh">列支敦士登依偎著</td><td class="explain">lehnet sich＝依偎、倚靠。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="An Alpenhöh'n." data-lang="de-DE"><span class="word">An Alpenhöh'n.</span></button></td><td class="zh">阿爾卑斯高地。</td><td class="explain">Alpenhöh'n＝阿爾卑斯的高處。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Dies liebe Heimatland," data-lang="de-DE"><span class="word">Dies liebe Heimatland,</span></button></td><td class="zh">這親愛的家鄉土地，</td><td class="explain">Heimatland＝家鄉國土。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Das teure Vaterland" data-lang="de-DE"><span class="word">Das teure Vaterland</span></button></td><td class="zh">這珍貴的祖國</td><td class="explain">teuer＝珍貴；Vaterland＝祖國。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hat Gottes weise Hand" data-lang="de-DE"><span class="word">Hat Gottes weise Hand</span></button></td><td class="zh">有上帝智慧的手</td><td class="explain">weise Hand＝智慧之手。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Für uns erseh'n." data-lang="de-DE"><span class="word">Für uns erseh'n.</span></button></td><td class="zh">為我們選定。</td><td class="explain">ersehen＝選中、看中。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hoch lebe Liechtenstein," data-lang="de-DE"><span class="word">Hoch lebe Liechtenstein,</span></button></td><td class="zh">列支敦士登萬歲，</td><td class="explain">Hoch lebe…＝萬歲句式。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Blühend am jungen Rhein," data-lang="de-DE"><span class="word">Blühend am jungen Rhein,</span></button></td><td class="zh">在年輕萊茵河畔繁盛，</td><td class="explain">blühend＝繁榮綻放；am jungen Rhein＝在年輕萊茵河畔。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Glücklich und treu." data-lang="de-DE"><span class="word">Glücklich und treu.</span></button></td><td class="zh">幸福而忠誠。</td><td class="explain">glücklich und treu＝幸福且忠誠。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hoch leb' der Fürst vom Land," data-lang="de-DE"><span class="word">Hoch leb' der Fürst vom Land,</span></button></td><td class="zh">國土上的親王萬歲，</td><td class="explain">Fürst＝親王（列支敦士登為公國）。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Hoch unser Vaterland," data-lang="de-DE"><span class="word">Hoch unser Vaterland,</span></button></td><td class="zh">我們的祖國萬歲，</td><td class="explain">再次祝福祖國。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Durch Bruderliebe Band" data-lang="de-DE"><span class="word">Durch Bruderliebe Band</span></button></td><td class="zh">藉著兄弟之愛的紐帶</td><td class="explain">Bruderliebe＝兄弟之愛；Band＝紐帶。</td></tr><tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Vereint und frei." data-lang="de-DE"><span class="word">Vereint und frei.</span></button></td><td class="zh">團結且自由。</td><td class="explain">vereint und frei＝聯合而自由。</td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選任一歌詞行可單獨朗讀；每首國歌旁有「播放此首」。上方「全部循環播放」會依頁面順序朗讀全部歌詞。語速可調，勾選後會循環直到按停止。內容供語言學習；正式場合請以各國官方版本為準。</div>
+</main>
+<footer>Nationalhymnen｜德文國歌</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const target = lang.toLowerCase().replace('_', '-');
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang.toLowerCase().replace('_', '-') === target)
+    || voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(target.slice(0, 2)));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function itemsIn(scope) {
+  const root = scope || document;
+  return [...root.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(itemsIn(document), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const sectionBtn = e.target.closest('[data-play-section]');
+  if (sectionBtn) {
+    const sec = document.getElementById(sectionBtn.dataset.playSection);
+    startQueue(itemsIn(sec), 0);
+    return;
+  }
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
