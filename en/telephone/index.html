@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英文 70–100 規律與電話號碼讀法。點選可朗讀；也可用全部循環播放。">
+<title>Telephone｜英文數字與電話</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#17355d;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#17355d;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.meta-box{background:white;border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#17355d;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #17355d;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #17355d;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#17355d;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #17355d;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="en-US">
+<header><div class="brand"><a href="../index.html">← 英文筆記</a>　/　Telephone</div></header>
+<main>
+<h1>英文數字規律與電話</h1>
+<p class="note">70–100 用規律的 seventy、eighty、ninety（對照法文 soixante-dix 系統）。電話可兩位一組或美式區碼讀法。點選可朗讀。</p>
+<nav class="toc" aria-label="章節"><a href="#rules">規律</a><a href="#70-100">70–100</a><a href="#contrast">對照法文</a><a href="#phone">電話</a></nav>
+
+<div class="controls" style="--accent:#17355d">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="rules">
+<h2>70–100 規律（英文）</h2>
+<div class="meta-box">
+<ul style="margin:0;padding-left:1.2rem">
+<li>70＝seven + ty → <strong>seventy</strong>；71＝seventy-one。</li>
+<li>80＝<strong>eighty</strong>；90＝<strong>ninety</strong>。</li>
+<li>100＝<strong>one hundred</strong> 或 <strong>a hundred</strong>。</li>
+<li>中間數字用連字號：twenty-three、forty-five。</li>
+</ul>
+</div>
+</section>
+
+<section id="70-100">
+<h2>70–100 選表</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">數字</th><th scope="col">英文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">70</td><td><button type="button" class="say" lang="en" data-say="seventy" data-lang="en-US"><span class="word">seventy</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">71</td><td><button type="button" class="say" lang="en" data-say="seventy-one" data-lang="en-US"><span class="word">seventy-one</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">75</td><td><button type="button" class="say" lang="en" data-say="seventy-five" data-lang="en-US"><span class="word">seventy-five</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">79</td><td><button type="button" class="say" lang="en" data-say="seventy-nine" data-lang="en-US"><span class="word">seventy-nine</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">80</td><td><button type="button" class="say" lang="en" data-say="eighty" data-lang="en-US"><span class="word">eighty</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">81</td><td><button type="button" class="say" lang="en" data-say="eighty-one" data-lang="en-US"><span class="word">eighty-one</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">87</td><td><button type="button" class="say" lang="en" data-say="eighty-seven" data-lang="en-US"><span class="word">eighty-seven</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">90</td><td><button type="button" class="say" lang="en" data-say="ninety" data-lang="en-US"><span class="word">ninety</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">91</td><td><button type="button" class="say" lang="en" data-say="ninety-one" data-lang="en-US"><span class="word">ninety-one</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">98</td><td><button type="button" class="say" lang="en" data-say="ninety-eight" data-lang="en-US"><span class="word">ninety-eight</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">99</td><td><button type="button" class="say" lang="en" data-say="ninety-nine" data-lang="en-US"><span class="word">ninety-nine</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">100</td><td><button type="button" class="say" lang="en" data-say="one hundred" data-lang="en-US"><span class="word">one hundred</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="contrast">
+<h2>對照法文（70／80／90）</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">數字</th><th scope="col">英文</th><th scope="col">法文（法國）</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">70</td><td><button type="button" class="say" lang="en" data-say="seventy" data-lang="en-US"><span class="word">seventy</span></button></td><td class="zh">soixante-dix（60+10）</td></tr>
+<tr class="vocab-row"><td class="zh">80</td><td><button type="button" class="say" lang="en" data-say="eighty" data-lang="en-US"><span class="word">eighty</span></button></td><td class="zh">quatre-vingts（4×20）</td></tr>
+<tr class="vocab-row"><td class="zh">90</td><td><button type="button" class="say" lang="en" data-say="ninety" data-lang="en-US"><span class="word">ninety</span></button></td><td class="zh">quatre-vingt-dix</td></tr>
+</tbody></table></div>
+<p class="note">英文這一段較<strong>規律</strong>；記電話兩位數時，87 是 eighty-seven，不是法文的 quatre-vingt-sept。</p>
+</section>
+
+<section id="phone">
+<h2>電話分組讀法</h2>
+<div class="meta-box">可<strong>每兩位一組</strong>讀（歐洲風格，0 讀 zero）；或<strong>美式</strong>三位區碼 + 四位本地號。斜線只是分組提示。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">號碼／說明</th><th scope="col">讀法（可點播）</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">06 87 98 14 08（兩位一組，英語讀法）</td><td><button type="button" class="say" lang="en" data-say="zero six, eighty-seven, ninety-eight, fourteen, zero eight" data-lang="en-US"><span class="word">zero six / eighty-seven / ninety-eight / fourteen / zero eight</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">06</td><td><button type="button" class="say" lang="en" data-say="zero six" data-lang="en-US"><span class="word">zero six</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">87</td><td><button type="button" class="say" lang="en" data-say="eighty-seven" data-lang="en-US"><span class="word">eighty-seven</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">98</td><td><button type="button" class="say" lang="en" data-say="ninety-eight" data-lang="en-US"><span class="word">ninety-eight</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">14</td><td><button type="button" class="say" lang="en" data-say="fourteen" data-lang="en-US"><span class="word">fourteen</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">08</td><td><button type="button" class="say" lang="en" data-say="zero eight" data-lang="en-US"><span class="word">zero eight</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">美式例：(555) 123-4567</td><td><button type="button" class="say" lang="en" data-say="five five five, one two three, four five six seven" data-lang="en-US"><span class="word">five five five, one two three, four five six seven</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">逐位讀 555</td><td><button type="button" class="say" lang="en" data-say="five, five, five" data-lang="en-US"><span class="word">five, five, five</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選可單獨朗讀。「全部循環播放」依頁面順序朗讀。電話中的 0 常讀 <strong>zero</strong>（英式有時讀 oh）。</div>
+</main>
+<footer>Telephone｜英文數字與電話</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

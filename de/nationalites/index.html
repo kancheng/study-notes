@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="德文國家名稱與國籍。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Nationalitäten｜德文國家與國籍</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#1d6a4f;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#1d6a4f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #1d6a4f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#1d6a4f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin:16px 0;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="de-DE">
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　Nationalitäten</div></header>
+<main>
+<h1>德文國家與國籍</h1>
+<p class="note">國家名稱與國籍名詞對照（männlich／weiblich）。表格中每個德文欄位可單獨點選朗讀；也可用下方控制列全部循環播放。</p>
+<nav class="toc" aria-label="章節"><a href="#pays">國家與國籍表</a><a href="#beispiele">例句</a><a href="#notes">用法提醒</a></nav>
+
+<div class="controls" style="--accent:#1d6a4f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="pays">
+<h2>國家與國籍表</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">Land</th><th scope="col">中文</th><th scope="col">männlich</th><th scope="col">weiblich</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Deutschland" data-lang="de-DE"><span class="word">Deutschland</span></button></td><td class="zh">德國</td><td><button type="button" class="say" lang="de" data-say="Deutscher" data-lang="de-DE"><span class="word">Deutscher</span></button></td><td><button type="button" class="say" lang="de" data-say="Deutsche" data-lang="de-DE"><span class="word">Deutsche</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Frankreich" data-lang="de-DE"><span class="word">Frankreich</span></button></td><td class="zh">法國</td><td><button type="button" class="say" lang="de" data-say="Franzose" data-lang="de-DE"><span class="word">Franzose</span></button></td><td><button type="button" class="say" lang="de" data-say="Französin" data-lang="de-DE"><span class="word">Französin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die USA" data-lang="de-DE"><span class="word">die USA</span></button></td><td class="zh">美國</td><td><button type="button" class="say" lang="de" data-say="Amerikaner" data-lang="de-DE"><span class="word">Amerikaner</span></button></td><td><button type="button" class="say" lang="de" data-say="Amerikanerin" data-lang="de-DE"><span class="word">Amerikanerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Japan" data-lang="de-DE"><span class="word">Japan</span></button></td><td class="zh">日本</td><td><button type="button" class="say" lang="de" data-say="Japaner" data-lang="de-DE"><span class="word">Japaner</span></button></td><td><button type="button" class="say" lang="de" data-say="Japanerin" data-lang="de-DE"><span class="word">Japanerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="China" data-lang="de-DE"><span class="word">China</span></button></td><td class="zh">中國</td><td><button type="button" class="say" lang="de" data-say="Chinese" data-lang="de-DE"><span class="word">Chinese</span></button></td><td><button type="button" class="say" lang="de" data-say="Chinesin" data-lang="de-DE"><span class="word">Chinesin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Taiwan" data-lang="de-DE"><span class="word">Taiwan</span></button></td><td class="zh">臺灣</td><td><button type="button" class="say" lang="de" data-say="Taiwaner" data-lang="de-DE"><span class="word">Taiwaner</span></button></td><td><button type="button" class="say" lang="de" data-say="Taiwanerin" data-lang="de-DE"><span class="word">Taiwanerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Österreich" data-lang="de-DE"><span class="word">Österreich</span></button></td><td class="zh">奧地利</td><td><button type="button" class="say" lang="de" data-say="Österreicher" data-lang="de-DE"><span class="word">Österreicher</span></button></td><td><button type="button" class="say" lang="de" data-say="Österreicherin" data-lang="de-DE"><span class="word">Österreicherin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Schweiz" data-lang="de-DE"><span class="word">die Schweiz</span></button></td><td class="zh">瑞士</td><td><button type="button" class="say" lang="de" data-say="Schweizer" data-lang="de-DE"><span class="word">Schweizer</span></button></td><td><button type="button" class="say" lang="de" data-say="Schweizerin" data-lang="de-DE"><span class="word">Schweizerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Italien" data-lang="de-DE"><span class="word">Italien</span></button></td><td class="zh">義大利</td><td><button type="button" class="say" lang="de" data-say="Italiener" data-lang="de-DE"><span class="word">Italiener</span></button></td><td><button type="button" class="say" lang="de" data-say="Italienerin" data-lang="de-DE"><span class="word">Italienerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Spanien" data-lang="de-DE"><span class="word">Spanien</span></button></td><td class="zh">西班牙</td><td><button type="button" class="say" lang="de" data-say="Spanier" data-lang="de-DE"><span class="word">Spanier</span></button></td><td><button type="button" class="say" lang="de" data-say="Spanierin" data-lang="de-DE"><span class="word">Spanierin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Indien" data-lang="de-DE"><span class="word">Indien</span></button></td><td class="zh">印度</td><td><button type="button" class="say" lang="de" data-say="Inder" data-lang="de-DE"><span class="word">Inder</span></button></td><td><button type="button" class="say" lang="de" data-say="Inderin" data-lang="de-DE"><span class="word">Inderin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Südkorea" data-lang="de-DE"><span class="word">Südkorea</span></button></td><td class="zh">韓國</td><td><button type="button" class="say" lang="de" data-say="Koreaner" data-lang="de-DE"><span class="word">Koreaner</span></button></td><td><button type="button" class="say" lang="de" data-say="Koreanerin" data-lang="de-DE"><span class="word">Koreanerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Polen" data-lang="de-DE"><span class="word">Polen</span></button></td><td class="zh">波蘭</td><td><button type="button" class="say" lang="de" data-say="Pole" data-lang="de-DE"><span class="word">Pole</span></button></td><td><button type="button" class="say" lang="de" data-say="Polin" data-lang="de-DE"><span class="word">Polin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Niederlande" data-lang="de-DE"><span class="word">die Niederlande</span></button></td><td class="zh">荷蘭</td><td><button type="button" class="say" lang="de" data-say="Niederländer" data-lang="de-DE"><span class="word">Niederländer</span></button></td><td><button type="button" class="say" lang="de" data-say="Niederländerin" data-lang="de-DE"><span class="word">Niederländerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Belgien" data-lang="de-DE"><span class="word">Belgien</span></button></td><td class="zh">比利時</td><td><button type="button" class="say" lang="de" data-say="Belgier" data-lang="de-DE"><span class="word">Belgier</span></button></td><td><button type="button" class="say" lang="de" data-say="Belgierin" data-lang="de-DE"><span class="word">Belgierin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Türkei" data-lang="de-DE"><span class="word">die Türkei</span></button></td><td class="zh">土耳其</td><td><button type="button" class="say" lang="de" data-say="Türke" data-lang="de-DE"><span class="word">Türke</span></button></td><td><button type="button" class="say" lang="de" data-say="Türkin" data-lang="de-DE"><span class="word">Türkin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Russland" data-lang="de-DE"><span class="word">Russland</span></button></td><td class="zh">俄羅斯</td><td><button type="button" class="say" lang="de" data-say="Russe" data-lang="de-DE"><span class="word">Russe</span></button></td><td><button type="button" class="say" lang="de" data-say="Russin" data-lang="de-DE"><span class="word">Russin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Kanada" data-lang="de-DE"><span class="word">Kanada</span></button></td><td class="zh">加拿大</td><td><button type="button" class="say" lang="de" data-say="Kanadier" data-lang="de-DE"><span class="word">Kanadier</span></button></td><td><button type="button" class="say" lang="de" data-say="Kanadierin" data-lang="de-DE"><span class="word">Kanadierin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Mexiko" data-lang="de-DE"><span class="word">Mexiko</span></button></td><td class="zh">墨西哥</td><td><button type="button" class="say" lang="de" data-say="Mexikaner" data-lang="de-DE"><span class="word">Mexikaner</span></button></td><td><button type="button" class="say" lang="de" data-say="Mexikanerin" data-lang="de-DE"><span class="word">Mexikanerin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Brasilien" data-lang="de-DE"><span class="word">Brasilien</span></button></td><td class="zh">巴西</td><td><button type="button" class="say" lang="de" data-say="Brasilianer" data-lang="de-DE"><span class="word">Brasilianer</span></button></td><td><button type="button" class="say" lang="de" data-say="Brasilianerin" data-lang="de-DE"><span class="word">Brasilianerin</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="beispiele">
+<h2>例句</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">德文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">我是臺灣人（男）。</td><td><button type="button" class="say" lang="de" data-say="Ich bin Taiwaner." data-lang="de-DE"><span class="word">Ich bin Taiwaner.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我是臺灣人（女）。</td><td><button type="button" class="say" lang="de" data-say="Ich bin Taiwanerin." data-lang="de-DE"><span class="word">Ich bin Taiwanerin.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我來自臺灣。</td><td><button type="button" class="say" lang="de" data-say="Ich komme aus Taiwan." data-lang="de-DE"><span class="word">Ich komme aus Taiwan.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">他是德國人。</td><td><button type="button" class="say" lang="de" data-say="Er ist Deutscher." data-lang="de-DE"><span class="word">Er ist Deutscher.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">她是法國人。</td><td><button type="button" class="say" lang="de" data-say="Sie ist Französin." data-lang="de-DE"><span class="word">Sie ist Französin.</span></button></td></tr>
+</tbody></table></div>
+<div class="tip"><strong>性別：</strong>多數國籍女性加 <em>-in</em>（Japaner → Japanerin）；少數特殊形式如 Pole／Polin、Türke／Türkin、Chinese／Chinesin、Franzose／Französin。</div>
+</section>
+
+<section id="notes">
+<div class="tip"><strong>大小寫：</strong>國家名稱大寫（<em>Deutschland</em>、<em>Taiwan</em>、<em>Frankreich</em>）。國籍當<strong>名詞</strong>（某國人）時大寫：<em>ein Deutscher</em>、<em>eine Taiwanerin</em>。當<strong>形容詞</strong>修飾後面名詞時小寫：<em>deutsche Sprache</em>、<em>taiwanische Kultur</em>。句型 <strong>Ich bin Taiwaner.</strong> 裡的 Taiwaner 是名詞性用法，大寫。</div>
+<div class="tip"><strong>播放：</strong>點選任以德文可單獨朗讀。「全部循環播放」依頁面順序朗讀；勾選「播完從頭再播」會循環至按停止。語速可用滑桿調整。</div>
+</section>
+</main>
+<footer>Nationalitäten｜德文國家與國籍</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

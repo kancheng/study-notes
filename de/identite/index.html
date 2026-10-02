@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="德文身分與聯絡資料詞彙、登記表示例與 mein／meine。點選可朗讀；也可用全部循環播放。">
+<title>Identität｜德文身分與聯絡資料</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dce4ef;color:#1d6a4f;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#1d6a4f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #1d6a4f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.hint{font-size:.92rem;color:#6a5870;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#1d6a4f;line-height:1.45}
+.vocab-row.active,.form-row.active{background:#fff4d8}
+.form-card{background:white;border:1px solid #dce4ef;border-radius:14px;padding:18px 20px;box-shadow:0 6px 18px #142f520c}
+.form-title{margin:0 0 14px;font-size:1.05rem;font-weight:750;color:#182a45}
+.form-grid{display:grid;gap:10px}
+.form-row{display:grid;grid-template-columns:minmax(7rem,10rem) 1fr;gap:10px;align-items:start;padding:6px 0;border-bottom:1px solid #e8edf4}
+.form-row:last-child{border-bottom:0}
+.form-label{font-size:.88rem;font-weight:700;color:#6a5870;padding-top:6px}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin:16px 0;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-lang="de-DE">
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　Identität</div></header>
+<main>
+<h1>德文身分與聯絡資料</h1>
+<p class="note">表單常用欄位與 <em>mein／meine</em> 所有格。點選德文可朗讀；也可用全部循環播放。</p>
+<nav class="toc" aria-label="章節"><a href="#felder">欄位詞彙</a><a href="#formulaire">登記表示例</a><a href="#possessifs">所有格</a></nav>
+
+<div class="controls" style="--accent:#1d6a4f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="felder">
+<h2>欄位詞彙</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">德文</th><th scope="col">中文</th><th scope="col">說明</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="der Nachname" data-lang="de-DE"><span class="word">Nachname</span></button></td><td class="zh">姓氏</td><td class="hint">der，陽性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="der Vorname" data-lang="de-DE"><span class="word">Vorname</span></button></td><td class="zh">名字</td><td class="hint">der，陽性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="das Geburtsdatum" data-lang="de-DE"><span class="word">Geburtsdatum</span></button></td><td class="zh">出生日期</td><td class="hint">das，中性；核心詞 das Datum</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="der Geburtsort" data-lang="de-DE"><span class="word">Geburtsort</span></button></td><td class="zh">出生地</td><td class="hint">der，陽性；der Ort</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="das Land" data-lang="de-DE"><span class="word">Land</span></button></td><td class="zh">國家</td><td class="hint">das，中性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Stadt" data-lang="de-DE"><span class="word">Stadt</span></button></td><td class="zh">城市</td><td class="hint">die，陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Adresse" data-lang="de-DE"><span class="word">Adresse</span></button></td><td class="zh">地址</td><td class="hint">die，陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die E-Mail" data-lang="de-DE"><span class="word">E-Mail</span></button></td><td class="zh">電子郵件</td><td class="hint">die，陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Telefonnummer" data-lang="de-DE"><span class="word">Telefonnummer</span></button></td><td class="zh">電話號碼</td><td class="hint">die，陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Postleitzahl" data-lang="de-DE"><span class="word">Postleitzahl</span></button></td><td class="zh">郵遞區號（PLZ）</td><td class="hint">die，陰性；常縮寫 PLZ</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="die Unterschrift" data-lang="de-DE"><span class="word">Unterschrift</span></button></td><td class="zh">簽名</td><td class="hint">die，陰性；動詞 unterschreiben</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="formulaire">
+<h2>登記表示例</h2>
+<div class="form-card">
+<p class="form-title">Anmeldeformular（示意）</p>
+<div class="form-grid">
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Nachname" data-lang="de-DE"><span class="word">Nachname</span></button></span><span><button type="button" class="say" lang="de" data-say="Müller" data-lang="de-DE"><span class="word">Müller</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Vorname" data-lang="de-DE"><span class="word">Vorname</span></button></span><span><button type="button" class="say" lang="de" data-say="Anna" data-lang="de-DE"><span class="word">Anna</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Geburtsdatum" data-lang="de-DE"><span class="word">Geburtsdatum</span></button></span><span><button type="button" class="say" lang="de" data-say="der erste März neunzehnhundertneunzig" data-lang="de-DE"><span class="word">01.03.1990</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Geburtsort" data-lang="de-DE"><span class="word">Geburtsort</span></button></span><span><button type="button" class="say" lang="de" data-say="Berlin" data-lang="de-DE"><span class="word">Berlin</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Adresse" data-lang="de-DE"><span class="word">Adresse</span></button></span><span><button type="button" class="say" lang="de" data-say="Hauptstraße zwölf" data-lang="de-DE"><span class="word">Hauptstraße 12</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Postleitzahl" data-lang="de-DE"><span class="word">Postleitzahl</span></button></span><span><button type="button" class="say" lang="de" data-say="eins null eins eins fünf" data-lang="de-DE"><span class="word">10115</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Stadt" data-lang="de-DE"><span class="word">Stadt</span></button></span><span><button type="button" class="say" lang="de" data-say="Berlin" data-lang="de-DE"><span class="word">Berlin</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Land" data-lang="de-DE"><span class="word">Land</span></button></span><span><button type="button" class="say" lang="de" data-say="Deutschland" data-lang="de-DE"><span class="word">Deutschland</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Telefonnummer" data-lang="de-DE"><span class="word">Telefonnummer</span></button></span><span><button type="button" class="say" lang="de" data-say="null eins sieben sechs, fünf fünf fünf fünf fünf fünf fünf" data-lang="de-DE"><span class="word">0176 55555555</span></button><span class="hint" style="display:block;margin-top:4px">德國常逐位或分組朗讀</span></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="E-Mail" data-lang="de-DE"><span class="word">E-Mail</span></button></span><span><button type="button" class="say" lang="de" data-say="anna punkt mueller at beispiel punkt de" data-lang="de-DE"><span class="word">anna.mueller@beispiel.de</span></button></span></div>
+<div class="form-row vocab-row"><span class="form-label"><button type="button" class="say" lang="de" data-say="Unterschrift" data-lang="de-DE"><span class="word">Unterschrift</span></button></span><span class="hint">簽名欄（手寫，不朗讀筆跡）</span></div>
+</div>
+</div>
+<div class="tip"><strong>說明：</strong>以上為<strong>課堂示例</strong>，非個人真實資料。德國地址常寫 <em>Straße + 門牌</em>，PLZ 在五碼，城市在後。</div>
+</section>
+
+<section id="possessifs">
+<h2>所有格 mein／meine</h2>
+<p class="note">所有格配合<strong>後面名詞</strong>的性別與單複數（陽性／中性 → <em>mein</em>；陰性／複數 → <em>meine</em>），不配合說話者性別。</p>
+<div class="tablewrap"><table><thead><tr><th scope="col">德文</th><th scope="col">中文</th><th scope="col">說明</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="mein Geburtsort" data-lang="de-DE"><span class="word">mein Geburtsort</span></button></td><td class="zh">我的出生地</td><td class="hint">der Geburtsort → mein</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="mein Geburtsdatum" data-lang="de-DE"><span class="word">mein Geburtsdatum</span></button></td><td class="zh">我的出生日期</td><td class="hint">das Datum → mein（中性）</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="meine Adresse" data-lang="de-DE"><span class="word">meine Adresse</span></button></td><td class="zh">我的地址</td><td class="hint">die Adresse → meine</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="meine Telefonnummer" data-lang="de-DE"><span class="word">meine Telefonnummer</span></button></td><td class="zh">我的電話號碼</td><td class="hint">die Telefonnummer → meine</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="mein Nachname" data-lang="de-DE"><span class="word">mein Nachname</span></button></td><td class="zh">我的姓氏</td><td class="hint">der Nachname → mein</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="meine E-Mail" data-lang="de-DE"><span class="word">meine E-Mail</span></button></td><td class="zh">我的電子郵件</td><td class="hint">die E-Mail → meine</td></tr>
+</tbody></table></div>
+<div class="tip"><strong>播放：</strong>點選德文可單獨朗讀。「全部循環播放」依頁面順序朗讀；勾選「播完從頭再播」會循環至按停止。</div>
+</section>
+</main>
+<footer>Identität｜德文身分與聯絡資料</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active,.form-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row') || item.el.closest('.form-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row') || b.closest('.form-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

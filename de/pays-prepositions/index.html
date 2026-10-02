@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="in、nach、aus 與國家城市，出生與居住句型。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>In, nach, aus｜國家介詞與出生居住</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#1d6a4f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#1d6a4f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #1d6a4f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #dce4ef;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say-inline{display:inline;background:transparent;border:0;cursor:pointer;font:inherit;padding:0;border-radius:4px}
+.say:hover,.say:focus-visible,.say-inline:hover,.say-inline:focus-visible{outline:2px solid #1d6a4f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#1d6a4f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #1d6a4f;padding:14px 18px;border-radius:8px;margin-top:18px;border:1px solid #dce4ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip ul{margin:8px 0 0;padding-left:1.25rem}
+.tip li{margin:6px 0}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="de-DE">
+<header><div class="brand"><a href="../index.html">← 德文筆記</a>　/　In, nach, aus</div></header>
+<main>
+<h1>國家介詞與出生、居住</h1>
+<p class="note">在／去／來： <em>in + Dativ</em>（在某處）、<em>nach</em>（去方向）、<em>aus + Dativ</em>（來自）。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#1d6a4f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>in + Dativ（在……裡／在……）</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">類型</th><th scope="col">例子</th><th scope="col">中文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">大多數國家（無冠詞）</td><td>
+<button type="button" class="say-inline" lang="de" data-say="in Frankreich" data-lang="de-DE"><span class="word">in Frankreich</span></button>、
+<button type="button" class="say-inline" lang="de" data-say="in Japan" data-lang="de-DE"><span class="word">in Japan</span></button>、
+<button type="button" class="say-inline" lang="de" data-say="in Spanien" data-lang="de-DE"><span class="word">in Spanien</span></button>
+</td><td class="zh">在法國／日本／西班牙</td></tr>
+<tr class="vocab-row"><td class="zh">複數／帶定冠詞的國名</td><td>
+<button type="button" class="say-inline" lang="de" data-say="in den USA" data-lang="de-DE"><span class="word">in den USA</span></button>、
+<button type="button" class="say-inline" lang="de" data-say="in den Niederlanden" data-lang="de-DE"><span class="word">in den Niederlanden</span></button>
+</td><td class="zh">在美國／荷蘭（Dativ：die → den）</td></tr>
+<tr class="vocab-row"><td class="zh">城市</td><td>
+<button type="button" class="say-inline" lang="de" data-say="in Berlin" data-lang="de-DE"><span class="word">in Berlin</span></button>、
+<button type="button" class="say-inline" lang="de" data-say="in Taipeh" data-lang="de-DE"><span class="word">in Taipeh</span></button>
+</td><td class="zh">在柏林／台北</td></tr>
+</tbody></table></div>
+
+<h2>nach（去……方向）</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">德文</th><th scope="col">中文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="nach Paris" data-lang="de-DE"><span class="word">nach Paris</span></button></td><td class="zh">去巴黎（城市，無冠詞）</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="nach Taiwan" data-lang="de-DE"><span class="word">nach Taiwan</span></button></td><td class="zh">去臺灣（部分國名也用 nach）</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Ich fahre nach Berlin." data-lang="de-DE"><span class="word">Ich fahre nach Berlin.</span></button></td><td class="zh">我開車去柏林。</td></tr>
+</tbody></table></div>
+<p class="note">去<strong>多數國家</strong>常說 <em>nach</em>（<em>nach Deutschland</em>）或 <em>in + Akkusativ</em>（<em>ins Ausland fahren</em>）；A1 先記 <em>nach + 城市／部分國名</em> 與 <em>in + Dativ 表位置</em>。</p>
+
+<h2>aus + Dativ（來自）</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">德文</th><th scope="col">中文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="aus Taiwan" data-lang="de-DE"><span class="word">aus Taiwan</span></button></td><td class="zh">來自臺灣</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Ich komme aus Taiwan." data-lang="de-DE"><span class="word">Ich komme aus Taiwan.</span></button></td><td class="zh">我來自臺灣。</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Er kommt aus Indien." data-lang="de-DE"><span class="word">Er kommt aus Indien.</span></button></td><td class="zh">他來自印度。</td></tr>
+</tbody></table></div>
+
+<h2>出生與居住</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">德文</th><th scope="col">中文</th><th scope="col">說明</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Er wurde in Indien geboren." data-lang="de-DE"><span class="word">Er wurde in Indien geboren.</span></button></td><td class="zh">他出生於印度。</td><td class="zh">被動：werden + Partizip II</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Er ist in Indien geboren." data-lang="de-DE"><span class="word">Er ist in Indien geboren.</span></button></td><td class="zh">他（是）在印度出生的。</td><td class="zh">口語亦常用 sein + geboren</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Sie wohnt in Spanien." data-lang="de-DE"><span class="word">Sie wohnt in Spanien.</span></button></td><td class="zh">她住在西班牙。</td><td class="zh">wohnen + in + Dativ</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="de" data-say="Ich wohne in Taipeh." data-lang="de-DE"><span class="word">Ich wohne in Taipeh.</span></button></td><td class="zh">我住在台北。</td><td class="zh">城市 in + 名稱</td></tr>
+</tbody></table></div>
+
+<div class="tip"><strong>與法文對照：</strong>法文「在國內」用 en／au／aux；德文位置多用 <strong>in + Dativ</strong>，複數國名記得 <strong>in den …</strong>。法文「來自」de；德文 <strong>aus + Dativ</strong>。出生地與國籍在現實中不一定相同。</div>
+</main>
+<footer>In, nach, aus｜國家介詞與出生居住</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

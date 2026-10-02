@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="日文國名與國籍（〜人）。每一項附漢字、平假名、片假名與羅馬拼音。點選可朗讀；也可全部循環播放。">
+<title>国と国籍｜日文國家與國籍</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f3f5}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#8d3a55;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadde2;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#8d3a55;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #8d3a55;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadde2;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadde2;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #8d3a55;outline-offset:2px}
+.kanji{font-size:1.08rem;font-weight:750;color:#8d3a55;line-height:1.45}
+.kana{font-size:.95rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.85rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #8d3a55;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadde2;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="ja-JP">
+<header><div class="brand"><a href="../index.html">← 日文筆記</a>　/　国と国籍</div></header>
+<main>
+<h1>日文國家與國籍</h1>
+<p class="note">国名與國籍（〜人）對照。每一項附漢字、平假名、片假名與羅馬拼音。點選可朗讀；也可用下方控制列全部循環播放。</p>
+
+<div class="controls" style="--accent:#8d3a55">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>國家與國籍表</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">国名</th><th scope="col">中文</th><th scope="col">人（〜人）</th></tr></thead><tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="日本" data-lang="ja-JP"><span class="kanji">日本</span><span class="kana"><span class="hira">にほん</span>　<span class="kata">ニホン</span></span><span class="roma">Nihon</span></button></td><td class="zh">日本</td><td><button type="button" class="say" lang="ja" data-say="日本人" data-lang="ja-JP"><span class="kanji">日本人</span><span class="kana"><span class="hira">にほんじん</span>　<span class="kata">ニホンジン</span></span><span class="roma">Nihonjin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="台湾" data-lang="ja-JP"><span class="kanji">台湾</span><span class="kana"><span class="hira">たいわん</span>　<span class="kata">タイワン</span></span><span class="roma">Taiwan</span></button></td><td class="zh">臺灣</td><td><button type="button" class="say" lang="ja" data-say="台湾人" data-lang="ja-JP"><span class="kanji">台湾人</span><span class="kana"><span class="hira">たいわんじん</span>　<span class="kata">タイワンジン</span></span><span class="roma">Taiwanjin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="中国" data-lang="ja-JP"><span class="kanji">中国</span><span class="kana"><span class="hira">ちゅうごく</span>　<span class="kata">チュウゴク</span></span><span class="roma">Chuugoku</span></button></td><td class="zh">中國</td><td><button type="button" class="say" lang="ja" data-say="中国人" data-lang="ja-JP"><span class="kanji">中国人</span><span class="kana"><span class="hira">ちゅうごくじん</span>　<span class="kata">チュウゴクジン</span></span><span class="roma">Chuugokujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="韓国" data-lang="ja-JP"><span class="kanji">韓国</span><span class="kana"><span class="hira">かんこく</span>　<span class="kata">カンコク</span></span><span class="roma">Kankoku</span></button></td><td class="zh">韓國</td><td><button type="button" class="say" lang="ja" data-say="韓国人" data-lang="ja-JP"><span class="kanji">韓国人</span><span class="kana"><span class="hira">かんこくじん</span>　<span class="kata">カンコクジン</span></span><span class="roma">Kankokujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="フランス" data-lang="ja-JP"><span class="kanji">フランス</span><span class="kana"><span class="hira">フランス</span>　<span class="kata">フランス</span></span><span class="roma">Furansu</span></button></td><td class="zh">法國</td><td><button type="button" class="say" lang="ja" data-say="フランス人" data-lang="ja-JP"><span class="kanji">フランス人</span><span class="kana"><span class="hira">フランスじん</span>　<span class="kata">フランスジン</span></span><span class="roma">Furansujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="アメリカ" data-lang="ja-JP"><span class="kanji">アメリカ</span><span class="kana"><span class="hira">アメリカ</span>　<span class="kata">アメリカ</span></span><span class="roma">Amerika</span></button></td><td class="zh">美國</td><td><button type="button" class="say" lang="ja" data-say="アメリカ人" data-lang="ja-JP"><span class="kanji">アメリカ人</span><span class="kana"><span class="hira">アメリカじん</span>　<span class="kata">アメリカジン</span></span><span class="roma">Amerikajin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="イギリス" data-lang="ja-JP"><span class="kanji">イギリス</span><span class="kana"><span class="hira">イギリス</span>　<span class="kata">イギリス</span></span><span class="roma">Igirisu</span></button></td><td class="zh">英國</td><td><button type="button" class="say" lang="ja" data-say="イギリス人" data-lang="ja-JP"><span class="kanji">イギリス人</span><span class="kana"><span class="hira">イギリスじん</span>　<span class="kata">イギリスジン</span></span><span class="roma">Igirisujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="ドイツ" data-lang="ja-JP"><span class="kanji">ドイツ</span><span class="kana"><span class="hira">ドイツ</span>　<span class="kata">ドイツ</span></span><span class="roma">Doitsu</span></button></td><td class="zh">德國</td><td><button type="button" class="say" lang="ja" data-say="ドイツ人" data-lang="ja-JP"><span class="kanji">ドイツ人</span><span class="kana"><span class="hira">ドイツじん</span>　<span class="kata">ドイツジン</span></span><span class="roma">Doitsujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="イタリア" data-lang="ja-JP"><span class="kanji">イタリア</span><span class="kana"><span class="hira">イタリア</span>　<span class="kata">イタリア</span></span><span class="roma">Itaria</span></button></td><td class="zh">義大利</td><td><button type="button" class="say" lang="ja" data-say="イタリア人" data-lang="ja-JP"><span class="kanji">イタリア人</span><span class="kana"><span class="hira">イタリアじん</span>　<span class="kata">イタリアジン</span></span><span class="roma">Itariajin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="スペイン" data-lang="ja-JP"><span class="kanji">スペイン</span><span class="kana"><span class="hira">スペイン</span>　<span class="kata">スペイン</span></span><span class="roma">Supein</span></button></td><td class="zh">西班牙</td><td><button type="button" class="say" lang="ja" data-say="スペイン人" data-lang="ja-JP"><span class="kanji">スペイン人</span><span class="kana"><span class="hira">スペインじん</span>　<span class="kata">スペインジン</span></span><span class="roma">Supeinjin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="カナダ" data-lang="ja-JP"><span class="kanji">カナダ</span><span class="kana"><span class="hira">カナダ</span>　<span class="kata">カナダ</span></span><span class="roma">Kanada</span></button></td><td class="zh">加拿大</td><td><button type="button" class="say" lang="ja" data-say="カナダ人" data-lang="ja-JP"><span class="kanji">カナダ人</span><span class="kana"><span class="hira">カナダじん</span>　<span class="kata">カナダジン</span></span><span class="roma">Kanadajin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="オーストラリア" data-lang="ja-JP"><span class="kanji">オーストラリア</span><span class="kana"><span class="hira">オーストラリア</span>　<span class="kata">オーストラリア</span></span><span class="roma">Oosutoraria</span></button></td><td class="zh">澳洲</td><td><button type="button" class="say" lang="ja" data-say="オーストラリア人" data-lang="ja-JP"><span class="kanji">オーストラリア人</span><span class="kana"><span class="hira">オーストラリアじん</span>　<span class="kata">オーストラリアジン</span></span><span class="roma">Oosutorariajin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="ブラジル" data-lang="ja-JP"><span class="kanji">ブラジル</span><span class="kana"><span class="hira">ブラジル</span>　<span class="kata">ブラジル</span></span><span class="roma">Burajiru</span></button></td><td class="zh">巴西</td><td><button type="button" class="say" lang="ja" data-say="ブラジル人" data-lang="ja-JP"><span class="kanji">ブラジル人</span><span class="kana"><span class="hira">ブラジルじん</span>　<span class="kata">ブラジルジン</span></span><span class="roma">Burajirujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="メキシコ" data-lang="ja-JP"><span class="kanji">メキシコ</span><span class="kana"><span class="hira">メキシコ</span>　<span class="kata">メキシコ</span></span><span class="roma">Mekishiko</span></button></td><td class="zh">墨西哥</td><td><button type="button" class="say" lang="ja" data-say="メキシコ人" data-lang="ja-JP"><span class="kanji">メキシコ人</span><span class="kana"><span class="hira">メキシコじん</span>　<span class="kata">メキシコジン</span></span><span class="roma">Mekishikojin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="インド" data-lang="ja-JP"><span class="kanji">インド</span><span class="kana"><span class="hira">インド</span>　<span class="kata">インド</span></span><span class="roma">Indo</span></button></td><td class="zh">印度</td><td><button type="button" class="say" lang="ja" data-say="インド人" data-lang="ja-JP"><span class="kanji">インド人</span><span class="kana"><span class="hira">インドじん</span>　<span class="kata">インドジン</span></span><span class="roma">Indojin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="タイ" data-lang="ja-JP"><span class="kanji">タイ</span><span class="kana"><span class="hira">タイ</span>　<span class="kata">タイ</span></span><span class="roma">Tai</span></button></td><td class="zh">泰國</td><td><button type="button" class="say" lang="ja" data-say="タイ人" data-lang="ja-JP"><span class="kanji">タイ人</span><span class="kana"><span class="hira">タイじん</span>　<span class="kata">タイジン</span></span><span class="roma">Taijin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="ベトナム" data-lang="ja-JP"><span class="kanji">ベトナム</span><span class="kana"><span class="hira">ベトナム</span>　<span class="kata">ベトナム</span></span><span class="roma">Betonamu</span></button></td><td class="zh">越南</td><td><button type="button" class="say" lang="ja" data-say="ベトナム人" data-lang="ja-JP"><span class="kanji">ベトナム人</span><span class="kana"><span class="hira">ベトナムじん</span>　<span class="kata">ベトナムジン</span></span><span class="roma">Betonamujin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="ロシア" data-lang="ja-JP"><span class="kanji">ロシア</span><span class="kana"><span class="hira">ロシア</span>　<span class="kata">ロシア</span></span><span class="roma">Roshia</span></button></td><td class="zh">俄羅斯</td><td><button type="button" class="say" lang="ja" data-say="ロシア人" data-lang="ja-JP"><span class="kanji">ロシア人</span><span class="kana"><span class="hira">ロシアじん</span>　<span class="kata">ロシアジン</span></span><span class="roma">Roshiajin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="エジプト" data-lang="ja-JP"><span class="kanji">エジプト</span><span class="kana"><span class="hira">エジプト</span>　<span class="kata">エジプト</span></span><span class="roma">Ejiputo</span></button></td><td class="zh">埃及</td><td><button type="button" class="say" lang="ja" data-say="エジプト人" data-lang="ja-JP"><span class="kanji">エジプト人</span><span class="kana"><span class="hira">エジプトじん</span>　<span class="kata">エジプトジン</span></span><span class="roma">Ejiputojin</span></button></td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="ja" data-say="ベルギー" data-lang="ja-JP"><span class="kanji">ベルギー</span><span class="kana"><span class="hira">ベルギー</span>　<span class="kata">ベルギー</span></span><span class="roma">Berugii</span></button></td><td class="zh">比利時</td><td><button type="button" class="say" lang="ja" data-say="ベルギー人" data-lang="ja-JP"><span class="kanji">ベルギー人</span><span class="kana"><span class="hira">ベルギーじん</span>　<span class="kata">ベルギージン</span></span><span class="roma">Berugiijin</span></button></td></tr>
+</tbody></table></div>
+
+<h2>例句（臺灣）</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">漢字 · 平假名 · 片假名 · 羅馬拼音</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">我是臺灣人。</td><td><button type="button" class="say" lang="ja" data-say="台湾人です。" data-lang="ja-JP"><span class="kanji">台湾人です。</span><span class="kana"><span class="hira">たいわんじん です。</span>　<span class="kata">タイワンジン デス。</span></span><span class="roma">Taiwanjin desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我來自臺灣。</td><td><button type="button" class="say" lang="ja" data-say="台湾出身です。" data-lang="ja-JP"><span class="kanji">台湾出身です。</span><span class="kana"><span class="hira">たいわん しゅっしん です。</span>　<span class="kata">タイワン シュッシン デス。</span></span><span class="roma">Taiwan shusshin desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我住在臺灣。</td><td><button type="button" class="say" lang="ja" data-say="台湾に住んでいます。" data-lang="ja-JP"><span class="kanji">台湾に住んでいます。</span><span class="kana"><span class="hira">たいわん に すんでいます。</span>　<span class="kata">タイワン ニ スンデイマス。</span></span><span class="roma">Taiwan ni sunde imasu.</span></button></td></tr>
+</tbody></table></div>
+
+<div class="tip"><strong>用法提醒：</strong>國籍多在国名後加 <strong>人</strong>（じん），如 <strong>フランス人</strong>、<strong>日本人</strong>、<strong>台湾人</strong>；日文不像法文依性別變化。自我介紹常用 <strong>〜人です</strong>、<strong>〜出身です</strong>、<strong>〜に住んでいます</strong>。朗讀使用漢字句；點選可單獨播放，「全部循環播放」依頁面順序朗讀。</div>
+</main>
+<footer>国と国籍｜日文國家與國籍</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>
