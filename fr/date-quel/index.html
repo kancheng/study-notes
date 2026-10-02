@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="問日期、星期與 quel／quelle 配合。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Quelle date｜日期問句與 quel</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh{color:#53647c;width:34%;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.08rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.compact td:nth-child(2){font-weight:600;color:#3d4d63;font-size:.95rem}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}.zh{width:40%}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Quelle date</div></header>
+<main>
+<h1>日期問句與 quel</h1>
+<p class="note">日常口語問「今天幾號／星期幾」。<em>quel jour</em> 依上下文可問日期或星期。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>問句</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">今天星期幾／今天是幾號？（口語）</td><td><button type="button" class="say" lang="fr" data-say="On est quel jour aujourd’hui ?" data-lang="fr-FR"><span class="word">On est quel jour aujourd’hui ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天是哪一天？</td><td><button type="button" class="say" lang="fr" data-say="C’est quel jour aujourd’hui ?" data-lang="fr-FR"><span class="word">C’est quel jour aujourd’hui ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天是幾月幾日？（較明確）</td><td><button type="button" class="say" lang="fr" data-say="Quelle est la date aujourd’hui ?" data-lang="fr-FR"><span class="word">Quelle est la date aujourd’hui ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天星期幾？（較明確）</td><td><button type="button" class="say" lang="fr" data-say="Quel jour de la semaine sommes-nous ?" data-lang="fr-FR"><span class="word">Quel jour de la semaine sommes-nous ?</span></button></td></tr>
+</tbody></table></div>
+<p class="note"><em>on</em>＝人們／我們（日期用 on est…）；<em>c’est</em>＝這是；<em>quel</em> 配合陽性單數 <em>jour</em>；<em>quelle</em> 配合陰性單數 <em>date</em>。</p>
+
+<h2>回答範例</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">今天是十月一日。（1er 讀 premier）</td><td><button type="button" class="say" lang="fr" data-say="Aujourd’hui, c’est le premier octobre." data-lang="fr-FR"><span class="word">Aujourd’hui, c’est le premier octobre.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">十月一日。（簡短）</td><td><button type="button" class="say" lang="fr" data-say="Le premier octobre." data-lang="fr-FR"><span class="word">Le premier octobre.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天星期四。</td><td><button type="button" class="say" lang="fr" data-say="Aujourd’hui, c’est jeudi." data-lang="fr-FR"><span class="word">Aujourd’hui, c’est jeudi.</span></button></td></tr>
+</tbody></table></div>
+<p class="note">日期結構：<strong>le + 日 + 月</strong>（日在前）。一日用序數 <em>premier</em>；其餘日子多用基數，如 <em>le deux octobre</em>。月份、星期一般<strong>不大寫</strong>。</p>
+
+<h2>疑問限定詞 quel</h2>
+<p class="note">「什麼／哪個／哪些」，配合所問名詞的性別與單複數；四種形式發音相同。</p>
+<div class="tablewrap"><table><thead><tr><th scope="col">名詞</th><th scope="col">問詞</th><th scope="col">例句</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">陽性單數</td><td>quel</td><td><button type="button" class="say" lang="fr" data-say="Quel est le prénom de l’élève ?" data-lang="fr-FR"><span class="word">Quel est le prénom… ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">陽性複數</td><td>quels</td><td><button type="button" class="say" lang="fr" data-say="Quels sont les prénoms des élèves ?" data-lang="fr-FR"><span class="word">Quels sont les prénoms… ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">陰性單數</td><td>quelle</td><td><button type="button" class="say" lang="fr" data-say="Quelle est la date aujourd’hui ?" data-lang="fr-FR"><span class="word">Quelle est la date… ?</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">陰性複數</td><td>quelles</td><td><button type="button" class="say" lang="fr" data-say="Quelles sont les dates importantes ?" data-lang="fr-FR"><span class="word">Quelles sont les dates… ?</span></button></td></tr>
+</tbody></table></div>
+
+<h2>星期速查</h2>
+<div class="tablewrap"><table class="compact"><thead><tr><th scope="col">法文</th><th scope="col">中文</th></tr></thead><tbody>
+<tr><td lang="fr">lundi</td><td>星期一</td></tr>
+<tr><td lang="fr">mardi</td><td>星期二</td></tr>
+<tr><td lang="fr">mercredi</td><td>星期三</td></tr>
+<tr><td lang="fr">jeudi</td><td>星期四</td></tr>
+<tr><td lang="fr">vendredi</td><td>星期五</td></tr>
+<tr><td lang="fr">samedi</td><td>星期六</td></tr>
+<tr><td lang="fr">dimanche</td><td>星期日</td></tr>
+</tbody></table></div>
+<p class="note">十二個月份完整列表見 <a href="../vocab/index.html">Vocabulaire</a> 或整合筆記第 5 類。</p>
+
+<div class="tip"><strong>用法提醒：</strong>手寫稿亦寫 <em>Aujourd’hui, c’est le 1er octobre.</em>（<em>1er</em> 讀 <em>premier</em>）。問年齡用 <em>Tu as quel âge ?</em>（<em>quel</em>＋<em>âge</em> 陽性）；問國籍用 <em>de quelle nationalité</em>（<em>quelle</em>＋<em>nationalité</em> 陰性）。</div>
+</main>
+<footer>Quelle date｜日期問句與 quel</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

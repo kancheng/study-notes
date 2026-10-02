@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="tu／vous 問答、Paul 問句、自我介紹範本。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Dialogue A1｜法文自我介紹問答</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+h3{font-size:1.05rem;margin:0 0 8px;color:#182a45}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin:18px 0;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip ul{margin:8px 0 0;padding-left:1.25rem}
+.tip li{margin:4px 0}
+.subnote{font-size:.9rem;color:#627087;margin:0 0 12px}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Dialogue A1</div></header>
+<main>
+<h1>法文自我介紹問答</h1>
+<p class="note">tu／vous 對照、詢問 Paul、自我介紹範本。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>tu／vous 對照</h2>
+<p class="subnote">保留口語語序；句首 Vous 大寫，句中 vous 小寫。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">主題</th><th scope="col">tu</th><th scope="col">vous</th><th scope="col">中文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td>姓名</td>
+<td><button type="button" class="say" lang="fr" data-say="Comment tu t’appelles ?" data-lang="fr-FR"><span class="word">Comment tu t’appelles ?</span></button></td>
+<td><button type="button" class="say" lang="fr" data-say="Comment vous vous appelez ?" data-lang="fr-FR"><span class="word">Comment vous vous appelez ?</span></button></td>
+<td class="zh">你／您叫什麼名字？</td></tr>
+<tr class="vocab-row"><td>國籍</td>
+<td><button type="button" class="say" lang="fr" data-say="Tu es de quelle nationalité ?" data-lang="fr-FR"><span class="word">Tu es de quelle nationalité ?</span></button></td>
+<td><button type="button" class="say" lang="fr" data-say="Vous êtes de quelle nationalité ?" data-lang="fr-FR"><span class="word">Vous êtes de quelle nationalité ?</span></button></td>
+<td class="zh">你／您是哪國人？</td></tr>
+<tr class="vocab-row"><td>年齡</td>
+<td><button type="button" class="say" lang="fr" data-say="Tu as quel âge ?" data-lang="fr-FR"><span class="word">Tu as quel âge ?</span></button></td>
+<td><button type="button" class="say" lang="fr" data-say="Vous avez quel âge ?" data-lang="fr-FR"><span class="word">Vous avez quel âge ?</span></button></td>
+<td class="zh">你／您幾歲？</td></tr>
+<tr class="vocab-row"><td>喜好</td>
+<td><button type="button" class="say" lang="fr" data-say="Tu aimes quoi ?" data-lang="fr-FR"><span class="word">Tu aimes quoi ?</span></button></td>
+<td><button type="button" class="say" lang="fr" data-say="Vous aimez quoi ?" data-lang="fr-FR"><span class="word">Vous aimez quoi ?</span></button></td>
+<td class="zh">你／您喜歡什麼？</td></tr>
+</tbody></table></div>
+
+<div class="tip"><h3>Comment tu t’appelles ?</h3>
+<ul>
+<li><strong>comment</strong>：如何；整句自然翻成「你叫什麼名字？」</li>
+<li><strong>tu</strong>：你，主詞</li>
+<li><strong>t’</strong>：te 遇到母音省音；s’appeler 是代名動詞，tu 搭配 te</li>
+<li><strong>appelles</strong>：s’appeler 搭配 tu 的動詞形式</li>
+</ul>
+<p><strong>Comment vous vous appelez ?</strong> 有兩個 vous：第一個是主詞「您／你們」，第二個是 s’appeler 所需的代名詞；<strong>appelez</strong> 搭配 vous。</p></div>
+
+<div class="tip"><h3>Tu es de quelle nationalité ?</h3>
+<ul>
+<li><strong>tu</strong>：你</li>
+<li><strong>es</strong>：être 搭配 tu</li>
+<li><strong>de</strong>：與 quelle nationalité 連用，表示「什麼國籍」</li>
+<li><strong>quelle</strong>：陰性單數，配合 nationalité</li>
+<li><strong>nationalité</strong>：國籍，陰性</li>
+</ul>
+<p>回答例：<strong>Je suis taïwanais／taïwanaise.</strong> 或 <strong>Je suis de nationalité taïwanaise.</strong>（第二句的 taïwanaise 修飾陰性名詞 nationalité，說話者男女皆可用 taïwanaise。）</p></div>
+
+<div class="tip"><h3>Tu as quel âge ?</h3>
+<ul>
+<li><strong>as</strong>：avoir 搭配 tu</li>
+<li><strong>quel</strong>：陽性單數，配合 âge</li>
+<li><strong>âge</strong>：年齡，陽性名詞 un âge</li>
+</ul>
+<p>回答例：<strong>J’ai vingt-trois ans.</strong>（示範用，非你的實際年齡。）</p></div>
+
+<div class="tip"><h3>Tu aimes quoi ?</h3>
+<ul>
+<li><strong>aimes</strong>：aimer 搭配 tu（勿寫成 Tu aime quoi ?）</li>
+<li><strong>quoi</strong>：什麼，疑問代名詞；不配合性別變成 quelle</li>
+</ul>
+<p>回答例：<strong>J’aime la musique et les langues.</strong></p></div>
+
+<h2>詢問 Paul</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">法文</th><th scope="col">中文</th><th scope="col">說明</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Paul est de quelle nationalité ?" data-lang="fr-FR"><span class="word">Paul est de quelle nationalité ?</span></button></td><td class="zh">Paul 是哪國人？</td><td class="zh">est 配合 Paul；quelle 配合 nationalité</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Paul a quel âge ?" data-lang="fr-FR"><span class="word">Paul a quel âge ?</span></button></td><td class="zh">Paul 幾歲？</td><td class="zh">a 是 avoir 的第三人稱單數</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Paul aime quoi ?" data-lang="fr-FR"><span class="word">Paul aime quoi ?</span></button></td><td class="zh">Paul 喜歡什麼？</td><td class="zh">aime 配合 Paul，沒有 s</td></tr>
+</tbody></table></div>
+
+<h2>自我介紹範本（示範填寫）</h2>
+<p class="subnote">方括號處換成自己的資料；國籍 taïwanais／taïwanaise 二選一。以下年齡為示範。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">你好！</td><td><button type="button" class="say" lang="fr" data-say="Bonjour !" data-lang="fr-FR"><span class="word">Bonjour !</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我叫 Hao-Cheng。</td><td><button type="button" class="say" lang="fr" data-say="Je m’appelle Hao-Cheng." data-lang="fr-FR"><span class="word">Je m’appelle Hao-Cheng.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我是臺灣人。</td><td><button type="button" class="say" lang="fr" data-say="Je suis taïwanais." data-lang="fr-FR"><span class="word">Je suis taïwanais.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我二十三歲。（示範）</td><td><button type="button" class="say" lang="fr" data-say="J’ai vingt-trois ans." data-lang="fr-FR"><span class="word">J’ai vingt-trois ans.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我住在台北。</td><td><button type="button" class="say" lang="fr" data-say="J’habite à Taipei." data-lang="fr-FR"><span class="word">J’habite à Taipei.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我喜歡音樂與語言。</td><td><button type="button" class="say" lang="fr" data-say="J’aime la musique et les langues." data-lang="fr-FR"><span class="word">J’aime la musique et les langues.</span></button></td></tr>
+</tbody></table></div>
+
+<h2>較正式說法（選用）</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">法文</th><th scope="col">中文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Comment t’appelles-tu ?" data-lang="fr-FR"><span class="word">Comment t’appelles-tu ?</span></button></td><td class="zh">你叫什麼名字？（倒裝）</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Comment vous appelez-vous ?" data-lang="fr-FR"><span class="word">Comment vous appelez-vous ?</span></button></td><td class="zh">您／你們叫什麼名字？（倒裝）</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Qu’est-ce que tu aimes ?" data-lang="fr-FR"><span class="word">Qu’est-ce que tu aimes ?</span></button></td><td class="zh">你喜歡什麼？</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Qu’est-ce que vous aimez ?" data-lang="fr-FR"><span class="word">Qu’est-ce que vous aimez ?</span></button></td><td class="zh">您／你們喜歡什麼？</td></tr>
+</tbody></table></div>
+
+<div class="tip"><strong>用法提醒：</strong>年齡用 avoir：<strong>J’ai … ans.</strong> 拼字注意 nationalité、âge、Taïwan。Tu aimes quoi ? 的 aimes 要加 s。</div>
+</main>
+<footer>Dialogue A1｜法文自我介紹問答</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

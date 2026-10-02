@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="節奏群、重音位置與連音。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Rythme｜節奏群與連音</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.meta{font-size:.88rem;color:#6a5870;margin-top:4px;line-height:1.5}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh{color:#53647c;width:34%;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.08rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.def-block{background:white;border:1px solid #eadfd6;border-radius:14px;padding:18px 20px;margin:12px 0 20px;box-shadow:0 6px 18px #142f520c}
+.def-block .say .word{font-size:1.05rem}
+.quiz{background:#f8efe8;border-radius:10px;padding:12px 16px;margin-top:10px;font-size:.92rem;line-height:1.65;color:#52647a}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}.zh{width:40%}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Rythme</div></header>
+<main>
+<h1>節奏群與連音</h1>
+<p class="note">Les groupes rythmiques et la place de l’accent tonique。點選可朗讀；也可用全部循環播放，並調整語速。朗讀整句時不分斜線，分組說明見中文欄。</p>
+
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>定義用字</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">群組（陽性）</td><td><button type="button" class="say" lang="fr" data-say="groupe" data-lang="fr-FR"><span class="word">groupe</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">與節奏有關的</td><td><button type="button" class="say" lang="fr" data-say="rythmique" data-lang="fr-FR"><span class="word">rythmique</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">位置（陰性）</td><td><button type="button" class="say" lang="fr" data-say="place" data-lang="fr-FR"><span class="word">place</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">語音中的重音</td><td><button type="button" class="say" lang="fr" data-say="accent tonique" data-lang="fr-FR"><span class="word">accent tonique</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">字、詞（陽性）</td><td><button type="button" class="say" lang="fr" data-say="mot" data-lang="fr-FR"><span class="word">mot</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">意義（陽性）</td><td><button type="button" class="say" lang="fr" data-say="sens" data-lang="fr-FR"><span class="word">sens</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">停頓（陰性）</td><td><button type="button" class="say" lang="fr" data-say="pause" data-lang="fr-FR"><span class="word">pause</span></button></td></tr>
+</tbody></table></div>
+
+<h2>課本定義句</h2>
+<div class="def-block">
+<button type="button" class="say vocab-row" lang="fr" data-say="Un groupe rythmique est un groupe de mots. Il forme du sens et il se prononce sans pause." data-lang="fr-FR"><span class="word">Un groupe rythmique est un groupe de mots. Il forme du sens et il se prononce sans pause.</span></button>
+<p class="meta">一個節奏群是一組詞語，能構成意思，整組連續說出，中間不作停頓。重音通常落在每組最後一個<strong>發音</strong>音節上（母音稍延長），不要把每個字各自重讀。<strong>accent tonique</strong> 與 é、è、ê 等書寫符號不是同一件事。</p>
+</div>
+
+<h2>觀察範例</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文與分組</th><th scope="col">法文（整句朗讀）</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">我叫 Enzo／我是義大利人。<br><span class="meta">課本：2 個節奏群、2 個重音</span></td><td><button type="button" class="say" lang="fr" data-say="Je m’appelle Enzo, je suis italien." data-lang="fr-FR"><span class="word">Je m’appelle Enzo, je suis italien.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我叫 Alice／我二十三歲／我是德國人。<br><span class="meta">課本：3 個節奏群、3 個重音</span></td><td><button type="button" class="say" lang="fr" data-say="Je m’appelle Alice, j’ai vingt-trois ans, je suis allemande." data-lang="fr-FR"><span class="word">Je m’appelle Alice, j’ai vingt-trois ans, je suis allemande.</span></button></td></tr>
+</tbody></table></div>
+<p class="note">題目 <em>L’accent du groupe rythmique est…</em>（節奏群的重音位於……）</p>
+<div class="quiz"><strong>答案：</strong> <strong>b</strong>（à la fin，在結尾）、<strong>c</strong>（sur la voyelle phonétique，在發音的母音上）。重音看實際發音，不是看最後一個字母；例如 Alice 字尾 e 不發音。錯誤選項：a 在開頭、d 在發音的子音上。</div>
+
+<h2>跟讀句子</h2>
+<p class="note">課本斜線為練習分組提示；以下整句一次朗讀，分組見中文。</p>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文（分組提示）</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">我叫 Emma／我是巴西人／而且喜歡電影。</td><td><button type="button" class="say" lang="fr" data-say="Je m’appelle Emma, je suis brésilienne, et j’aime le cinéma." data-lang="fr-FR"><span class="word">Je m’appelle Emma, je suis brésilienne, et j’aime le cinéma.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">她叫 Sanae／她是日本人／而且喜歡藝術。</td><td><button type="button" class="say" lang="fr" data-say="Elle s’appelle Sanae, elle est japonaise, et elle aime l’art." data-lang="fr-FR"><span class="word">Elle s’appelle Sanae, elle est japonaise, et elle aime l’art.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">你是中國人／而且喜歡運動。</td><td><button type="button" class="say" lang="fr" data-say="Tu es chinois, et tu aimes le sport." data-lang="fr-FR"><span class="word">Tu es chinois, et tu aimes le sport.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">他是瑞士人／而且喜歡語言。</td><td><button type="button" class="say" lang="fr" data-say="Il est suisse, et il aime les langues." data-lang="fr-FR"><span class="word">Il est suisse, et il aime les langues.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我是塞內加爾人／而且喜歡音樂。</td><td><button type="button" class="say" lang="fr" data-say="Je suis sénégalaise, et j’aime la musique." data-lang="fr-FR"><span class="word">Je suis sénégalaise, et j’aime la musique.</span></button></td></tr>
+</tbody></table></div>
+
+<h2>連音與連讀</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">說明</th><th scope="col">例句</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">en 後接母音，帶出 /n/ 連音</td><td><button type="button" class="say" lang="fr" data-say="en Inde" data-lang="fr-FR"><span class="word">en Inde</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">en ＋ 母音開頭國名</td><td><button type="button" class="say" lang="fr" data-say="en Espagne" data-lang="fr-FR"><span class="word">en Espagne</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">aux 的 x 連音成 /z/</td><td><button type="button" class="say" lang="fr" data-say="aux États-Unis" data-lang="fr-FR"><span class="word">aux États-Unis</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">aux ＋ 母音開頭（îles）</td><td><button type="button" class="say" lang="fr" data-say="Il habite aux îles Fidji." data-lang="fr-FR"><span class="word">Il habite aux îles Fidji.</span></button></td></tr>
+</tbody></table></div>
+
+<div class="tip"><strong>用法提醒：</strong>habiter 的 h 是啞音 h：<em>il habite</em>、<em>elle habite</em> 會自然連讀，這是原本會發音的子音接到下個音節，不等同於把不發音字尾讀出來的 liaison。<em>Tu habites en Algérie</em> 中 habites 字尾 s 通常不發音，不要看到 s 接母音就自動讀成 /z/。</div>
+</main>
+<footer>Rythme｜節奏群與連音</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

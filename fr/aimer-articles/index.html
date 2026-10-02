@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="定冠詞 le、la、l’、les 與 aimer 喜好句型。點選可朗讀；也可用全部循環播放，並調整語速。">
+<title>Aimer｜定冠詞與喜好</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:18px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+.pattern{font-weight:750;color:#182a45;margin:0 0 8px}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Aimer</div></header>
+<main>
+<h1>定冠詞與喜好</h1>
+<p class="note">Les articles définis：le、la、l’、les。搭配 aimer 表達一般喜好。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<h2>定冠詞說明</h2>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">冠詞</th><th scope="col">使用情況</th><th scope="col">例子</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td>le</td><td class="zh">陽性單數，未省音</td><td>
+<button type="button" class="say" lang="fr" data-say="le sport" data-lang="fr-FR"><span class="word">le sport</span></button>、
+<button type="button" class="say" lang="fr" data-say="le café" data-lang="fr-FR"><span class="word">le café</span></button>、
+<button type="button" class="say" lang="fr" data-say="le cinéma" data-lang="fr-FR"><span class="word">le cinéma</span></button>
+</td></tr>
+<tr class="vocab-row"><td>la</td><td class="zh">陰性單數，未省音</td><td>
+<button type="button" class="say" lang="fr" data-say="la musique" data-lang="fr-FR"><span class="word">la musique</span></button>、
+<button type="button" class="say" lang="fr" data-say="la langue" data-lang="fr-FR"><span class="word">la langue</span></button>
+</td></tr>
+<tr class="vocab-row"><td>l’</td><td class="zh">單數名詞以母音或啞音 h 開頭，陰陽性皆可</td><td>
+<button type="button" class="say" lang="fr" data-say="l’art" data-lang="fr-FR"><span class="word">l’art</span></button>（陽性）、
+<button type="button" class="say" lang="fr" data-say="l’histoire" data-lang="fr-FR"><span class="word">l’histoire</span></button>（陰性）
+</td></tr>
+<tr class="vocab-row"><td>les</td><td class="zh">複數，陰陽性皆可</td><td>
+<button type="button" class="say" lang="fr" data-say="les langues" data-lang="fr-FR"><span class="word">les langues</span></button>
+</td></tr>
+</tbody></table></div>
+<p class="note">不是所有 h 開頭的字都能省音；histoire 的 h 是啞音 h，可以寫成 l’histoire。</p>
+
+<h2>喜好句型</h2>
+<p class="pattern">主詞 + aimer 的變位 + 定冠詞 + 名詞</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">法文</th><th scope="col">中文</th><th scope="col">名詞資訊</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="J’aime l’histoire." data-lang="fr-FR"><span class="word">J’aime l’histoire.</span></button></td><td class="zh">我喜歡歷史。</td><td class="zh">histoire 陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Elle aime les langues." data-lang="fr-FR"><span class="word">Elle aime les langues.</span></button></td><td class="zh">她喜歡語言。</td><td class="zh">langues 陰性複數</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Tu aimes le café." data-lang="fr-FR"><span class="word">Tu aimes le café.</span></button></td><td class="zh">你喜歡咖啡。</td><td class="zh">café 陽性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Il aime la musique." data-lang="fr-FR"><span class="word">Il aime la musique.</span></button></td><td class="zh">他喜歡音樂。</td><td class="zh">musique 陰性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="J’aime le cinéma." data-lang="fr-FR"><span class="word">J’aime le cinéma.</span></button></td><td class="zh">我喜歡電影。</td><td class="zh">cinéma 陽性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Elle aime l’art." data-lang="fr-FR"><span class="word">Elle aime l’art.</span></button></td><td class="zh">她喜歡藝術。</td><td class="zh">art 陽性</td></tr>
+<tr class="vocab-row"><td><button type="button" class="say" lang="fr" data-say="Tu aimes le sport ?" data-lang="fr-FR"><span class="word">Tu aimes le sport ?</span></button></td><td class="zh">你喜歡運動嗎？</td><td class="zh">sport 陽性；用語調提問</td></tr>
+</tbody></table></div>
+
+<div class="tip"><strong>用法提醒：</strong>表達對某類事物的一般喜好時，法語通常<strong>保留定冠詞</strong>（le、la、l’、les）；中文不必硬翻成「這個／那個」。aime、aimes、aiment 字尾不發音，這三種形式發音相同。</div>
+</main>
+<footer>Aimer｜定冠詞與喜好</footer>
+<script>
+
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  speechSynthesis.cancel();
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) {
+      index = 0;
+    } else {
+      stopAll();
+      setStatus('播放完畢');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) {
+    row.classList.add('active');
+    row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 280);
+  });
+}
+
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = startAt || 0;
+    playNext();
+  });
+}
+
+rateInput.addEventListener('input', () => {
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+});
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+
+document.getElementById('play-all').addEventListener('click', () => {
+  startQueue(allItems(), 0);
+});
+document.getElementById('stop-all').addEventListener('click', stopAll);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
+});
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+</script>
+</body>
+</html>

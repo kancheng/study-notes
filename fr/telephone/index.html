@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="法文 70–100 規律、瑞士／比利時說法，以及電話號碼分組讀法。點選可朗讀。">
+<title>Téléphone｜法文數字與電話</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#b3482f;color:white;padding:22px max(20px,calc((100vw - 1050px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:28px 0 10px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #eadfd6;color:#b3482f;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.meta-box{background:white;border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px #142f520c;margin:0 0 14px;line-height:1.7;color:#52647a}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #eadfd6;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th{background:#f4f7fb;text-align:left;font-size:.9rem;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid #eadfd6;vertical-align:top}
+.zh{color:#53647c;line-height:1.55}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 0;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.word{font-size:1.05rem;font-weight:750;color:#b3482f;line-height:1.45}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
+footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:600px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body data-lang="fr-FR">
+<header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Téléphone</div></header>
+<main>
+<h1>法文數字規律與電話</h1>
+<p class="note">70–100 組合規律、瑞士／比利時說法，以及法國電話分組讀法。完整 0–2000 見 <a href="../numbers/">Nombres</a>。點選可朗讀。</p>
+<nav class="toc" aria-label="章節"><a href="#rules">組合規律</a><a href="#70-100">70–100</a><a href="#regions">瑞／比</a><a href="#phone">電話</a></nav>
+
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
+<section id="rules">
+<h2>組合規律</h2>
+<div class="meta-box">
+<ul style="margin:0;padding-left:1.2rem">
+<li>70＝60＋10：<strong>soixante-dix</strong>。</li>
+<li>71＝60＋11：<strong>soixante et onze</strong>，有 <strong>et</strong>。</li>
+<li>80＝4×20：<strong>quatre-vingts</strong>，單獨八十時有 <strong>s</strong>。</li>
+<li>81＝80＋1：<strong>quatre-vingt-un</strong>，沒有 et、沒有 s。</li>
+<li>90＝80＋10：<strong>quatre-vingt-dix</strong>。</li>
+<li>91＝80＋11：<strong>quatre-vingt-onze</strong>，沒有 et。</li>
+</ul>
+</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">中文</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">七十</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix" data-lang="fr-FR"><span class="word">soixante-dix</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">七十一（有 et）</td><td><button type="button" class="say" lang="fr" data-say="soixante et onze" data-lang="fr-FR"><span class="word">soixante et onze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">八十（有 s）</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingts" data-lang="fr-FR"><span class="word">quatre-vingts</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">八十一（無 et、無 s）</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-un" data-lang="fr-FR"><span class="word">quatre-vingt-un</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">九十</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-dix" data-lang="fr-FR"><span class="word">quatre-vingt-dix</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">九十一</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-onze" data-lang="fr-FR"><span class="word">quatre-vingt-onze</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="70-100">
+<h2>70–100（法國常用拼法）</h2>
+<div class="tablewrap"><table><thead><tr><th scope="col">數字</th><th scope="col">法文</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">70</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix" data-lang="fr-FR"><span class="word">soixante-dix</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">71</td><td><button type="button" class="say" lang="fr" data-say="soixante et onze" data-lang="fr-FR"><span class="word">soixante et onze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">72</td><td><button type="button" class="say" lang="fr" data-say="soixante-douze" data-lang="fr-FR"><span class="word">soixante-douze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">73</td><td><button type="button" class="say" lang="fr" data-say="soixante-treize" data-lang="fr-FR"><span class="word">soixante-treize</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">74</td><td><button type="button" class="say" lang="fr" data-say="soixante-quatorze" data-lang="fr-FR"><span class="word">soixante-quatorze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">75</td><td><button type="button" class="say" lang="fr" data-say="soixante-quinze" data-lang="fr-FR"><span class="word">soixante-quinze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">76</td><td><button type="button" class="say" lang="fr" data-say="soixante-seize" data-lang="fr-FR"><span class="word">soixante-seize</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">77</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix-sept" data-lang="fr-FR"><span class="word">soixante-dix-sept</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">78</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix-huit" data-lang="fr-FR"><span class="word">soixante-dix-huit</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">79</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix-neuf" data-lang="fr-FR"><span class="word">soixante-dix-neuf</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">80</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingts" data-lang="fr-FR"><span class="word">quatre-vingts</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">81</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-un" data-lang="fr-FR"><span class="word">quatre-vingt-un</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">82</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-deux" data-lang="fr-FR"><span class="word">quatre-vingt-deux</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">85</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-cinq" data-lang="fr-FR"><span class="word">quatre-vingt-cinq</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">90</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-dix" data-lang="fr-FR"><span class="word">quatre-vingt-dix</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">91</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-onze" data-lang="fr-FR"><span class="word">quatre-vingt-onze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">95</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-quinze" data-lang="fr-FR"><span class="word">quatre-vingt-quinze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">99</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-dix-neuf" data-lang="fr-FR"><span class="word">quatre-vingt-dix-neuf</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">100</td><td><button type="button" class="say" lang="fr" data-say="cent" data-lang="fr-FR"><span class="word">cent</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="regions">
+<h2>瑞士、比利時用法</h2>
+<div class="meta-box">課本：En Suisse et en Belgique, on dit septante et nonante. 瑞士部分地區也會聽到 huitante（八十）。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">數字</th><th scope="col">法國</th><th scope="col">比利時／瑞士</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">70</td><td><button type="button" class="say" lang="fr" data-say="soixante-dix" data-lang="fr-FR"><span class="word">soixante-dix</span></button></td><td><button type="button" class="say" lang="fr" data-say="septante" data-lang="fr-FR"><span class="word">septante</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">80</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingts" data-lang="fr-FR"><span class="word">quatre-vingts</span></button></td><td><button type="button" class="say" lang="fr" data-say="huitante" data-lang="fr-FR"><span class="word">huitante（部分瑞士）</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">90</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-dix" data-lang="fr-FR"><span class="word">quatre-vingt-dix</span></button></td><td><button type="button" class="say" lang="fr" data-say="nonante" data-lang="fr-FR"><span class="word">nonante</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">課本文</td><td colspan="2"><button type="button" class="say" lang="fr" data-say="En Suisse et en Belgique, on dit septante et nonante." data-lang="fr-FR"><span class="word">En Suisse et en Belgique, on dit septante et nonante.</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="phone">
+<h2>電話分組讀法</h2>
+<div class="meta-box">法國電話常<strong>每兩位數一組</strong>讀，開頭的 <strong>0</strong> 要讀出來（zéro）。斜線只是分組提示。</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">號碼／說明</th><th scope="col">讀法（可點播）</th></tr></thead><tbody>
+<tr class="vocab-row"><td class="zh">06 87 98 14 08（整串分組）</td><td><button type="button" class="say" lang="fr" data-say="zéro six, quatre-vingt-sept, quatre-vingt-dix-huit, quatorze, zéro huit" data-lang="fr-FR"><span class="word">zéro six / quatre-vingt-sept / quatre-vingt-dix-huit / quatorze / zéro huit</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">06</td><td><button type="button" class="say" lang="fr" data-say="zéro six" data-lang="fr-FR"><span class="word">zéro six</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">87</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-sept" data-lang="fr-FR"><span class="word">quatre-vingt-sept</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">98</td><td><button type="button" class="say" lang="fr" data-say="quatre-vingt-dix-huit" data-lang="fr-FR"><span class="word">quatre-vingt-dix-huit</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">14</td><td><button type="button" class="say" lang="fr" data-say="quatorze" data-lang="fr-FR"><span class="word">quatorze</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">08</td><td><button type="button" class="say" lang="fr" data-say="zéro huit" data-lang="fr-FR"><span class="word">zéro huit</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">06 76 66 89 99（聽力例）</td><td><button type="button" class="say" lang="fr" data-say="zéro six, soixante-seize, soixante-six, quatre-vingt-neuf, quatre-vingt-dix-neuf" data-lang="fr-FR"><span class="word">zéro six / soixante-seize / soixante-six / quatre-vingt-neuf / quatre-vingt-dix-neuf</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>用法提醒：</strong>點選可單獨朗讀。「全部循環播放」依頁面順序朗讀。完整數字表請到 <a href="../numbers/">Nombres</a>。</div>
+</main>
+<footer>Téléphone｜法文數字與電話</footer>
+<script>
+const lessonLang = document.body.dataset.lang;
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let playing = false;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang; u.rate = rate;
+  const voice = pickVoice(lang); if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say, lang: el.dataset.lang || lessonLang, el,
+  }));
+}
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+function setStatus(text) { if (statusEl) statusEl.textContent = text; }
+function stopAll() {
+  playing = false; queue = []; index = 0;
+  speechSynthesis.cancel(); clearActive(); setStatus('已停止');
+}
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) { index = 0; }
+    else { stopAll(); setStatus('播放完畢'); return; }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) { row.classList.add('active'); row.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  speakOnce(item.text, item.lang, parseFloat(rateInput.value) || 0.9, () => {
+    if (!playing) return; index += 1; setTimeout(playNext, 280);
+  });
+}
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => { playing = true; queue = items; index = startAt || 0; playNext(); });
+}
+rateInput.addEventListener('input', () => { rateLabel.textContent = parseFloat(rateInput.value).toFixed(1); });
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+document.getElementById('play-all').addEventListener('click', () => startQueue(allItems(), 0));
+document.getElementById('stop-all').addEventListener('click', stopAll);
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b || e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false; queue = []; clearActive();
+    const row = b.closest('.vocab-row'); if (row) row.classList.add('active');
+    setStatus('單句：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => { clearActive(); setStatus('待命'); });
+  });
+});
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>
