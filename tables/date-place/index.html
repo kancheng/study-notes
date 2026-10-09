@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英、法、德、日對照：星期與日期、年齡、國家與城市、交通方式與車內位置。點選可朗讀。">
+<title>日期與地點對照｜四語筆記</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
+*{box-sizing:border-box}
+body{margin:0}
+header{background:#445a7a;color:white;padding:22px max(20px,calc((100vw - 1180px)/2))}
+header .brand{font-size:1.35rem;font-weight:800}
+header a{color:inherit;text-decoration:none}
+main{max-width:1180px;margin:auto;padding:32px 20px 70px}
+h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
+h2{font-size:1.25rem;margin:32px 0 12px}
+p{line-height:1.7;color:#53647c}
+.note{font-size:.92rem;color:#52647d;margin:0 0 18px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{display:inline-block;padding:7px 12px;border-radius:9px;background:white;border:1px solid #dae3ef;color:#445a7a;text-decoration:none;font-weight:650;font-size:.92rem}
+.toc a:hover,.toc a:focus-visible{outline:2px solid #445a7a;outline-offset:2px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dae3ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#445a7a;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #445a7a;outline-offset:2px}
+.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input{width:140px}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
+.tablewrap{overflow-x:auto;background:white;border:1px solid #dae3ef;border-radius:14px;box-shadow:0 6px 18px #142f520c}
+table{border-collapse:collapse;width:100%;min-width:980px}
+th{background:#eef2f7;text-align:left;font-size:.9rem;padding:12px 12px;white-space:nowrap}
+.th-en{color:#17355d}.th-fr{color:#b3482f}.th-de{color:#1d6a4f}.th-ja{color:#8d3a55}
+td{padding:10px 12px;border-top:1px solid #e6edf5;vertical-align:top}
+.zh{color:#53647c;font-weight:650;white-space:nowrap}
+.say{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;background:transparent;border:0;cursor:pointer;font:inherit;text-align:left;padding:4px 2px;border-radius:8px}
+.say:hover,.say:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.say .word{font-size:1.05rem;font-weight:750}
+.say.en,.say.en .word{color:#17355d}
+.say.fr,.say.fr .word{color:#b3482f}
+.say.de,.say.de .word{color:#1d6a4f}
+.say.ja,.say.ja .word{color:#8d3a55}
+.sub{font-size:.9rem;color:#3d4d63}
+.kata{color:#6a5870}
+.roma{font-size:.82rem;color:#6a5870}
+.vocab-row.active{background:#fff4d8}
+.tip{background:white;border-left:4px solid #445a7a;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #dae3ef;border-left-width:4px;line-height:1.7;color:#52647a}
+.tip a{color:#445a7a;font-weight:650}
+footer{max-width:1180px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
+@media(max-width:700px){main{padding-top:25px}.rate input{width:100px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="../index.html">← 對表</a>　/　日期與地點對照</div></header>
+<main>
+<h1>日期、問句與地點</h1>
+<p class="note">同一件事並排四種說法。年齡、地名介詞和「在車裡」都按各語言自己的文法，不逐字搬法文。點選可朗讀；日文日期的六日、八日用平假名朗讀，避免讀錯。</p>
+<nav class="toc" aria-label="章節"><a href="#split">四組對照</a><a href="#dates">日期讀法</a><a href="#place">地名</a><a href="#move">交通與位置</a><a href="#ask">問句</a><a href="#answer">回答</a></nav>
+<div class="controls">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+<section id="split">
+<h2>四組對照</h2>
+<p class="note">年齡：英文和德文用「是」，法文用「有」，日文用「歳です」。國家和城市：英文、德文、日文的介詞或助詞相同；法文要換。交通方式不等於人在車裡。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">星期／日期</td><td><button type="button" class="say en" data-say="What day is it today?" data-lang="en-US"><span class="word">What day is it today?</span></button><button type="button" class="say en" data-say="What's today's date?" data-lang="en-US"><span class="word">What's today's date?</span></button></td><td><button type="button" class="say fr" data-say="On est quel jour aujourd’hui ?" data-lang="fr-FR"><span class="word">On est quel jour aujourd’hui ?</span></button><button type="button" class="say fr" data-say="Quelle est la date d’aujourd’hui ?" data-lang="fr-FR"><span class="word">Quelle est la date d’aujourd’hui ?</span></button></td><td><button type="button" class="say de" data-say="Welcher Wochentag ist heute?" data-lang="de-DE"><span class="word">Welcher Wochentag ist heute?</span></button><button type="button" class="say de" data-say="Welches Datum haben wir heute?" data-lang="de-DE"><span class="word">Welches Datum haben wir heute?</span></button></td><td><button type="button" class="say ja" data-say="今日は何曜日ですか。" data-lang="ja-JP"><span class="word">今日は何曜日ですか。</span><span class="sub"><span class="hira">きょう は なんようび ですか。</span>　<span class="kata">キョウ ハ ナンヨウビ デスカ。</span></span><span class="roma">Kyou wa nanyoubi desu ka.</span></button><button type="button" class="say ja" data-say="今日の日付は何ですか。" data-lang="ja-JP"><span class="word">今日の日付は何ですか。</span><span class="sub"><span class="hira">きょう の ひづけ は なん ですか。</span>　<span class="kata">キョウ ノ ヒヅケ ハ ナン デスカ。</span></span><span class="roma">Kyou no hizuke wa nan desu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">年齡</td><td><button type="button" class="say en" data-say="Paul is thirty-two." data-lang="en-US"><span class="word">Paul is thirty-two.</span></button></td><td><button type="button" class="say fr" data-say="Paul a trente-deux ans." data-lang="fr-FR"><span class="word">Paul a trente-deux ans.</span></button></td><td><button type="button" class="say de" data-say="Paul ist zweiunddreißig Jahre alt." data-lang="de-DE"><span class="word">Paul ist zweiunddreißig Jahre alt.</span></button></td><td><button type="button" class="say ja" data-say="ポールは三十二歳です。" data-lang="ja-JP"><span class="word">ポールは三十二歳です。</span><span class="sub"><span class="hira">ポール は さんじゅうにさい です。</span>　<span class="kata">ポール ハ サンジュウニサイ デス。</span></span><span class="roma">Pooru wa sanjuunisai desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">國家／城市</td><td><button type="button" class="say en" data-say="Ana lives in Spain, in Barcelona." data-lang="en-US"><span class="word">Ana lives in Spain, in Barcelona.</span></button></td><td><button type="button" class="say fr" data-say="Ana habite en Espagne, à Barcelone." data-lang="fr-FR"><span class="word">Ana habite en Espagne, à Barcelone.</span></button></td><td><button type="button" class="say de" data-say="Ana wohnt in Spanien, in Barcelona." data-lang="de-DE"><span class="word">Ana wohnt in Spanien, in Barcelona.</span></button></td><td><button type="button" class="say ja" data-say="アナはスペインのバルセロナに住んでいます。" data-lang="ja-JP"><span class="word">アナはスペインのバルセロナに住んでいます。</span><span class="sub"><span class="hira">アナ は スペイン の バルセロナ に すんでいます。</span>　<span class="kata">アナ ハ スペイン ノ バルセロナ ニ スンデイマス。</span></span><span class="roma">Ana wa Supein no Baruserona ni sunde imasu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">方式／位置</td><td><button type="button" class="say en" data-say="by car" data-lang="en-US"><span class="word">by car</span></button><button type="button" class="say en" data-say="in the car" data-lang="en-US"><span class="word">in the car</span></button></td><td><button type="button" class="say fr" data-say="en voiture" data-lang="fr-FR"><span class="word">en voiture</span></button><button type="button" class="say fr" data-say="dans la voiture" data-lang="fr-FR"><span class="word">dans la voiture</span></button></td><td><button type="button" class="say de" data-say="mit dem Auto" data-lang="de-DE"><span class="word">mit dem Auto</span></button><button type="button" class="say de" data-say="im Auto" data-lang="de-DE"><span class="word">im Auto</span></button></td><td><button type="button" class="say ja" data-say="車で" data-lang="ja-JP"><span class="word">車で</span><span class="sub"><span class="hira">くるま で</span>　<span class="kata">クルマ デ</span></span><span class="roma">kuruma de</span></button><button type="button" class="say ja" data-say="車の中に" data-lang="ja-JP"><span class="word">車の中に</span><span class="sub"><span class="hira">くるま の なか に</span>　<span class="kata">クルマ ノ ナカ ニ</span></span><span class="roma">kuruma no naka ni</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="dates">
+<h2>日期讀法</h2>
+<p class="note">法文只有 1 日用 premier，6 日、8 日用基數，前面要有 le。德文每一天都用序數。英文月份在前，並用序數。日文一日、六日、八日有特別讀音。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">10 月 1 日</td><td><button type="button" class="say en" data-say="October first" data-lang="en-US"><span class="word">October 1st / first</span></button></td><td><button type="button" class="say fr" data-say="le premier octobre" data-lang="fr-FR"><span class="word">le premier octobre</span></button></td><td><button type="button" class="say de" data-say="der erste Oktober" data-lang="de-DE"><span class="word">der erste Oktober</span></button></td><td><button type="button" class="say ja" data-say="ついたち" data-lang="ja-JP"><span class="word">十月一日</span><span class="sub"><span class="hira">じゅうがつ ついたち</span>　<span class="kata">ジュウガツ ツイタチ</span></span><span class="roma">juugatsu tsuitachi</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">10 月 6 日</td><td><button type="button" class="say en" data-say="October sixth" data-lang="en-US"><span class="word">October 6th / sixth</span></button></td><td><button type="button" class="say fr" data-say="le six octobre" data-lang="fr-FR"><span class="word">le six octobre</span></button></td><td><button type="button" class="say de" data-say="der sechste Oktober" data-lang="de-DE"><span class="word">der sechste Oktober</span></button></td><td><button type="button" class="say ja" data-say="むいか" data-lang="ja-JP"><span class="word">十月六日</span><span class="sub"><span class="hira">じゅうがつ むいか</span>　<span class="kata">ジュウガツ ムイカ</span></span><span class="roma">juugatsu muika</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">10 月 8 日</td><td><button type="button" class="say en" data-say="October eighth" data-lang="en-US"><span class="word">October 8th / eighth</span></button></td><td><button type="button" class="say fr" data-say="le huit octobre" data-lang="fr-FR"><span class="word">le huit octobre</span></button></td><td><button type="button" class="say de" data-say="der achte Oktober" data-lang="de-DE"><span class="word">der achte Oktober</span></button></td><td><button type="button" class="say ja" data-say="ようか" data-lang="ja-JP"><span class="word">十月八日</span><span class="sub"><span class="hira">じゅうがつ ようか</span>　<span class="kata">ジュウガツ ヨウカ</span></span><span class="roma">juugatsu youka</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">2026 年</td><td><button type="button" class="say en" data-say="twenty twenty-six" data-lang="en-US"><span class="word">twenty twenty-six</span></button></td><td><button type="button" class="say fr" data-say="deux mille vingt-six" data-lang="fr-FR"><span class="word">deux mille vingt-six</span></button></td><td><button type="button" class="say de" data-say="zweitausendsechsundzwanzig" data-lang="de-DE"><span class="word">zweitausendsechsundzwanzig</span></button></td><td><button type="button" class="say ja" data-say="にせんにじゅうろくねん" data-lang="ja-JP"><span class="word">二千二十六年</span><span class="sub"><span class="hira">にせんにじゅうろくねん</span>　<span class="kata">ニセンニジュウロクネン</span></span><span class="roma">nisen nijuurokunen</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="place">
+<h2>地名</h2>
+<p class="note">這一欄的「陰性國家、陽性國家」是在說明法文介詞。德文多數國名都用 in，只有帶冠詞的國名要變格。日文地名後加に。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">城市</td><td><button type="button" class="say en" data-say="in Barcelona" data-lang="en-US"><span class="word">in Barcelona</span></button></td><td><button type="button" class="say fr" data-say="à Barcelone" data-lang="fr-FR"><span class="word">à Barcelone</span></button></td><td><button type="button" class="say de" data-say="in Barcelona" data-lang="de-DE"><span class="word">in Barcelona</span></button></td><td><button type="button" class="say ja" data-say="バルセロナに" data-lang="ja-JP"><span class="word">バルセロナに</span><span class="sub"><span class="hira">バルセロナ に</span>　<span class="kata">バルセロナ ニ</span></span><span class="roma">Baruserona ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">陰性國家</td><td><button type="button" class="say en" data-say="in Spain" data-lang="en-US"><span class="word">in Spain</span></button></td><td><button type="button" class="say fr" data-say="en Espagne" data-lang="fr-FR"><span class="word">en Espagne</span></button></td><td><button type="button" class="say de" data-say="in Spanien" data-lang="de-DE"><span class="word">in Spanien</span></button></td><td><button type="button" class="say ja" data-say="スペインに" data-lang="ja-JP"><span class="word">スペインに</span><span class="sub"><span class="hira">スペイン に</span>　<span class="kata">スペイン ニ</span></span><span class="roma">Supein ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">另一個陰性國家</td><td><button type="button" class="say en" data-say="in France" data-lang="en-US"><span class="word">in France</span></button></td><td><button type="button" class="say fr" data-say="en France" data-lang="fr-FR"><span class="word">en France</span></button></td><td><button type="button" class="say de" data-say="in Frankreich" data-lang="de-DE"><span class="word">in Frankreich</span></button></td><td><button type="button" class="say ja" data-say="フランスに" data-lang="ja-JP"><span class="word">フランスに</span><span class="sub"><span class="hira">フランス に</span>　<span class="kata">フランス ニ</span></span><span class="roma">Furansu ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">母音開頭的陽性國家</td><td><button type="button" class="say en" data-say="in Iran" data-lang="en-US"><span class="word">in Iran</span></button></td><td><button type="button" class="say fr" data-say="en Iran" data-lang="fr-FR"><span class="word">en Iran</span></button></td><td><button type="button" class="say de" data-say="im Iran" data-lang="de-DE"><span class="word">im Iran</span></button></td><td><button type="button" class="say ja" data-say="イランに" data-lang="ja-JP"><span class="word">イランに</span><span class="sub"><span class="hira">イラン に</span>　<span class="kata">イラン ニ</span></span><span class="roma">Iran ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">子音開頭的陽性國家</td><td><button type="button" class="say en" data-say="in Japan" data-lang="en-US"><span class="word">in Japan</span></button></td><td><button type="button" class="say fr" data-say="au Japon" data-lang="fr-FR"><span class="word">au Japon</span></button></td><td><button type="button" class="say de" data-say="in Japan" data-lang="de-DE"><span class="word">in Japan</span></button></td><td><button type="button" class="say ja" data-say="日本に" data-lang="ja-JP"><span class="word">日本に</span><span class="sub"><span class="hira">にほん に</span>　<span class="kata">ニホン ニ</span></span><span class="roma">Nihon ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">複數國家</td><td><button type="button" class="say en" data-say="in the United States" data-lang="en-US"><span class="word">in the United States</span></button></td><td><button type="button" class="say fr" data-say="aux États-Unis" data-lang="fr-FR"><span class="word">aux États-Unis</span></button></td><td><button type="button" class="say de" data-say="in den USA" data-lang="de-DE"><span class="word">in den USA</span></button></td><td><button type="button" class="say ja" data-say="アメリカに" data-lang="ja-JP"><span class="word">アメリカに</span><span class="sub"><span class="hira">アメリカ に</span>　<span class="kata">アメリカ ニ</span></span><span class="roma">Amerika ni</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="move">
+<h2>交通與位置</h2>
+<p class="note">法文 en voiture 不一定是自己開。德文 mit 後面用第三格，im Auto 等於 in dem Auto。日文方式用で，裡面用の中に。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">汽車，交通方式</td><td><button type="button" class="say en" data-say="by car" data-lang="en-US"><span class="word">by car</span></button></td><td><button type="button" class="say fr" data-say="en voiture" data-lang="fr-FR"><span class="word">en voiture</span></button></td><td><button type="button" class="say de" data-say="mit dem Auto" data-lang="de-DE"><span class="word">mit dem Auto</span></button></td><td><button type="button" class="say ja" data-say="車で" data-lang="ja-JP"><span class="word">車で</span><span class="sub"><span class="hira">くるま で</span>　<span class="kata">クルマ デ</span></span><span class="roma">kuruma de</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">汽車，所在位置</td><td><button type="button" class="say en" data-say="in the car" data-lang="en-US"><span class="word">in the car</span></button></td><td><button type="button" class="say fr" data-say="dans la voiture" data-lang="fr-FR"><span class="word">dans la voiture</span></button></td><td><button type="button" class="say de" data-say="im Auto" data-lang="de-DE"><span class="word">im Auto</span></button></td><td><button type="button" class="say ja" data-say="車の中に" data-lang="ja-JP"><span class="word">車の中に</span><span class="sub"><span class="hira">くるま の なか に</span>　<span class="kata">クルマ ノ ナカ ニ</span></span><span class="roma">kuruma no naka ni</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">公車</td><td><button type="button" class="say en" data-say="by bus" data-lang="en-US"><span class="word">by bus</span></button></td><td><button type="button" class="say fr" data-say="en bus" data-lang="fr-FR"><span class="word">en bus</span></button></td><td><button type="button" class="say de" data-say="mit dem Bus" data-lang="de-DE"><span class="word">mit dem Bus</span></button></td><td><button type="button" class="say ja" data-say="バスで" data-lang="ja-JP"><span class="word">バスで</span><span class="sub"><span class="hira">バス で</span>　<span class="kata">バス デ</span></span><span class="roma">basu de</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">火車</td><td><button type="button" class="say en" data-say="by train" data-lang="en-US"><span class="word">by train</span></button></td><td><button type="button" class="say fr" data-say="en train" data-lang="fr-FR"><span class="word">en train</span></button></td><td><button type="button" class="say de" data-say="mit dem Zug" data-lang="de-DE"><span class="word">mit dem Zug</span></button></td><td><button type="button" class="say ja" data-say="電車で" data-lang="ja-JP"><span class="word">電車で</span><span class="sub"><span class="hira">でんしゃ で</span>　<span class="kata">デンシャ デ</span></span><span class="roma">densha de</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">地鐵</td><td><button type="button" class="say en" data-say="by subway" data-lang="en-US"><span class="word">by subway</span></button></td><td><button type="button" class="say fr" data-say="en métro" data-lang="fr-FR"><span class="word">en métro</span></button></td><td><button type="button" class="say de" data-say="mit der U-Bahn" data-lang="de-DE"><span class="word">mit der U-Bahn</span></button></td><td><button type="button" class="say ja" data-say="地下鉄で" data-lang="ja-JP"><span class="word">地下鉄で</span><span class="sub"><span class="hira">ちかてつ で</span>　<span class="kata">チカテツ デ</span></span><span class="roma">chikatetsu de</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">飛機</td><td><button type="button" class="say en" data-say="by plane" data-lang="en-US"><span class="word">by plane</span></button></td><td><button type="button" class="say fr" data-say="en avion" data-lang="fr-FR"><span class="word">en avion</span></button></td><td><button type="button" class="say de" data-say="mit dem Flugzeug" data-lang="de-DE"><span class="word">mit dem Flugzeug</span></button></td><td><button type="button" class="say ja" data-say="飛行機で" data-lang="ja-JP"><span class="word">飛行機で</span><span class="sub"><span class="hira">ひこうき で</span>　<span class="kata">ヒコウキ デ</span></span><span class="roma">hikouki de</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">步行</td><td><button type="button" class="say en" data-say="on foot" data-lang="en-US"><span class="word">on foot</span></button></td><td><button type="button" class="say fr" data-say="à pied" data-lang="fr-FR"><span class="word">à pied</span></button></td><td><button type="button" class="say de" data-say="zu Fuß" data-lang="de-DE"><span class="word">zu Fuß</span></button></td><td><button type="button" class="say ja" data-say="歩いて" data-lang="ja-JP"><span class="word">歩いて</span><span class="sub"><span class="hira">あるいて</span>　<span class="kata">アルイテ</span></span><span class="roma">aruite</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">自行車</td><td><button type="button" class="say en" data-say="by bike" data-lang="en-US"><span class="word">by bike</span></button></td><td><button type="button" class="say fr" data-say="à vélo" data-lang="fr-FR"><span class="word">à vélo</span></button></td><td><button type="button" class="say de" data-say="mit dem Fahrrad" data-lang="de-DE"><span class="word">mit dem Fahrrad</span></button></td><td><button type="button" class="say ja" data-say="自転車で" data-lang="ja-JP"><span class="word">自転車で</span><span class="sub"><span class="hira">じてんしゃ で</span>　<span class="kata">ジテンシャ デ</span></span><span class="roma">jitensha de</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="ask">
+<h2>問句</h2>
+<p class="note">法文問國籍、城市時，quel 的形式看名詞，不看被問的人是男是女。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">今天星期幾？</td><td><button type="button" class="say en" data-say="What day is it today?" data-lang="en-US"><span class="word">What day is it today?</span></button></td><td><button type="button" class="say fr" data-say="On est quel jour aujourd’hui ?" data-lang="fr-FR"><span class="word">On est quel jour aujourd’hui ?</span></button></td><td><button type="button" class="say de" data-say="Welcher Wochentag ist heute?" data-lang="de-DE"><span class="word">Welcher Wochentag ist heute?</span></button></td><td><button type="button" class="say ja" data-say="今日は何曜日ですか。" data-lang="ja-JP"><span class="word">今日は何曜日ですか。</span><span class="sub"><span class="hira">きょう は なんようび ですか。</span>　<span class="kata">キョウ ハ ナンヨウビ デスカ。</span></span><span class="roma">Kyou wa nanyoubi desu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天幾月幾日？</td><td><button type="button" class="say en" data-say="What's today's date?" data-lang="en-US"><span class="word">What's today's date?</span></button></td><td><button type="button" class="say fr" data-say="Quelle est la date d’aujourd’hui ?" data-lang="fr-FR"><span class="word">Quelle est la date d’aujourd’hui ?</span></button></td><td><button type="button" class="say de" data-say="Welches Datum haben wir heute?" data-lang="de-DE"><span class="word">Welches Datum haben wir heute?</span></button></td><td><button type="button" class="say ja" data-say="今日の日付は何ですか。" data-lang="ja-JP"><span class="word">今日の日付は何ですか。</span><span class="sub"><span class="hira">きょう の ひづけ は なん ですか。</span>　<span class="kata">キョウ ノ ヒヅケ ハ ナン デスカ。</span></span><span class="roma">Kyou no hizuke wa nan desu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 是什麼國籍？</td><td><button type="button" class="say en" data-say="What nationality is Paul?" data-lang="en-US"><span class="word">What nationality is Paul?</span></button></td><td><button type="button" class="say fr" data-say="Paul est de quelle nationalité ?" data-lang="fr-FR"><span class="word">Paul est de quelle nationalité ?</span></button></td><td><button type="button" class="say de" data-say="Welche Nationalität hat Paul?" data-lang="de-DE"><span class="word">Welche Nationalität hat Paul?</span></button></td><td><button type="button" class="say ja" data-say="ポールは何人ですか。" data-lang="ja-JP"><span class="word">ポールは何人ですか。</span><span class="sub"><span class="hira">ポール は なにじん ですか。</span>　<span class="kata">ポール ハ ナニジン デスカ。</span></span><span class="roma">Pooru wa nanijin desu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 幾歲？</td><td><button type="button" class="say en" data-say="How old is Paul?" data-lang="en-US"><span class="word">How old is Paul?</span></button></td><td><button type="button" class="say fr" data-say="Paul a quel âge ?" data-lang="fr-FR"><span class="word">Paul a quel âge ?</span></button></td><td><button type="button" class="say de" data-say="Wie alt ist Paul?" data-lang="de-DE"><span class="word">Wie alt ist Paul?</span></button></td><td><button type="button" class="say ja" data-say="ポールは何歳ですか。" data-lang="ja-JP"><span class="word">ポールは何歳ですか。</span><span class="sub"><span class="hira">ポール は なんさい ですか。</span>　<span class="kata">ポール ハ ナンサイ デスカ。</span></span><span class="roma">Pooru wa nansai desu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 夢想什麼？</td><td><button type="button" class="say en" data-say="What does Paul dream of?" data-lang="en-US"><span class="word">What does Paul dream of?</span></button></td><td><button type="button" class="say fr" data-say="Paul rêve de quoi ?" data-lang="fr-FR"><span class="word">Paul rêve de quoi ?</span></button></td><td><button type="button" class="say de" data-say="Wovon träumt Paul?" data-lang="de-DE"><span class="word">Wovon träumt Paul?</span></button></td><td><button type="button" class="say ja" data-say="ポールは何を夢見ていますか。" data-lang="ja-JP"><span class="word">ポールは何を夢見ていますか。</span><span class="sub"><span class="hira">ポール は なに を ゆめみていますか。</span>　<span class="kata">ポール ハ ナニ ヲ ユメミテイマスカ。</span></span><span class="roma">Pooru wa nani o yumemite imasu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Ana 住在哪個國家？</td><td><button type="button" class="say en" data-say="Which country does Ana live in?" data-lang="en-US"><span class="word">Which country does Ana live in?</span></button></td><td><button type="button" class="say fr" data-say="Ana habite dans quel pays ?" data-lang="fr-FR"><span class="word">Ana habite dans quel pays ?</span></button></td><td><button type="button" class="say de" data-say="In welchem Land wohnt Ana?" data-lang="de-DE"><span class="word">In welchem Land wohnt Ana?</span></button></td><td><button type="button" class="say ja" data-say="アナはどの国に住んでいますか。" data-lang="ja-JP"><span class="word">アナはどの国に住んでいますか。</span><span class="sub"><span class="hira">アナ は どの くに に すんでいますか。</span>　<span class="kata">アナ ハ ドノ クニ ニ スンデイマスカ。</span></span><span class="roma">Ana wa dono kuni ni sunde imasu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Ana 住在哪座城市？</td><td><button type="button" class="say en" data-say="Which city does Ana live in?" data-lang="en-US"><span class="word">Which city does Ana live in?</span></button></td><td><button type="button" class="say fr" data-say="Ana habite dans quelle ville ?" data-lang="fr-FR"><span class="word">Ana habite dans quelle ville ?</span></button></td><td><button type="button" class="say de" data-say="In welcher Stadt wohnt Ana?" data-lang="de-DE"><span class="word">In welcher Stadt wohnt Ana?</span></button></td><td><button type="button" class="say ja" data-say="アナはどの都市に住んでいますか。" data-lang="ja-JP"><span class="word">アナはどの都市に住んでいますか。</span><span class="sub"><span class="hira">アナ は どの とし に すんでいますか。</span>　<span class="kata">アナ ハ ドノ トシ ニ スンデイマスカ。</span></span><span class="roma">Ana wa dono toshi ni sunde imasu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">你怎麼去學校？</td><td><button type="button" class="say en" data-say="How do you get to school?" data-lang="en-US"><span class="word">How do you get to school?</span></button></td><td><button type="button" class="say fr" data-say="Tu vas à l’école comment ?" data-lang="fr-FR"><span class="word">Tu vas à l’école comment ?</span></button></td><td><button type="button" class="say de" data-say="Wie kommst du zur Schule?" data-lang="de-DE"><span class="word">Wie kommst du zur Schule?</span></button></td><td><button type="button" class="say ja" data-say="学校へはどうやって行きますか。" data-lang="ja-JP"><span class="word">学校へはどうやって行きますか。</span><span class="sub"><span class="hira">がっこう へ は どうやって いきますか。</span>　<span class="kata">ガッコウ ヘ ハ ドウヤッテ イキマスカ。</span></span><span class="roma">Gakkou e wa douyatte ikimasu ka.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">鑰匙在哪裡？</td><td><button type="button" class="say en" data-say="Where are the keys?" data-lang="en-US"><span class="word">Where are the keys?</span></button></td><td><button type="button" class="say fr" data-say="Où sont les clés ?" data-lang="fr-FR"><span class="word">Où sont les clés ?</span></button></td><td><button type="button" class="say de" data-say="Wo sind die Schlüssel?" data-lang="de-DE"><span class="word">Wo sind die Schlüssel?</span></button></td><td><button type="button" class="say ja" data-say="鍵はどこですか。" data-lang="ja-JP"><span class="word">鍵はどこですか。</span><span class="sub"><span class="hira">かぎ は どこ ですか。</span>　<span class="kata">カギ ハ ドコ デスカ。</span></span><span class="roma">Kagi wa doko desu ka.</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<section id="answer">
+<h2>回答</h2>
+<p class="note">Paul 的國籍、年齡和夢想是課堂範例，不是已知的個人資料。星期四對應課堂例句。</p>
+<div class="tablewrap"><table>
+<thead><tr><th scope="col">中文</th><th scope="col" class="th-en">英文</th><th scope="col" class="th-fr">法文</th><th scope="col" class="th-de">德文</th><th scope="col" class="th-ja">日文</th></tr></thead>
+<tbody>
+<tr class="vocab-row"><td class="zh">今天星期四。</td><td><button type="button" class="say en" data-say="It's Thursday." data-lang="en-US"><span class="word">It's Thursday.</span></button></td><td><button type="button" class="say fr" data-say="On est jeudi." data-lang="fr-FR"><span class="word">On est jeudi.</span></button></td><td><button type="button" class="say de" data-say="Heute ist Donnerstag." data-lang="de-DE"><span class="word">Heute ist Donnerstag.</span></button></td><td><button type="button" class="say ja" data-say="今日は木曜日です。" data-lang="ja-JP"><span class="word">今日は木曜日です。</span><span class="sub"><span class="hira">きょう は もくようび です。</span>　<span class="kata">キョウ ハ モクヨウビ デス。</span></span><span class="roma">Kyou wa mokuyoubi desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">今天是 2026 年 10 月 8 日。</td><td><button type="button" class="say en" data-say="It's October eighth, twenty twenty-six." data-lang="en-US"><span class="word">It's October eighth, twenty twenty-six.</span></button></td><td><button type="button" class="say fr" data-say="Aujourd’hui, c’est le huit octobre deux mille vingt-six." data-lang="fr-FR"><span class="word">Aujourd’hui, c’est le huit octobre deux mille vingt-six.</span></button></td><td><button type="button" class="say de" data-say="Heute ist der achte Oktober zweitausendsechsundzwanzig." data-lang="de-DE"><span class="word">Heute ist der achte Oktober zweitausendsechsundzwanzig.</span></button></td><td><button type="button" class="say ja" data-say="きょうはにせんにじゅうろくねんじゅうがつようかです。" data-lang="ja-JP"><span class="word">今日は二千二十六年十月八日です。</span><span class="sub"><span class="hira">きょう は にせんにじゅうろくねん じゅうがつ ようか です。</span>　<span class="kata">キョウ ハ ニセンニジュウロクネン ジュウガツ ヨウカ デス。</span></span><span class="roma">Kyou wa nisen nijuurokunen juugatsu youka desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 是法國人。</td><td><button type="button" class="say en" data-say="Paul is French." data-lang="en-US"><span class="word">Paul is French.</span></button></td><td><button type="button" class="say fr" data-say="Paul est français." data-lang="fr-FR"><span class="word">Paul est français.</span></button></td><td><button type="button" class="say de" data-say="Paul ist Franzose." data-lang="de-DE"><span class="word">Paul ist Franzose.</span></button></td><td><button type="button" class="say ja" data-say="ポールはフランス人です。" data-lang="ja-JP"><span class="word">ポールはフランス人です。</span><span class="sub"><span class="hira">ポール は フランスじん です。</span>　<span class="kata">ポール ハ フランスジン デス。</span></span><span class="roma">Pooru wa Furansujin desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 三十二歲。</td><td><button type="button" class="say en" data-say="Paul is thirty-two." data-lang="en-US"><span class="word">Paul is thirty-two.</span></button></td><td><button type="button" class="say fr" data-say="Paul a trente-deux ans." data-lang="fr-FR"><span class="word">Paul a trente-deux ans.</span></button></td><td><button type="button" class="say de" data-say="Paul ist zweiunddreißig Jahre alt." data-lang="de-DE"><span class="word">Paul ist zweiunddreißig Jahre alt.</span></button></td><td><button type="button" class="say ja" data-say="ポールは三十二歳です。" data-lang="ja-JP"><span class="word">ポールは三十二歳です。</span><span class="sub"><span class="hira">ポール は さんじゅうにさい です。</span>　<span class="kata">ポール ハ サンジュウニサイ デス。</span></span><span class="roma">Pooru wa sanjuunisai desu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Paul 夢想去旅行。</td><td><button type="button" class="say en" data-say="Paul dreams of traveling." data-lang="en-US"><span class="word">Paul dreams of traveling.</span></button></td><td><button type="button" class="say fr" data-say="Paul rêve de voyager." data-lang="fr-FR"><span class="word">Paul rêve de voyager.</span></button></td><td><button type="button" class="say de" data-say="Paul träumt davon, zu reisen." data-lang="de-DE"><span class="word">Paul träumt davon, zu reisen.</span></button></td><td><button type="button" class="say ja" data-say="ポールは旅行を夢見ています。" data-lang="ja-JP"><span class="word">ポールは旅行を夢見ています。</span><span class="sub"><span class="hira">ポール は りょこう を ゆめみています。</span>　<span class="kata">ポール ハ リョコウ ヲ ユメミテイマス。</span></span><span class="roma">Pooru wa ryokou o yumemite imasu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Ana 住在西班牙。</td><td><button type="button" class="say en" data-say="Ana lives in Spain." data-lang="en-US"><span class="word">Ana lives in Spain.</span></button></td><td><button type="button" class="say fr" data-say="Ana habite en Espagne." data-lang="fr-FR"><span class="word">Ana habite en Espagne.</span></button></td><td><button type="button" class="say de" data-say="Ana wohnt in Spanien." data-lang="de-DE"><span class="word">Ana wohnt in Spanien.</span></button></td><td><button type="button" class="say ja" data-say="アナはスペインに住んでいます。" data-lang="ja-JP"><span class="word">アナはスペインに住んでいます。</span><span class="sub"><span class="hira">アナ は スペイン に すんでいます。</span>　<span class="kata">アナ ハ スペイン ニ スンデイマス。</span></span><span class="roma">Ana wa Supein ni sunde imasu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">Ana 住在巴塞隆納。</td><td><button type="button" class="say en" data-say="Ana lives in Barcelona." data-lang="en-US"><span class="word">Ana lives in Barcelona.</span></button></td><td><button type="button" class="say fr" data-say="Ana habite à Barcelone." data-lang="fr-FR"><span class="word">Ana habite à Barcelone.</span></button></td><td><button type="button" class="say de" data-say="Ana wohnt in Barcelona." data-lang="de-DE"><span class="word">Ana wohnt in Barcelona.</span></button></td><td><button type="button" class="say ja" data-say="アナはバルセロナに住んでいます。" data-lang="ja-JP"><span class="word">アナはバルセロナに住んでいます。</span><span class="sub"><span class="hira">アナ は バルセロナ に すんでいます。</span>　<span class="kata">アナ ハ バルセロナ ニ スンデイマス。</span></span><span class="roma">Ana wa Baruserona ni sunde imasu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">我開車／搭汽車去學校。</td><td><button type="button" class="say en" data-say="I go to school by car." data-lang="en-US"><span class="word">I go to school by car.</span></button></td><td><button type="button" class="say fr" data-say="Je vais à l’école en voiture." data-lang="fr-FR"><span class="word">Je vais à l’école en voiture.</span></button></td><td><button type="button" class="say de" data-say="Ich fahre mit dem Auto zur Schule." data-lang="de-DE"><span class="word">Ich fahre mit dem Auto zur Schule.</span></button></td><td><button type="button" class="say ja" data-say="私は車で学校へ行きます。" data-lang="ja-JP"><span class="word">私は車で学校へ行きます。</span><span class="sub"><span class="hira">わたし は くるま で がっこう へ いきます。</span>　<span class="kata">ワタシ ハ クルマ デ ガッコウ ヘ イキマス。</span></span><span class="roma">Watashi wa kuruma de gakkou e ikimasu.</span></button></td></tr>
+<tr class="vocab-row"><td class="zh">鑰匙在車裡。</td><td><button type="button" class="say en" data-say="The keys are in the car." data-lang="en-US"><span class="word">The keys are in the car.</span></button></td><td><button type="button" class="say fr" data-say="Les clés sont dans la voiture." data-lang="fr-FR"><span class="word">Les clés sont dans la voiture.</span></button></td><td><button type="button" class="say de" data-say="Die Schlüssel sind im Auto." data-lang="de-DE"><span class="word">Die Schlüssel sind im Auto.</span></button></td><td><button type="button" class="say ja" data-say="鍵は車の中にあります。" data-lang="ja-JP"><span class="word">鍵は車の中にあります。</span><span class="sub"><span class="hira">かぎ は くるま の なか に あります。</span>　<span class="kata">カギ ハ クルマ ノ ナカ ニ アリマス。</span></span><span class="roma">Kagi wa kuruma no naka ni arimasu.</span></button></td></tr>
+</tbody></table></div>
+</section>
+
+<div class="tip"><strong>各語言專題：</strong>
+<a href="../../fr/date-quel/">法文日期</a>、
+<a href="../../fr/dialogue-a1/">法文問答</a>、
+<a href="../../fr/pays-prepositions/">法文地點</a>；
+<a href="../../en/date-quel/">英文</a>、
+<a href="../../de/date-quel/">德文</a>、
+<a href="../../ja/date-quel/">日文</a>的日期頁也已補上對應句子。</div>
+</main>
+<footer>日期與地點對照｜英・法・德・日</footer>
+
+<script>
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const loopBox = document.getElementById('loop');
+const statusEl = document.getElementById('play-status');
+let playing = false, queue = [], index = 0;
+
+function voicesReady(cb) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
+}
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang; u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { if (onend) onend(); };
+  u.onerror = () => { if (onend) onend(); };
+  speechSynthesis.speak(u);
+}
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({ text: el.dataset.say, lang: el.dataset.lang, el }));
+}
+function clearActive() {
+  document.querySelectorAll('.vocab-row.active').forEach(r => r.classList.remove('active'));
+}
+function setStatus(text) { if (statusEl) statusEl.textContent = text; }
+function stopAll() {
+  playing = false; queue = []; index = 0;
+  speechSynthesis.cancel(); clearActive(); setStatus('已停止');
+}
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    if (loopBox && loopBox.checked && queue.length) index = 0;
+    else { stopAll(); setStatus('播放完畢'); return; }
+  }
+  const item = queue[index];
+  clearActive();
+  const row = item.el.closest('.vocab-row');
+  if (row) { row.classList.add('active'); row.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => { if (!playing) return; index += 1; setTimeout(playNext, 280); });
+}
+function startQueue(items, startAt) {
+  if (!items.length) return;
+  voicesReady(() => { playing = true; queue = items; index = startAt || 0; playNext(); });
+}
+rateInput.addEventListener('input', () => { rateLabel.textContent = parseFloat(rateInput.value).toFixed(1); });
+rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+document.getElementById('play-all').addEventListener('click', () => startQueue(allItems(), 0));
+document.getElementById('stop-all').addEventListener('click', stopAll);
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]');
+  if (!b || e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false; queue = []; clearActive();
+    const row = b.closest('.vocab-row');
+    if (row) row.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang, rate, () => { clearActive(); setStatus('待命'); });
+  });
+});
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>
