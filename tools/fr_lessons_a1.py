@@ -260,9 +260,22 @@ LESSONS = [
     L(
         'verbes-er', 'A1', 'Verbes en -er', '法文 A1｜-er 動詞',
         '大多數動詞是 -er。去掉 -er 之後，照人稱加詞尾。nous 的詞尾是 -ons。manger 在 nous 要保留 e，acheter 在單數要把 e 改成 è。',
-        'parler、manger、acheter 的現在式，附例句、中文、朗讀與 PDF。',
-        'je、tu、il、ils 的詞尾不發音，所以 parle、parles、parlent 聽起來一樣。\n母音前 je 省成 j’：j’habite、j’aime、j’achète。',
+        'habiter、parler、aimer、manger、acheter 的現在式，附例句、中文、朗讀與 PDF。',
+        'je、tu、il、ils 的詞尾不發音，所以 parle、parles、parlent 聽起來一樣。\nhabiter 的 h 是啞音，所以 je 要省成 j’habite；on 表示「我們」時動詞仍用第三人稱單數。',
         [
+            G('habiter', '居住', [
+                ['je', 'j’habite', '我住'],
+                ['tu', 'tu habites', '你住'],
+                ['il / elle / on', 'il habite', '他／她／我們住'],
+                ['nous', 'nous habitons', '我們住'],
+                ['vous', 'vous habitez', '您／你們住'],
+                ['ils / elles', 'ils habitent', '他們／她們住'],
+            ], [
+                ['J’habite à Taipei.', '我住在台北。'],
+                ['Tu habites où ?', '你住在哪裡？'],
+                ['Elle habite en Espagne.', '她住在西班牙。'],
+                ['Nous habitons à Taïwan.', '我們住在臺灣。'],
+            ]),
             G('parler', '說', [
                 ['je', 'je parle', '我說'],
                 ['tu', 'tu parles', '你說'],
@@ -275,6 +288,19 @@ LESSONS = [
                 ['Tu parles anglais ?', '你說英文嗎？'],
                 ['Elle parle lentement.', '她說得很慢。'],
                 ['Nous parlons de Taipei.', '我們在談台北。'],
+            ]),
+            G('aimer', '喜歡', [
+                ['je', 'j’aime', '我喜歡'],
+                ['tu', 'tu aimes', '你喜歡'],
+                ['il / elle / on', 'il aime', '他／她喜歡'],
+                ['nous', 'nous aimons', '我們喜歡'],
+                ['vous', 'vous aimez', '您喜歡'],
+                ['ils / elles', 'ils aiment', '他們喜歡'],
+            ], [
+                ['J’aime voyager.', '我喜歡旅行。'],
+                ['Tu aimes le yoga ?', '你喜歡瑜伽嗎？'],
+                ['Elle aime la Belgique.', '她喜歡比利時。'],
+                ['Nous aimons les langues.', '我們喜歡語言。'],
             ]),
             G('manger', 'nous 保留 e', [
                 ['je', 'je mange', '我吃'],
