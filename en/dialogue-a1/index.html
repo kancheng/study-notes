@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="英文自我介紹問答：隨意 vs 較客氣、Paul 問句、示範回答。點選可朗讀；也可用全部循環播放。">
+<meta name="description" content="英文自我介紹問答：隨意 vs 較客氣、Paul 問句、示範回答。點選可朗讀；也可用全部播放。">
 <title>Dialogue A1｜英文自我介紹問答</title>
 <style>
 :root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f2f5fa}
@@ -19,12 +19,14 @@ h3{font-size:1.05rem;margin:0 0 8px;color:#182a45}
 p{line-height:1.7;color:#53647c}
 .note{font-size:.92rem;color:#52647d;margin:0 0 18px}
 .subnote{font-size:.9rem;color:#627087;margin:0 0 12px}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 16px}.download{display:inline-block;background:var(--accent,currentColor);color:white;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:700}.download:hover,.download:focus-visible{filter:brightness(.94);outline:2px solid currentColor;outline-offset:2px}.toolbar-note{font-size:.9rem;color:#627087}
 .controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dce4ef;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
 .controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#17355d;color:white}
 .ctrl.stop{background:#5c6675}
 .ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #17355d;outline-offset:2px}
-.rate,.loop{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate,.rounds{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rounds input{width:64px;padding:6px 8px;border:1px solid #dce4ef;border-radius:8px;font:inherit}
 .rate input{width:140px}
 .status{margin-top:10px;font-size:.9rem;color:#6a5870}
 .tablewrap{overflow-x:auto;background:white;border:1px solid #dce4ef;border-radius:14px;box-shadow:0 6px 18px #142f520c;margin-bottom:8px}
@@ -47,17 +49,23 @@ footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
 <header><div class="brand"><a href="../index.html">← 英文筆記</a>　/　Dialogue A1</div></header>
 <main>
 <h1>英文自我介紹問答</h1>
-<p class="note">隨意 vs 較客氣問法、詢問 Paul、自我介紹範本。點選可朗讀；也可用全部循環播放，並調整語速。</p>
+<p class="note">隨意 vs 較客氣問法、詢問 Paul、自我介紹範本。點選可朗讀；也可用全部播放，並調整語速。</p>
 
+<div class="toolbar">
+  <a class="download" style="background:#17355d" href="./dialogue-a1.pdf" download>下載完整 PDF</a>
+  <span class="toolbar-note">發音使用裝置語音；可用性依瀏覽器與系統而異。</span>
+</div>
 <div class="controls" style="--accent:#17355d">
   <div class="controls-row">
-    <button type="button" id="play-all" class="ctrl">▶ 全部循環播放</button>
+    <button type="button" id="play-all" class="ctrl">▶ 全部播放</button>
     <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
     <label class="rate">語速
       <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
       <span id="rate-label">0.9</span>
     </label>
-    <label class="loop"><input id="loop" type="checkbox" checked> 播完從頭再播</label>
+    <label class="rounds">播放次數
+      <input id="rounds" type="number" min="1" max="99" value="1" inputmode="numeric">
+    </label>
   </div>
   <div id="play-status" class="status">待命</div>
 </div>
@@ -179,13 +187,16 @@ footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
 <footer>Dialogue A1｜英文自我介紹問答</footer>
 <script>
 
+
 const lessonLang = document.body.dataset.lang;
 const rateInput = document.getElementById('rate');
 const rateLabel = document.getElementById('rate-label');
-const loopBox = document.getElementById('loop');
+const roundsInput = document.getElementById('rounds');
 const statusEl = document.getElementById('play-status');
 let queue = [];
 let index = 0;
+let round = 0;
+let targetRounds = 1;
 let playing = false;
 
 function voicesReady(cb) {
@@ -228,10 +239,17 @@ function setStatus(text) {
   if (statusEl) statusEl.textContent = text;
 }
 
+function readRounds() {
+  const n = parseInt(roundsInput && roundsInput.value, 10);
+  if (!Number.isFinite(n) || n < 1) return 1;
+  return Math.min(n, 99);
+}
+
 function stopAll() {
   playing = false;
   queue = [];
   index = 0;
+  round = 0;
   speechSynthesis.cancel();
   clearActive();
   setStatus('已停止');
@@ -240,11 +258,16 @@ function stopAll() {
 function playNext() {
   if (!playing) return;
   if (index >= queue.length) {
-    if (loopBox && loopBox.checked && queue.length) {
+    round += 1;
+    if (round < targetRounds && queue.length) {
       index = 0;
     } else {
-      stopAll();
-      setStatus('播放完畢');
+      playing = false;
+      queue = [];
+      index = 0;
+      speechSynthesis.cancel();
+      clearActive();
+      setStatus('播放完畢（共 ' + targetRounds + ' 次）');
       return;
     }
   }
@@ -255,7 +278,7 @@ function playNext() {
     row.classList.add('active');
     row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
-  setStatus('播放中：' + item.text + '（' + (index + 1) + ' / ' + queue.length + '）');
+  setStatus('播放中：' + item.text + '（第 ' + (round + 1) + '/' + targetRounds + ' 次 · ' + (index + 1) + '/' + queue.length + '）');
   const rate = parseFloat(rateInput.value) || 0.9;
   speakOnce(item.text, item.lang, rate, () => {
     if (!playing) return;
@@ -270,6 +293,8 @@ function startQueue(items, startAt) {
     playing = true;
     queue = items;
     index = startAt || 0;
+    round = 0;
+    targetRounds = readRounds();
     playNext();
   });
 }
@@ -304,6 +329,7 @@ document.addEventListener('click', e => {
 });
 
 if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
 
 </script>
 </body>
