@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="法文使用拉丁字母，並常搭配重音與合字。點選可聽字母或符號名稱。">
+<meta name="description" content="法文使用拉丁字母，並常搭配重音與合字。點選可聽名稱；也可全部播放並設定次數。">
 <title>Alphabet｜法文字母</title>
 <style>
 :root{font-family:system-ui,-apple-system,'Noto Sans TC','Yu Gothic',sans-serif;color:#182a45;background:#f7f4f2}
@@ -17,34 +17,68 @@ h1{font-size:clamp(1.8rem,4vw,2.65rem);margin:0 0 8px}
 h2{font-size:1.35rem;margin:36px 0 12px}
 p{line-height:1.7;color:#53647c}
 .note{font-size:.92rem;color:#52647d;margin:0 0 22px}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 16px}
+.download{display:inline-block;background:#b3482f;color:white;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:700}
+.download:hover,.download:focus-visible{filter:brightness(.94);outline:2px solid #b3482f;outline-offset:2px}
+.toolbar-note{font-size:.9rem;color:#627087}
+.controls{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border:1px solid #eadfd6;border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px #142f5214;margin:0 0 22px;backdrop-filter:blur(6px)}
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ctrl{cursor:pointer;border:0;border-radius:9px;font:inherit;font-weight:750;padding:10px 14px;background:#b3482f;color:white}
+.ctrl.stop{background:#5c6675}
+.ctrl:hover,.ctrl:focus-visible{filter:brightness(.92);outline:2px solid #b3482f;outline-offset:2px}
+.rate,.rounds{font-size:.92rem;color:#3d4d63;display:flex;align-items:center;gap:8px}
+.rate input[type=range]{width:140px}
+.rounds input{width:64px;padding:6px 8px;border:1px solid #eadfd6;border-radius:8px;font:inherit}
+.status{margin-top:10px;font-size:.9rem;color:#6a5870}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px}
 .tile{background:white;border:1px solid #eadfd6;border-radius:14px;padding:14px 10px;text-align:center;box-shadow:0 6px 18px #142f520c;cursor:pointer}
 .tile:hover,.tile:focus-visible{outline:2px solid #b3482f;outline-offset:2px}
+.tile.active,.cell.active{background:#fff4d8;outline:2px solid #b3482f;outline-offset:2px}
 .glyph{font-size:1.85rem;font-weight:800;color:#b3482f;line-height:1.2}
 .pair{font-size:1.05rem;color:#3d4d63;margin-top:4px}
 .roma,.name{font-size:.88rem;color:#6a5870;margin-top:4px}
-.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px}
+.tip{background:white;border-left:4px solid #b3482f;padding:14px 18px;border-radius:8px;margin-top:28px;border:1px solid #eadfd6;border-left-width:4px;line-height:1.7;color:#52647a}
 .kana-wrap{overflow-x:auto;margin:12px 0 8px}
 .kana{border-collapse:collapse;width:100%;min-width:640px;background:white;border:1px solid #eadfd6;border-radius:12px;overflow:hidden}
 .kana th,.kana td{border:1px solid #eadfd6;padding:10px 8px;text-align:center;vertical-align:middle}
 .kana th{background:#f8eef2;font-size:.9rem;color:#5c3a46}
 .kana td.rowhead{background:#f8eef2;font-weight:750;white-space:nowrap}
 .kana .empty{background:#faf7f8;color:#b7a8ae}
-.cell{cursor:pointer;border-radius:8px}
+.cell{cursor:pointer;border-radius:8px;background:transparent;border:0;width:100%;padding:4px;font:inherit}
 .cell:hover,.cell:focus-visible{outline:2px solid #b3482f;outline-offset:-2px}
 .cell .hira{font-size:1.45rem;font-weight:800;color:#b3482f;line-height:1.15}
 .cell .kata{font-size:1.05rem;color:#3d4d63;margin-top:2px}
 .cell .roma{font-size:.82rem;color:#6a5870;margin-top:2px}
 .accent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
 footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
-@media(max-width:600px){main{padding-top:25px}.glyph{font-size:1.55rem}}
+@media(max-width:600px){main{padding-top:25px}.glyph{font-size:1.55rem}.rate input[type=range]{width:100px}}
 </style>
 </head>
-<body>
+<body data-lang="fr-FR">
 <header><div class="brand"><a href="../index.html">← 法文筆記</a>　/　Alphabet</div></header>
 <main>
 <h1>法文字母表</h1>
-<p class="note">法文使用拉丁字母，並常搭配重音與合字。點選可聽字母或符號名稱。</p>
+<p class="note">法文使用拉丁字母，並常搭配重音與合字。點選可聽名稱；也可全部播放並設定次數。</p>
+
+<div class="toolbar">
+  <a class="download" href="./alphabet.pdf" download>下載完整 PDF</a>
+  <span class="toolbar-note">發音使用裝置語音；可用性依瀏覽器與系統而異。</span>
+</div>
+<div class="controls" style="--accent:#b3482f">
+  <div class="controls-row">
+    <button type="button" id="play-all" class="ctrl">▶ 全部播放</button>
+    <button type="button" id="stop-all" class="ctrl stop">■ 停止</button>
+    <label class="rate">語速
+      <input id="rate" type="range" min="0.5" max="1.4" step="0.1" value="0.9">
+      <span id="rate-label">0.9</span>
+    </label>
+    <label class="rounds">播放次數
+      <input id="rounds" type="number" min="1" max="99" value="1" inputmode="numeric">
+    </label>
+  </div>
+  <div id="play-status" class="status">待命</div>
+</div>
+
 
 <h2>基本字母</h2>
 <p class="note">法文字母共 26 個。名稱依法文讀法標註。</p>
@@ -54,37 +88,154 @@ footer{max-width:1050px;margin:auto;padding:20px;color:#627087;font-size:.9rem}
 <div class="accent-grid"><button class="tile" type="button" data-say="é" data-lang="fr-FR" aria-label="播放 É"><div class="glyph">É</div><div class="pair">é</div><div class="name">e aigu</div></button><button class="tile" type="button" data-say="è" data-lang="fr-FR" aria-label="播放 È"><div class="glyph">È</div><div class="pair">è</div><div class="name">e grave</div></button><button class="tile" type="button" data-say="ê" data-lang="fr-FR" aria-label="播放 Ê"><div class="glyph">Ê</div><div class="pair">ê</div><div class="name">e circonflexe</div></button><button class="tile" type="button" data-say="ë" data-lang="fr-FR" aria-label="播放 Ë"><div class="glyph">Ë</div><div class="pair">ë</div><div class="name">e tréma</div></button><button class="tile" type="button" data-say="à" data-lang="fr-FR" aria-label="播放 À"><div class="glyph">À</div><div class="pair">à</div><div class="name">a grave</div></button><button class="tile" type="button" data-say="â" data-lang="fr-FR" aria-label="播放 Â"><div class="glyph">Â</div><div class="pair">â</div><div class="name">a circonflexe</div></button><button class="tile" type="button" data-say="ù" data-lang="fr-FR" aria-label="播放 Ù"><div class="glyph">Ù</div><div class="pair">ù</div><div class="name">u grave</div></button><button class="tile" type="button" data-say="û" data-lang="fr-FR" aria-label="播放 Û"><div class="glyph">Û</div><div class="pair">û</div><div class="name">u circonflexe</div></button><button class="tile" type="button" data-say="ü" data-lang="fr-FR" aria-label="播放 Ü"><div class="glyph">Ü</div><div class="pair">ü</div><div class="name">u tréma</div></button><button class="tile" type="button" data-say="ô" data-lang="fr-FR" aria-label="播放 Ô"><div class="glyph">Ô</div><div class="pair">ô</div><div class="name">o circonflexe</div></button><button class="tile" type="button" data-say="î" data-lang="fr-FR" aria-label="播放 Î"><div class="glyph">Î</div><div class="pair">î</div><div class="name">i circonflexe</div></button><button class="tile" type="button" data-say="ï" data-lang="fr-FR" aria-label="播放 Ï"><div class="glyph">Ï</div><div class="pair">ï</div><div class="name">i tréma</div></button><button class="tile" type="button" data-say="ç" data-lang="fr-FR" aria-label="播放 Ç"><div class="glyph">Ç</div><div class="pair">ç</div><div class="name">c cédille</div></button><button class="tile" type="button" data-say="œ" data-lang="fr-FR" aria-label="播放 Œ"><div class="glyph">Œ</div><div class="pair">œ</div><div class="name">e dans l’o</div></button><button class="tile" type="button" data-say="æ" data-lang="fr-FR" aria-label="播放 Æ"><div class="glyph">Æ</div><div class="pair">æ</div><div class="name">e dans l’a</div></button></div>
 <div class="tip"><strong>補充：</strong>h 分為 mute h 與 aspirate h，會影響冠詞是否省音：l’homme，但 le haricot。大寫時重音仍建議保留：École。</div>
 
-<div class="tip"><strong>用法提醒：</strong>點選字母或假名可朗讀。發音品質依裝置內安裝的語音而異。</div>
+<div class="tip"><strong>用法提醒：</strong>點選字母或假名可單獨朗讀。「全部播放」會依頁面順序朗讀；「播放次數」可設定整輪要播幾遍（1–99）。語速可用滑桿調整。也可下載 PDF 列印複習。</div>
 </main>
 <footer>Alphabet｜法文字母</footer>
 <script>
 
-function speak(text, lang) {
+const lessonLang = document.body.dataset.lang || 'en-US';
+const rateInput = document.getElementById('rate');
+const rateLabel = document.getElementById('rate-label');
+const roundsInput = document.getElementById('rounds');
+const statusEl = document.getElementById('play-status');
+let queue = [];
+let index = 0;
+let round = 0;
+let targetRounds = 1;
+let playing = false;
+let current = null;
+
+function voicesReady(cb) {
   if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音播放。'); return; }
-  let started = false;
-  const run = () => {
-    if (started) return;
-    started = true;
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang;
-    u.rate = 0.85;
-    const prefix = lang.toLowerCase().replace('_','-').slice(0, 2);
-    const voice = speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_','-').startsWith(prefix));
-    if (voice) u.voice = voice;
-    speechSynthesis.speak(u);
-  };
-  if (speechSynthesis.getVoices().length) run();
-  else {
-    speechSynthesis.addEventListener('voiceschanged', run, { once: true });
-    setTimeout(run, 300);
-  }
+  if (speechSynthesis.getVoices().length) { cb(); return; }
+  speechSynthesis.addEventListener('voiceschanged', () => cb(), { once: true });
+  setTimeout(cb, 300);
 }
-if ('speechSynthesis' in window) speechSynthesis.getVoices();
+
+function pickVoice(lang) {
+  const prefix = lang.toLowerCase().replace('_', '-').slice(0, 2);
+  return speechSynthesis.getVoices().find(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefix));
+}
+
+function speakOnce(text, lang, rate, onend) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = rate;
+  const voice = pickVoice(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => { current = null; if (onend) onend(); };
+  u.onerror = () => { current = null; if (onend) onend(); };
+  current = u;
+  speechSynthesis.speak(u);
+}
+
+function allItems() {
+  return [...document.querySelectorAll('[data-say]')].map(el => ({
+    text: el.dataset.say,
+    lang: el.dataset.lang || lessonLang,
+    el,
+  }));
+}
+
+function clearActive() {
+  document.querySelectorAll('.tile.active, .cell.active').forEach(el => el.classList.remove('active'));
+}
+
+function setStatus(text) {
+  if (statusEl) statusEl.textContent = text;
+}
+
+function readRounds() {
+  const n = parseInt(roundsInput && roundsInput.value, 10);
+  if (!Number.isFinite(n) || n < 1) return 1;
+  return Math.min(n, 99);
+}
+
+function stopAll() {
+  playing = false;
+  queue = [];
+  index = 0;
+  round = 0;
+  speechSynthesis.cancel();
+  current = null;
+  clearActive();
+  setStatus('已停止');
+}
+
+function playNext() {
+  if (!playing) return;
+  if (index >= queue.length) {
+    round += 1;
+    if (round < targetRounds && queue.length) {
+      index = 0;
+    } else {
+      playing = false;
+      queue = [];
+      index = 0;
+      speechSynthesis.cancel();
+      current = null;
+      clearActive();
+      setStatus('播放完畢（共 ' + targetRounds + ' 次）');
+      return;
+    }
+  }
+  const item = queue[index];
+  clearActive();
+  item.el.classList.add('active');
+  item.el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  setStatus('播放中：' + item.text + '（第 ' + (round + 1) + '/' + targetRounds + ' 次 · ' + (index + 1) + '/' + queue.length + '）');
+  const rate = parseFloat(rateInput.value) || 0.9;
+  speakOnce(item.text, item.lang, rate, () => {
+    if (!playing) return;
+    index += 1;
+    setTimeout(playNext, 220);
+  });
+}
+
+function startQueue(items) {
+  if (!items.length) return;
+  voicesReady(() => {
+    playing = true;
+    queue = items;
+    index = 0;
+    round = 0;
+    targetRounds = readRounds();
+    playNext();
+  });
+}
+
+if (rateInput && rateLabel) {
+  rateInput.addEventListener('input', () => {
+    rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+  });
+  rateLabel.textContent = parseFloat(rateInput.value).toFixed(1);
+}
+
+const playAll = document.getElementById('play-all');
+const stopAllBtn = document.getElementById('stop-all');
+if (playAll) playAll.addEventListener('click', () => startQueue(allItems()));
+if (stopAllBtn) stopAllBtn.addEventListener('click', stopAll);
+
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-say]');
-  if (b) speak(b.dataset.say, b.dataset.lang || 'en-US');
+  if (!b) return;
+  if (e.target.closest('.controls')) return;
+  const rate = parseFloat(rateInput && rateInput.value) || 0.9;
+  voicesReady(() => {
+    playing = false;
+    queue = [];
+    clearActive();
+    b.classList.add('active');
+    setStatus('單字：' + b.dataset.say);
+    speakOnce(b.dataset.say, b.dataset.lang || lessonLang, rate, () => {
+      clearActive();
+      setStatus('待命');
+    });
+  });
 });
+
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
 
 </script>
 </body>
